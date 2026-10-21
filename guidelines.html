@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>応募要領 | 社会課題×DX チャレンジ 2026</title>
+<meta name="description" content="社会課題×DX チャレンジ 2026 の応募要領。参加登録・作品提出・プレゼン審査について。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f7f5ff; --bg2:#ffffff; --panel:#ffffff; --panel2:#f1edff;
+  --line:rgba(20,16,60,.12); --line2:rgba(20,16,60,.26);
+  --ink:#14103a; --ink2:#4a4870; --ink3:#7d7aa0;
+  --lime:#c6ff4d; --uv:#6d3bff; --magenta:#ff2fb3; --ice:#19d3ff;
+  --sans:'Noto Sans JP',sans-serif;
+  --disp:'Space Grotesk','Noto Sans JP',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --r:22px; --gutter:clamp(20px,4vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  background-image:
+    radial-gradient(900px 600px at 8% 12%,rgba(109,59,255,.14),transparent 60%),
+    radial-gradient(800px 600px at 92% 30%,rgba(255,47,179,.12),transparent 60%),
+    radial-gradient(900px 700px at 50% 85%,rgba(25,211,255,.12),transparent 60%);
+  background-attachment:fixed;
+  color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.85;
+  letter-spacing:.01em;overflow-x:clip;-webkit-font-smoothing:antialiased
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+::selection{background:var(--magenta);color:#fff}
+
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.14;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+section{position:relative;padding:clamp(64px,9vw,120px) 0}
+section+section{border-top:1px solid var(--line)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* section head */
+.sec{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.sec__head{position:sticky;top:96px}
+.sec__no{font-family:var(--mono);font-size:.8rem;letter-spacing:.2em;color:var(--uv);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec__no::after{content:'';flex:1;height:1px;background:var(--line2);max-width:60px}
+.sec__title{font-weight:900;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.2;letter-spacing:.02em}
+.sec__en{font-family:var(--disp);font-weight:500;font-size:.85rem;letter-spacing:.14em;color:var(--ink3);margin-top:10px;text-transform:uppercase}
+@media(max-width:860px){.sec{grid-template-columns:1fr;gap:28px}.sec__head{position:static}}
+
+/* header */
+.header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px var(--gutter);transition:background .35s,border-color .35s,backdrop-filter .35s;border-bottom:1px solid transparent}
+.header.is-scrolled{background:rgba(247,245,255,.92);backdrop-filter:blur(14px);border-color:var(--line)}
+.logos{display:flex;align-items:center;gap:16px}
+.logos img{height:34px;width:auto;opacity:.95}
+.logos .sep{width:1px;height:26px;background:var(--line2)}
+.nav{display:flex;align-items:center;gap:18px}
+.nav a{font-size:.82rem;font-weight:500;letter-spacing:.06em;color:var(--ink2);position:relative;padding:4px 0}
+.nav a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--uv);transition:right .3s}
+.nav a:hover{color:var(--ink)}.nav a:hover::after{right:0}
+
+/* pill */
+.pill{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:700;font-size:.9rem;letter-spacing:.04em;border:1px solid var(--line2);color:var(--ink);transition:transform .25s,background .25s,color .25s,border-color .25s;white-space:nowrap}
+.pill .arr{font-family:var(--disp);font-weight:700;transition:transform .25s}
+.pill:hover{transform:translateY(-2px)}.pill:hover .arr{transform:translate(2px,-2px)}
+.pill.lime{background:var(--lime);color:#06080c;border-color:var(--lime)}
+.pill.lime:hover{background:#d9ff7a}
+.pill.ghost:hover{border-color:var(--ink);background:rgba(20,16,60,.04)}
+.pill.is-disabled{opacity:.55;cursor:not-allowed;filter:saturate(.4)}
+.pill.is-disabled:hover{transform:none}
+.pill .chip{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;padding:3px 8px;border-radius:999px;background:rgba(20,16,60,.08);color:var(--ink3);white-space:nowrap}
+
+.nav-toggle{display:none;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;background:none;border:1px solid var(--line2);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+@media(max-width:1180px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(247,245,255,.97);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--line)}
+  .nav.is-open{display:flex}
+  .nav a{padding:14px var(--gutter);border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink)}
+  .nav .pill{margin:14px var(--gutter) 0;justify-content:center}
+  .nav-toggle{display:block}
+  .logos img{height:28px}
+}
+
+/* page hero */
+.page-hero{padding:clamp(110px,15vw,170px) 0 clamp(48px,7vw,80px);border-bottom:1px solid var(--line)}
+.breadcrumb{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--ink3);margin-bottom:22px}
+.breadcrumb a{color:var(--uv)}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb .sep{margin:0 8px}
+.page-title{font-weight:900;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.1;letter-spacing:-.01em}
+.page-title small{display:block;font-family:var(--disp);font-size:.28em;font-weight:500;letter-spacing:.2em;color:var(--uv);text-transform:uppercase;margin-bottom:10px}
+.page-sub{margin-top:14px;color:var(--ink2);font-size:.95rem}
+
+/* content body */
+.content-body{display:grid;gap:24px}
+.content-body>p{color:var(--ink);font-size:1rem;line-height:1.85}
+
+/* note */
+.note-list{display:grid;gap:8px}
+.note-item{font-size:.88rem;color:var(--ink3);padding-left:1.4em;position:relative;line-height:1.75}
+.note-item::before{content:'＊';position:absolute;left:0;color:var(--uv);font-size:.8rem}
+
+/* form block */
+.form-block{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r);padding:24px 28px;display:flex;flex-direction:column;gap:16px}
+.form-block__label{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;color:var(--uv);text-transform:uppercase}
+.deadline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.9rem;color:var(--ink2)}
+.deadline .k{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;color:var(--uv);text-transform:uppercase;white-space:nowrap}
+.deadline b{color:var(--ink);font-weight:700}
+
+/* presentation items */
+.present-list{display:grid;gap:12px}
+.present-item{display:grid;grid-template-columns:36px 1fr;gap:4px 16px;align-items:start;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.present-item .num{font-family:var(--disp);font-weight:800;font-size:1.35rem;color:var(--uv);line-height:1.2;padding-top:2px}
+.present-item h4{font-weight:700;font-size:1rem;margin-bottom:4px;line-height:1.4}
+.present-item p{font-size:.92rem;color:var(--ink2);line-height:1.75;grid-column:2}
+
+/* footer */
+.footer{border-top:1px solid var(--line);padding:48px 0 40px}
+.footer__grid{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.footer__contact .mono{display:block;margin-bottom:6px}
+.footer__contact a{font-family:var(--disp);font-weight:700;font-size:clamp(1.1rem,2vw,1.5rem);letter-spacing:.02em;color:var(--ink);border-bottom:1px solid var(--line2);transition:border-color .3s}
+.footer__contact a:hover{border-color:var(--uv)}
+.footer__logos{display:flex;align-items:center;gap:18px}
+.footer__logos img{height:44px;width:auto;opacity:.9}
+.footer__members{margin-top:28px;font-size:.82rem;color:var(--ink3);line-height:1.9}
+.footer__bottom{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer__bottom a{color:var(--ink2)}
+@media(max-width:700px){.footer__grid{grid-template-columns:1fr}}
+.work-box{margin:22px 0;padding:18px 20px;border:1px solid rgba(109,59,255,.35);border-radius:16px;background:rgba(109,59,255,.06)}
+.work-box__def{font-size:1.02rem;margin-bottom:10px}
+.work-box__def b{color:var(--uv,#6d3bff)}
+.form-dl-note{margin-top:8px;font-size:.88rem}
+.form-dl{display:inline-flex;align-items:center;gap:12px;margin-top:10px;padding:10px 16px 10px 10px;border-radius:14px;border:1px solid rgba(109,59,255,.45);background:#fff;color:inherit;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.form-dl:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(109,59,255,.18)}
+.form-dl__ic{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:10px;background:#2b579a;color:#fff;font:700 .7rem/1 "IBM Plex Mono",monospace;letter-spacing:.04em}
+.form-dl b{display:block;font-size:.95rem}.form-dl small{display:block;font-size:.78rem;opacity:.7}.form-dl .arr{font-weight:700;color:var(--uv,#6d3bff)}
+.chip.lock{display:inline-flex;align-items:center;gap:4px;letter-spacing:.06em}
+.chip.lock .lock-ic{flex:none;display:block}
+.form-ph .lock-big{display:block;margin:0 auto 10px;width:30px;height:30px;color:var(--uv,#6d3bff)}
+.keydates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:28px}
+.keydates>div{border:1px solid var(--line2);border-radius:14px;padding:12px 14px;background:var(--panel)}
+.keydates .k{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;color:var(--uv);text-transform:uppercase}
+.keydates b{display:block;font-size:.95rem;margin-top:2px}.keydates>div>span:last-child{display:block;font-size:.82rem;color:var(--ink2)}
+.toc{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0}
+.toc a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--line2);background:var(--panel);color:var(--ink);text-decoration:none;font-size:.88rem;font-weight:700}
+.toc a span{font-family:var(--mono);font-size:.7rem;color:var(--uv)}.toc a:hover{border-color:var(--uv)}
+.spec{display:grid;gap:0;border-top:1px solid var(--line2);margin:0}
+.spec>div{display:grid;grid-template-columns:150px 1fr;gap:6px 22px;padding:16px 0;border-bottom:1px solid var(--line)}
+.spec dt{font-weight:700;color:var(--uv);font-size:.92rem}.spec dd{margin:0;line-height:1.8}
+.sub-h{font-size:1.1rem;font-weight:900;margin:10px 0 -6px}
+.steps{list-style:none;counter-reset:st;display:grid;gap:10px;margin:0;padding:0}
+.steps li{counter-increment:st;display:grid;grid-template-columns:40px 1fr;gap:2px 14px;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.steps li::before{content:counter(st,decimal-leading-zero);grid-row:span 2;font-family:var(--disp);font-weight:800;font-size:1.2rem;color:var(--uv);line-height:1.3}
+.steps b{font-size:.98rem}.steps span{font-size:.9rem;color:var(--ink2)}
+.mini{margin:10px 0 0;padding-left:1.1em;display:grid;gap:6px;font-size:.88rem;color:var(--ink2);line-height:1.75}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.check li{position:relative;padding:12px 16px 12px 46px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:.93rem}
+.check li::before{content:'';position:absolute;left:16px;top:50%;width:16px;height:16px;margin-top:-8px;border:2px solid var(--uv);border-radius:4px}
+.crit-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.crit-g>div{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--panel)}
+.crit-g span{font-family:var(--disp);font-weight:800;color:var(--uv)}.crit-g b{display:block;margin:2px 0 4px}.crit-g p{font-size:.88rem;color:var(--ink2)}
+.sched{width:100%;border-collapse:collapse;font-size:.95rem}
+.sched th,.sched td{text-align:left;padding:12px 4px;border-bottom:1px solid var(--line)}.sched th{width:42%;color:var(--ink2);font-weight:700}
+.faq-link a{color:var(--uv);font-weight:700}
+@media(max-width:800px){.keydates{grid-template-columns:repeat(2,minmax(0,1fr))}.crit-g{grid-template-columns:1fr}.spec>div{grid-template-columns:1fr}}
+.ktl{margin-top:30px;padding:20px 22px 18px;border:1px solid var(--line2);border-radius:18px;background:var(--panel)}
+.ktl__title{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--uv);text-transform:uppercase;margin:0 0 14px}
+.ktl__title::after{content:' / Timeline'}
+.ktl__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative}
+.ktl__list::before{content:'';position:absolute;left:10%;right:10%;top:calc(1.4em + 13px);height:2px;background:linear-gradient(90deg,var(--uv),var(--magenta,#ff2fb3) 60%,var(--ice,#19d3ff))}
+.ktl__item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:0 6px;position:relative}
+.ktl__when{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--ink2);white-space:nowrap;line-height:1.4em}
+.ktl__dot{width:16px;height:16px;border-radius:50%;background:var(--panel);border:3px solid var(--uv);position:relative;z-index:1;margin:2px 0}
+.ktl__item.is-end .ktl__dot{border-color:var(--ice,#19d3ff)}
+.ktl__what{font-size:.95rem;line-height:1.35}
+.ktl__note{font-size:.76rem;color:var(--ink3);line-height:1.5}
+@media(max-width:800px){
+  .ktl__list{grid-template-columns:1fr;gap:14px}
+  .ktl__list::before{left:7px;right:auto;top:6px;bottom:6px;width:2px;height:auto;background:linear-gradient(180deg,var(--uv),var(--magenta,#ff2fb3) 60%,var(--ice,#19d3ff))}
+  .ktl__item{display:grid;grid-template-columns:16px 1fr;grid-template-areas:"dot when" "dot what" "dot note";column-gap:14px;row-gap:0;text-align:left;align-items:start;padding:0}
+  .ktl__dot{grid-area:dot;margin-top:3px}.ktl__when{grid-area:when}.ktl__what{grid-area:what}.ktl__note{grid-area:note}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="logos">
+    <a href="https://www.niigata-u.ac.jp/" target="_blank" rel="noopener"><img src="assets/img/logo_niigata-u.svg" alt="新潟大学"></a>
+    <span class="sep"></span>
+    <a href="https://create.niigata-u.ac.jp/" target="_blank" rel="noopener"><img src="assets/img/logo_create.png" alt="新潟大学 創生学部"></a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">MENU</button>
+  <nav class="nav" id="nav">
+    <a href="index.html">← コンテストトップ</a>
+    <a href="#eligibility">応募資格</a>
+    <a href="#entry">参加登録</a>
+    <a href="#submit">作品提出</a>
+    <a href="#review">書面審査</a>
+    <a href="#presentation">プレゼン審査</a>
+    <a href="#ai">AI利用・剽窃</a>
+    <a href="#award">表彰</a>
+    <a href="#schedule">日程</a>
+  </nav>
+</header>
+
+<!-- ===== Page Title ===== -->
+<div class="page-hero" id="top">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">社会課題×DX チャレンジ 2026</a><span class="sep">›</span>応募要領</p>
+    <h1 class="page-title"><small>Application Guide</small>応募要領</h1>
+    <p class="page-sub">社会課題×DX チャレンジ 2026 ／ 参加・作品提出・審査に関する正式な要領です。</p>
+  </div>
+</div>
+
+<!-- ===== 00 応募資格 ===== -->
+<section id="eligibility">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">00</p>
+      <h2 class="sec__title">応募資格</h2>
+      <p class="sec__en">Eligibility</p>
+    </div>
+    <div class="content-body">
+      <dl class="spec">
+        <div><dt>対象</dt><dd>新潟大学 創生学部に所属する学生（創生学修コース・DX共創コース）</dd></div>
+        <div><dt>参加登録の単位</dt><dd>グループまたは個人。個人やグループ未完成の状態でも参加登録できます。</dd></div>
+        <div><dt>作品提出の単位</dt><dd>グループ（2〜5名を目安）。創生学修コース・DX共創コースの学生をそれぞれ1名以上含むことが必要です。</dd></div>
+      </dl>
+      <div class="note-list">
+        <p class="note-item">両コースの学生が協働することが本企画のねらいです。参加登録締め切りの時点で、両コースの学生を含むグループになっている必要があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 参加登録 ===== -->
+<section id="entry">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">01</p>
+      <h2 class="sec__title">参加登録</h2>
+      <p class="sec__en">Registration</p>
+    </div>
+    <div class="content-body">
+      <p>本コンテストへの参加登録は、以下のフォームから行ってください。</p>
+      <div class="form-block">
+        <span class="form-block__label">Registration Form</span>
+        <span class="pill ghost is-disabled" style="display:inline-flex">参加登録フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></span>
+        <div class="deadline">
+          <span class="k">Period</span>
+          <span>参加登録期間：<b>2026年11月2日(月)〜12月31日(木)</b></span>
+        </div>
+      </div>
+      <div class="note-list">
+        <p class="note-item">参加登録は、個人や未完成グループ（創生学修コース・DX共創コースの学生を含まないグループ）でも可能です。後日（11月中旬）、マッチングの場を設けますので、マッチング後にグループができた場合は、改めてグループでの登録をしてください。</p>
+      </div>
+      <h3 class="sub-h">参加から提出までの流れ</h3>
+      <ol class="steps">
+        <li><b>参加登録</b><span>グループ・個人のどちらでも登録できます（11月2日〜12月31日）。</span></li>
+        <li><b>グループマッチング</b><span>個人・未完成グループ向けに、11月中旬にマッチングの場を設けます。</span></li>
+        <li><b>グループで再登録</b><span>マッチングでグループができた場合は、改めてグループで参加登録してください。</span></li>
+        <li><b>制作・作品提出</b><span>両コースの学生を含むグループで作品を制作し、提出します（1月1日〜2月8日）。</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 作品提出 ===== -->
+<section id="submit">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">02</p>
+      <h2 class="sec__title">作品提出</h2>
+      <p class="sec__en">Submission</p>
+    </div>
+    <div class="content-body">
+      <p>身近な社会・地域・学術の課題を設定し、DXツールを活用して、その課題の解決または改善を提案するための作品を提出してください。完成品である必要はありません。実現可能性が分かる試作品や、一部の機能を実際に動かしたものでも提出できます。</p>
+      <div class="note-list">
+        <p class="note-item">DXツール：AI、IoT、プログラミング、データ分析、3D技術などのデジタル技術を活用したツール</p>
+      </div>
+      <p>作品は、以下の作品提出フォームから提出してください。提出物の内容は、このあとの説明をご覧ください。</p>
+      <div class="form-block">
+        <span class="form-block__label">Submission Form</span>
+        <span class="pill ghost is-disabled" style="display:inline-flex">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></span>
+        <div class="deadline">
+          <span class="k">Period</span>
+          <span>作品提出期間：<b>2027年1月1日(金)〜2月8日(月)</b></span>
+        </div>
+      </div>
+      <div class="note-list">
+        <p class="note-item">作品提出は、参加登録を行ったグループに限ります。</p>
+        <p class="note-item">作品提出は、各グループ（創生学修コース・DX共創コースの学生をそれぞれ1名以上含む）の代表者が行ってください。</p>
+      </div>
+      <div class="work-box">
+        <p class="work-box__def">本コンテストにおける<b>「作品」</b>とは、<b>課題解決のための案と、その実現に向けた実装コンテンツをまとめたパッケージ</b>です。</p>
+        <p>具体的な提出物は次の2点です。</p>
+        <div class="present-list">
+          <div class="present-item"><span class="num">①</span><div><h4>作品説明 PDF（2枚）</h4><p>課題解決のための案と、実装コンテンツの内容を説明する資料</p><ul class="mini"><li>次の4項目を含めて <b>A4・2頁以内</b> で記載します。<br>① 本提案の核心となる社会的課題（背景や着想に至った経緯など）<br>② 課題解決のために作成した作品の説明<br>③ 作品が社会課題に対して期待される効果、および作品の独自性・創造性<br>④ 作品における展望や今後の課題</li><li>本文は 11 ポイント以上の文字を使用してください。</li><li>図・写真・AR コードなどを活用して、課題と作品を具体的に説明してください。</li></ul><p class="form-dl-note">所定の様式(Word)に記入し、PDF に変換して提出してください。</p><a class="form-dl" href="assets/forms/ccs-dx-2026_work-description-form.docx" download="作品説明PDF_様式_社会課題DXチャレンジ2026.docx"><span class="form-dl__ic" aria-hidden="true">DOCX</span><span><b>作品説明PDF 様式をダウンロード</b><small>Word ・ A4 2頁 ・ 4.2MB</small></span><span class="arr" aria-hidden="true">↓</span></a></div></div>
+          <div class="present-item"><span class="num">②</span><div><h4>実装コンテンツ</h4><p>アプリ、Webコンテンツ、デバイス、電子システムなど、課題を具体的に解決するための試作品・制作物と、その挙動を説明する文章・図面・写真・動画等を指します。</p><p class="form-dl-note">Google ドライブまたは GitHub のリンクで提出してください。</p><p class="form-dl-note">デバイスや電子システムなど、現物をリンクで提出できない場合は、その挙動を説明する文章・図面・写真・動画等を Google ドライブにまとめ、そのリンクを提出してください。</p><ul class="mini"><li>審査員がリンクから内容を確認できるよう、閲覧可能な共有設定にしてください。</li><li>アプリ・Webコンテンツなど、ソフトウェアを含む作品は、<b>ソースコードの提出が必須</b>です。GitHub のリポジトリ、または Google ドライブのリンクで提出してください。</li></ul></div></div>
+        </div>
+      </div>
+      <h3 class="sub-h">提出前のチェックリスト</h3>
+      <ul class="check">
+        <li>グループのメンバー全員が、新潟大学 創生学部の学生である</li>
+        <li>グループに創生学修コース・DX共創コースの学生がそれぞれ1名以上含まれている</li>
+        <li>グループで参加登録を済ませている</li>
+        <li>作品説明 PDF は所定の様式を使い、A4・2頁以内に収まっている</li>
+        <li>作品説明 PDF に、4つの記載項目(① 社会的課題と背景 ② 作品の説明 ③ 期待される効果と独自性・創造性 ④ 展望と今後の課題)がすべて含まれている</li>
+        <li>実装コンテンツのリンクが、審査員が閲覧できる共有設定になっている</li>
+        <li>ソフトウェアを含む作品の場合、ソースコードを提出物に含めている</li>
+        <li>生成AIを使った部分も含め、制作内容を自分たちで説明できる</li>
+        <li>他者の作品・アイデア・画像などを自分たちのものとして使っていない（利用した素材は利用条件を守り、出典を作品説明 PDF に明記している）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 審査 ===== -->
+<section id="review">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">03</p>
+      <h2 class="sec__title">書面審査</h2>
+      <p class="sec__en">Document Review</p>
+    </div>
+    <div class="content-body">
+      <p>提出された作品（作品説明 PDF・実装コンテンツ）の書面審査と、プレゼン審査を行います。いずれも次の4つの評価軸で評価します。</p>
+      <div class="crit-g">
+        <div><span>01</span><b>社会課題への理解とアプローチ</b><p>社会課題の設定が明確で、技術との接続が論理的か</p></div>
+        <div><span>02</span><b>DX技術の活用度</b><p>DX技術を効果的に応用できているか</p></div>
+        <div><span>03</span><b>実装完成度</b><p>作品としての完成度・動作性・UI等</p></div>
+        <div><span>04</span><b>創造性</b><p>アイデアの独自性、新規性、切り口の面白さ</p></div>
+      </div>
+      <h3 class="sub-h">制作の進め方</h3>
+      <p>次の2つのどちらで進めても構いません。</p>
+      <div class="present-list">
+        <div class="present-item"><span class="num">A</span><div><h4>DX技術を起点とするアプローチ</h4><p>「DX技術をどう社会課題に応用できるか」から考え始める。</p></div></div>
+        <div class="present-item"><span class="num">B</span><div><h4>社会課題を起点とするアプローチ</h4><p>「解決すべき社会課題を定め、それにどうDX技術を応用できるか」から考え始める。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 プレゼン審査 ===== -->
+<section id="presentation">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">04</p>
+      <h2 class="sec__title">プレゼン審査</h2>
+      <p class="sec__en">Presentation</p>
+    </div>
+    <div class="content-body">
+      <div class="note-list">
+        <p class="note-item">作品提出グループに限る</p>
+      </div>
+      <p>本コンテストでは、プレゼン審査を実施します。</p>
+      <p>プレゼン審査には、以下の内容を含めてください。</p>
+      <div class="present-list">
+        <div class="present-item">
+          <span class="num">①</span>
+          <div>
+            <h4>背景・目的</h4>
+            <p>提案の核心となる社会課題や学術的意義の背景、およびそれに対する本提案の目指すこと</p>
+          </div>
+        </div>
+        <div class="present-item">
+          <span class="num">②</span>
+          <div>
+            <h4>提案の説明</h4>
+            <p>課題解決において提案する作品の説明</p>
+          </div>
+        </div>
+        <div class="present-item">
+          <span class="num">③</span>
+          <div>
+            <h4>提案の独自性・創造性</h4>
+            <p>課題解決に対して本提案の期待される効果</p>
+          </div>
+        </div>
+        <div class="present-item">
+          <span class="num">④</span>
+          <div>
+            <h4>課題・展望</h4>
+            <p>本提案の実用化や今後求められること</p>
+          </div>
+        </div>
+      </div>
+      <div class="note-list">
+        <p class="note-item">上記の内容をそのまま提示する必要はありませんので、自由な形式でスライドを作成してください。</p>
+        <p class="note-item">プレゼン審査の日程は、作品提出時に記載した代表者へのメールにて、後日お知らせします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 生成AIの利用 ===== -->
+<section id="ai">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">05</p>
+      <h2 class="sec__title">生成AIは利用可、<br>盗作・剽窃は禁止</h2>
+      <p class="sec__en">AI &amp; Integrity</p>
+    </div>
+    <div class="content-body">
+      <p>生成AIなどのツールは使用できます。ただし、AIを使った部分も含め、制作内容を自分たちで説明できることが必要です。</p>
+      <div class="note-list">
+        <p class="note-item">プレゼン審査で十分に説明できない場合は、理解度の評価に反映されます。</p>
+      </div>
+      <h3 class="sub-h">盗作・剽窃の禁止</h3>
+      <p>他者の作品・アイデア・画像などを自分たちのものとして提出すること（盗作・剽窃）を禁止します。</p>
+      <div class="note-list">
+        <p class="note-item">公開されているライブラリ・素材・データなどを利用する場合は、利用条件（ライセンス）を守り、出典を作品説明 PDF に明記してください。</p>
+        <p class="note-item">生成AIの出力をそのまま用いる場合も、その旨と使用したツールを作品説明 PDF に記載してください。</p>
+        <p class="note-item">盗作・剽窃が判明した場合は審査の対象外とし、受賞後であっても取り消すことがあります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 表彰 ===== -->
+<section id="award">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">06</p>
+      <h2 class="sec__title">表彰</h2>
+      <p class="sec__en">Award</p>
+    </div>
+    <div class="content-body">
+      <p>優秀な作品に対して、学部長表彰を行い、賞状を贈呈します。表彰するグループ数は、応募状況と審査結果をふまえて決定します。</p>
+      <p>受賞グループは、次年度4月上旬に開催する「表彰および受賞記念発表会」で成果を発表します。卒業などにより参加が難しい場合は、ビデオメッセージなど別の方法での参加も可能です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 スケジュール ===== -->
+<section id="schedule">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <p class="sec__no">07</p>
+      <h2 class="sec__title">スケジュール</h2>
+      <p class="sec__en">Schedule</p>
+    </div>
+    <div class="content-body">
+      <table class="sched">
+        <tr><th>参加登録期間</th><td>2026年11月2日(月)〜12月31日(木)</td></tr>
+        <tr><th>グループマッチング</th><td>2026年11月中旬</td></tr>
+        <tr><th>作品提出期間</th><td>2027年1月1日(金)〜2月8日(月)</td></tr>
+        <tr><th>プレゼン審査</th><td>2027年2月上旬〜中旬</td></tr>
+        <tr><th>受賞者決定・発表会案内</th><td>2027年2月下旬</td></tr>
+        <tr><th>表彰・受賞記念発表会</th><td>2027年4月上旬</td></tr>
+      </table>
+      <div class="note-list"><p class="note-item">詳細日程は後日案内します。</p></div>
+      <p class="faq-link">その他のよくある質問は、<a href="index.html#faq">コンテストトップの Q&amp;A</a> をご覧ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__contact"><span class="mono">Contact / 問い合わせ</span><a href="mailto:ccs.contest.official@gmail.com">ccs.contest.official@gmail.com</a></div>
+      <div class="footer__logos">
+        <a href="https://www.niigata-u.ac.jp/" target="_blank" rel="noopener"><img src="assets/img/logo_niigata-u.svg" alt="新潟大学"></a>
+        <a href="https://create.niigata-u.ac.jp/" target="_blank" rel="noopener"><img src="assets/img/logo_create.png" alt="新潟大学 創生学部"></a>
+      </div>
+    </div>
+    <p class="footer__members">主催：新潟大学 創生学部<br>運営メンバー：創生学部教員　西海、小山、金子、田中、高橋、小形、熊野、澤邉、佐藤、今村、寺口、遊佐</p>
+    <div class="footer__bottom mono"><span>© 2026 College of Creative Studies, Niigata University</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  const toggle = document.getElementById('navToggle'), nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => {
+    const o = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', o);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('is-open')));
+
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+  }), {threshold:.1});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>

@@ -1,43 +1,1008 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>社会課題×DX チャレンジ 2026</title>
-<meta name="description" content="新潟大学 創生学部の学生コンテスト企画「社会課題×DX チャレンジ 2026 〜デジタルの力で未来をつくる〜」の公式サイト(準備中)">
-<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>社会課題×DX チャレンジ 2026 | 新潟大学 創生学部</title>
+<meta name="description" content="新潟大学 創生学部 創生学修コース×DX共創コースの学生が協働し、DX技術で社会課題に挑むコンテスト「社会課題×DX チャレンジ 2026」の公式サイト。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Dela+Gothic+One&family=Noto+Sans+JP:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f5ff;--ink:#14103a;--ink2:#4a4570;--lime:#c6ff4d;--uv:#6d3bff;--magenta:#ff2fb3;--ice:#19d3ff}
+/* ============================================================
+   社会課題×DX チャレンジ 2026  公式サイト
+   design: "quiet cyberpunk" — ライム × ウルトラバイオレット、細い罫線、非対称グリッド
+   ============================================================ */
+:root{
+  --bg:#131a2b; --bg2:#182036; --panel:#1c2540; --panel2:#243052;
+  --line:rgba(233,238,245,.14); --line2:rgba(233,238,245,.28);
+  --ink:#f2f5fa; --ink2:#bcc6d6; --ink3:#8792a6; --magenta:#ff4fd8;
+  --lime:#c6ff4d; --lime2:#9ee02a; --uv:#7c5cff; --uv2:#4b35c9; --ice:#9ad9ff;
+  --sans:'Noto Sans JP',sans-serif; --disp:'Space Grotesk','Noto Sans JP',sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --r:22px; --gutter:clamp(20px,4vw,64px);
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center;padding:32px 16px;line-height:1.8}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:
- radial-gradient(60vw 60vw at 100% 0%,rgba(255,47,179,.16),transparent 60%),
- radial-gradient(50vw 50vw at 0% 100%,rgba(25,211,255,.18),transparent 60%),
- radial-gradient(40vw 40vw at 50% 50%,rgba(109,59,255,.10),transparent 60%)}
-.card{max-width:640px;width:100%;background:#fff;border:1px solid rgba(20,16,58,.08);border-radius:24px;padding:40px 36px;box-shadow:0 20px 60px rgba(20,16,58,.08)}
-.tag{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--uv);border:1px solid rgba(109,59,255,.35);border-radius:999px;padding:4px 12px;margin-bottom:22px}
-h1{font-size:clamp(1.5rem,5vw,2.2rem);font-weight:900;line-height:1.3;letter-spacing:.01em}
-h1 .dx{color:var(--uv)}
-.sub{margin-top:6px;font-weight:700;color:var(--ink2)}
-.org{margin-top:22px;font-size:.95rem}
-.org b{font-weight:900}
-.status{margin-top:26px;padding:16px 18px;border-radius:14px;background:var(--lime);font-weight:900;font-size:1rem;color:var(--ink)}
-.status small{display:block;font-weight:500;font-size:.85rem;margin-top:4px;color:var(--ink2)}
-.contact{margin-top:26px;padding-top:18px;border-top:1px solid rgba(20,16,58,.1);font-size:.9rem;color:var(--ink2)}
-.contact .lbl{display:block;font-size:.78rem;letter-spacing:.1em;margin-bottom:2px}
-.contact a{color:var(--uv);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(109,59,255,.35)}
-@media(max-width:480px){.card{padding:30px 22px;border-radius:18px}}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.85;letter-spacing:.01em;overflow-x:clip;-webkit-font-smoothing:antialiased}
+section:nth-of-type(even){background:var(--bg2)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+::selection{background:var(--lime);color:#000}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.3;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+.lime{color:var(--lime)}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+section{position:relative;padding:clamp(72px,10vw,140px) 0}
+section+section{border-top:1px solid var(--line)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* ---------- section head (left sticky) ---------- */
+.sec{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.sec__head{position:sticky;top:96px}
+.sec__no{font-family:var(--mono);font-size:.8rem;letter-spacing:.2em;color:var(--lime);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec__no::after{content:'';flex:1;height:1px;background:var(--line2);max-width:60px}
+.sec__title{font-weight:900;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.2;letter-spacing:.02em}
+.sec__en{font-family:var(--disp);font-weight:500;font-size:.85rem;letter-spacing:.14em;color:var(--ink3);margin-top:10px;text-transform:uppercase}
+@media(max-width:860px){.sec{grid-template-columns:1fr;gap:28px}.sec__head{position:static}}
+
+/* ---------- header ---------- */
+.header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px var(--gutter);transition:background .35s,border-color .35s,backdrop-filter .35s;border-bottom:1px solid transparent}
+.header.is-scrolled{background:rgba(7,9,15,.72);backdrop-filter:blur(14px);border-color:var(--line)}
+.logos{display:flex;align-items:center;gap:16px}
+.logos img{height:34px;width:auto;opacity:.95}
+.logos .sep{width:1px;height:26px;background:var(--line2)}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{font-size:.82rem;font-weight:500;letter-spacing:.06em;color:var(--ink2);position:relative;padding:4px 0}
+.nav a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--lime);transition:right .3s}
+.nav a:hover{color:var(--ink)}.nav a:hover::after{right:0}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:700;font-size:.9rem;letter-spacing:.04em;border:1px solid var(--line2);color:var(--ink);transition:transform .25s,background .25s,color .25s,border-color .25s;white-space:nowrap}
+.pill .arr{font-family:var(--disp);font-weight:700;transition:transform .25s}
+.pill:hover{transform:translateY(-2px)}.pill:hover .arr{transform:translate(2px,-2px)}
+.pill.lime{background:var(--lime);color:#06080c;border-color:var(--lime)}
+.pill.lime:hover{background:#d9ff7a}
+.pill.ghost:hover{border-color:var(--ink);background:rgba(255,255,255,.04)}
+.pill.is-disabled{opacity:.55;cursor:not-allowed;filter:saturate(.4);pointer-events:none}
+.pill.is-disabled:hover{transform:none}
+.pill .chip{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.1);color:var(--ink2);white-space:nowrap}
+.pill.lime .chip{background:rgba(0,0,0,.14);color:#06080c}
+.nav-toggle{display:none;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;background:none;border:1px solid var(--line2);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+@media(max-width:1000px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(7,9,15,.96);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--line)}
+  .nav.is-open{display:flex}
+  .nav a{padding:14px var(--gutter);border-bottom:1px solid var(--line);font-size:.95rem}
+  .nav .pill{margin:14px var(--gutter) 0;justify-content:center}
+  .nav-toggle{display:block}
+  .logos img{height:28px}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:0;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:-3;background:url('assets/img/hero.jpg') center/cover no-repeat;transform:scale(1.04);filter:brightness(1.25) saturate(1.15)}
+.hero__aurora{position:absolute;inset:-20%;z-index:-2;pointer-events:none;filter:blur(70px);opacity:.75;mix-blend-mode:screen}
+.hero__aurora i{position:absolute;border-radius:50%;width:46vw;height:46vw;max-width:720px;max-height:720px}
+.hero__aurora i:nth-child(1){left:5%;top:10%;background:radial-gradient(circle,rgba(124,92,255,.75),transparent 60%);animation:drift1 16s ease-in-out infinite alternate}
+.hero__aurora i:nth-child(2){right:0;top:0;background:radial-gradient(circle,rgba(255,79,216,.55),transparent 60%);animation:drift2 19s ease-in-out infinite alternate}
+.hero__aurora i:nth-child(3){left:35%;bottom:-10%;background:radial-gradient(circle,rgba(198,255,77,.5),transparent 60%);animation:drift3 22s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(18vw,12vh) scale(1.25)}}
+@keyframes drift2{to{transform:translate(-22vw,18vh) scale(.85)}}
+@keyframes drift3{to{transform:translate(-14vw,-16vh) scale(1.2)}}
+.hero__veil{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,rgba(19,26,43,.78) 0%,rgba(19,26,43,.5) 45%,rgba(19,26,43,.15) 100%),
+  linear-gradient(180deg,rgba(19,26,43,.2) 0%,rgba(19,26,43,0) 40%,rgba(19,26,43,1) 100%)}
+.hero__inner{padding:140px var(--gutter) 0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:end;max-width:1240px;margin:0 auto;width:100%}
+.kicker{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(198,255,77,.18)}
+.hero__title{font-weight:900;line-height:1.02;letter-spacing:-.01em}
+.hero__title .l{display:block}
+.hero__title .l1{font-size:clamp(2.6rem,7.2vw,6.2rem)}
+.psy{background:linear-gradient(90deg,#fff 0%,var(--lime) 22%,var(--ice) 42%,var(--magenta) 62%,var(--uv) 80%,#fff 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 9s linear infinite}
+@keyframes flow{to{background-position:300% 0}}
+.gl{position:relative;display:inline-block}
+.gl::before,.gl::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;pointer-events:none;clip-path:inset(0 0 100% 0);-webkit-text-fill-color:currentColor}
+.gl::before{color:var(--lime);transform:translate(-.04em,-.02em);animation:gl1 7s steps(1) infinite}
+.gl::after{color:var(--magenta);transform:translate(.04em,.02em);animation:gl2 7s steps(1) infinite 3.5s}
+@keyframes gl1{0%,86%{clip-path:inset(0 0 100% 0)}87%{clip-path:inset(12% 0 62% 0)}89%{clip-path:inset(48% 0 22% 0)}91%{clip-path:inset(72% 0 6% 0)}93%,100%{clip-path:inset(0 0 100% 0)}}
+@keyframes gl2{0%,90%{clip-path:inset(0 0 100% 0)}91%{clip-path:inset(30% 0 48% 0)}93%{clip-path:inset(5% 0 80% 0)}95%{clip-path:inset(60% 0 18% 0)}97%,100%{clip-path:inset(0 0 100% 0)}}
+.hero__title .l2{font-family:var(--disp);font-weight:800;font-size:clamp(3rem,8.6vw,7.6rem);letter-spacing:-.03em;display:flex;align-items:baseline;gap:.15em;margin:.02em 0}
+.hero__title .l2 .x{font-family:var(--sans);font-weight:300;font-size:.55em;color:var(--ink2);transform:translateY(-.1em)}
+.hero__title .l2 .dx{color:var(--lime);text-shadow:0 0 32px rgba(198,255,77,.35);animation:dxpulse 3.2s ease-in-out infinite}
+@keyframes dxpulse{0%,100%{text-shadow:0 0 28px rgba(198,255,77,.35),0 0 0 rgba(255,79,216,0)}50%{text-shadow:0 0 54px rgba(198,255,77,.75),-.06em 0 0 rgba(255,79,216,.55),.06em 0 0 rgba(154,217,255,.55)}}
+.hero__title .l3{font-size:clamp(2.6rem,7.2vw,6.2rem)}
+.hero__title .l3 .year{font-family:var(--disp);font-weight:800;font-size:.72em;color:transparent;-webkit-text-stroke:1.5px rgba(233,238,245,.85);margin-left:.18em;letter-spacing:-.02em;vertical-align:baseline}
+.hero__tag{margin-top:28px;font-weight:300;font-size:clamp(1rem,1.8vw,1.35rem);letter-spacing:.2em;color:var(--ink2)}
+.hero__tag b{font-weight:700;color:var(--ink)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero__side{display:flex;flex-direction:column;gap:14px;align-self:stretch;justify-content:flex-end;padding-bottom:6px;min-width:0}
+.catch{margin-bottom:auto;align-self:flex-end;text-align:right;color:#fff;font-weight:900;line-height:1.1;letter-spacing:.04em;transform:rotate(-7deg);transform-origin:right top;filter:drop-shadow(0 8px 22px rgba(7,9,15,.55))}
+.catch__row{display:flex;align-items:flex-end;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.catch__stack{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:12px 22px 10px 18px;isolation:isolate}
+.catch__brush{position:absolute;inset:-8px -64px -8px 2px;width:calc(100% + 62px);height:calc(100% + 16px);z-index:-1}
+.catch__brush .dry{stroke-width:2;opacity:.25}
+.catch__w{display:block;white-space:nowrap;font-weight:900;line-height:1.25}
+.catch__brush{fill:#d8ff3a}.catch__brush .dry{stroke:#14103a;opacity:.18}.catch__brush .dot{fill:#d8ff3a}
+.catch__brush.g1,.catch__brush.g2{mix-blend-mode:normal;opacity:0;pointer-events:none}
+.catch__brush.g1{fill:#ff2fb3;transform:translate(-6px,2px);animation:cgl1 5s steps(1) infinite}
+.catch__brush.g2{fill:#19d3ff;transform:translate(6px,-3px);animation:cgl2 5s steps(1) infinite 2.5s}
+.catch__brush.g1 .dry,.catch__brush.g2 .dry,.catch__brush.g1 .dot,.catch__brush.g2 .dot{display:none}
+@keyframes cgl1{0%,88%{opacity:0;clip-path:inset(0 0 100% 0)}89%{opacity:1;clip-path:inset(10% 0 64% 0)}91%{clip-path:inset(46% 0 30% 0)}93%{clip-path:inset(70% 0 8% 0)}95%,100%{opacity:0;clip-path:inset(0 0 100% 0)}}
+@keyframes cgl2{0%,90%{opacity:0;clip-path:inset(0 0 100% 0)}91%{opacity:1;clip-path:inset(28% 0 52% 0)}93%{clip-path:inset(4% 0 82% 0)}95%{clip-path:inset(58% 0 20% 0)}97%,100%{opacity:0;clip-path:inset(0 0 100% 0)}}
+.catch__w{position:relative}
+.catch__w::before,.catch__w::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;clip-path:inset(0 0 100% 0);pointer-events:none;-webkit-text-stroke:0;text-shadow:none}
+.catch__w::before{color:#ff2fb3;transform:translate(-.05em,0);animation:cgl1 5s steps(1) infinite}
+.catch__w::after{color:#19d3ff;transform:translate(.05em,0);animation:cgl2 5s steps(1) infinite 2.5s}
+@media(prefers-reduced-motion:reduce){.catch__brush.g1,.catch__brush.g2,.catch__w::before,.catch__w::after{animation:none;opacity:0}}
+
+.catch{font-family:'Dela Gothic One','Noto Sans JP',sans-serif;font-weight:400}
+.catch__w{font-size:clamp(1.5rem,2.1vw,2rem);color:#2fe9ff;-webkit-text-stroke:1.2px #14103a;paint-order:stroke fill;text-shadow:2px 2px 0 #14103a;letter-spacing:.01em}
+.catch__tail{margin-left:76px;font-size:clamp(0.78rem,1.1vw,1.05rem);padding-bottom:8px;white-space:nowrap}
+.catch__line{margin-top:12px;font-size:clamp(1.9rem,3.3vw,3rem);letter-spacing:.04em;background:linear-gradient(90deg,#fff,var(--lime));-webkit-background-clip:text;background-clip:text;color:transparent}
+.date{border:1px solid var(--line2);border-radius:16px;padding:16px 20px;background:rgba(12,16,24,.55);backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:4px;min-width:240px}
+.date .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--lime);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.date .k::after{content:'';flex:1;height:1px;background:var(--line2)}
+.date .v{font-weight:900;font-size:clamp(1.3rem,2.2vw,1.7rem);letter-spacing:.02em;line-height:1.25;margin-top:4px;white-space:nowrap}
+.date .s{font-size:.78rem;color:var(--ink3)}
+.marquee{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;background:rgba(7,9,15,.5)}
+.marquee__track{display:inline-block;padding:12px 0;animation:mq 38s linear infinite}
+.marquee__track span{font-family:var(--disp);font-weight:700;font-size:.9rem;letter-spacing:.22em;color:var(--ink2);margin-right:64px;text-transform:uppercase}
+.marquee__track span i{font-style:normal;color:var(--lime);margin-right:64px}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(max-width:900px){.hero__inner{grid-template-columns:1fr;gap:28px;padding-top:110px}.hero__side{flex-direction:row;flex-wrap:wrap}.date{flex:1 1 220px}.catch{flex:1 1 100%;align-self:flex-start;text-align:left;margin:0 0 10px;transform:rotate(-4deg);transform-origin:left top}.catch__row{justify-content:flex-start}}
+@media(max-width:520px){.hero__title .l2{gap:.1em}.hero__title .l3 .year{display:block;margin:.05em 0 0;font-size:.9em}.date{min-width:0;flex:1 1 100%}}
+
+/* ---------- status ribbon (検討段階) ---------- */
+.status{background:linear-gradient(90deg,rgba(124,92,255,.22),rgba(124,92,255,.06) 60%,transparent);border-bottom:1px solid var(--line)}
+.status__in{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+.status__tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--ice);text-transform:uppercase}
+.status__tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--ice);box-shadow:0 0 0 0 rgba(154,217,255,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(154,217,255,0)}100%{box-shadow:0 0 0 0 rgba(154,217,255,0)}}
+.status__text{flex:1 1 420px;font-size:.95rem;color:var(--ink2)}
+.status__text b{color:var(--ink);font-weight:700}
+
+/* ---------- outline ---------- */
+.rows{border-top:1px solid var(--line2)}
+.row{display:grid;grid-template-columns:150px 1fr;gap:12px 28px;padding:20px 0;border-bottom:1px solid var(--line);transition:background .25s}
+.row:hover{background:linear-gradient(90deg,rgba(198,255,77,.05),transparent)}
+.row dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--lime);text-transform:uppercase;padding-top:6px}
+.row dt b{display:block;font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-transform:none;margin-bottom:2px}
+.row dd{font-size:1rem;color:var(--ink)}
+.row dd .note{display:block;font-size:.82rem;color:var(--ink3);margin-top:4px}
+.row dd ul{display:grid;gap:4px}
+.row dd ul li{padding-left:18px;position:relative}
+.row dd ul li::before{content:'';position:absolute;left:0;top:.85em;width:8px;height:1px;background:var(--lime)}
+.row dd a{color:var(--ice);border-bottom:1px solid rgba(154,217,255,.35)}
+@media(max-width:600px){.row{grid-template-columns:1fr;gap:6px}}
+
+/* ---------- purpose ---------- */
+.statement{font-weight:300;font-size:clamp(1.15rem,2.1vw,1.55rem);line-height:2;letter-spacing:.02em;color:var(--ink)}
+.statement mark{background:none;color:var(--ink);font-weight:700;background-image:linear-gradient(transparent 62%,rgba(198,255,77,.35) 62%)}
+.venn{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.venn svg{width:100%;height:auto;max-width:440px;justify-self:center}
+.venn__notes{display:grid;gap:14px}
+.vn{border-left:1px solid var(--line2);padding:4px 0 4px 18px}
+.vn .mono{display:block;margin-bottom:4px}
+.vn b{font-size:1.05rem}
+.vn p{font-size:.9rem;color:var(--ink2)}
+@media(max-width:800px){.venn{grid-template-columns:1fr}}
+
+/* ---------- bento (応募条件・作品提出) ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.tile:hover{border-color:var(--line2);transform:translateY(-2px)}
+.tile::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(360px circle at 100% 0%,rgba(124,92,255,.14),transparent 60%);opacity:0;transition:opacity .3s}
+.tile:hover::after{opacity:1}
+.tile .mono{display:block;margin-bottom:14px}
+.tile h3{font-size:1.25rem;font-weight:900;margin-bottom:12px;letter-spacing:.02em}
+.tile p{font-size:.95rem;color:var(--ink2)}
+.tile ol{counter-reset:n;display:grid;gap:12px}
+.tile ol li{counter-increment:n;display:grid;grid-template-columns:36px 1fr;gap:10px;font-size:.95rem;color:var(--ink)}
+.tile ol li::before{content:counter(n,decimal-leading-zero);font-family:var(--mono);color:var(--lime);font-size:.8rem;padding-top:4px}
+.tile.w3{grid-column:span 3}.tile.w2{grid-column:span 2}.tile.w6{grid-column:span 6}
+.tile.lime{background:var(--lime);border-color:var(--lime);color:#06080c}
+.tile.lime .mono{color:rgba(6,8,12,.6)}.tile.lime p{color:rgba(6,8,12,.75)}.tile.lime::after{display:none}
+.tile.uv{background:linear-gradient(145deg,#3a2a8f,#1e1a46);border-color:rgba(124,92,255,.6)}
+.tile .big{font-family:var(--disp);font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
+.tile .big small{font-family:var(--sans);font-weight:900;font-size:.42em;letter-spacing:.04em;margin-left:.2em}
+@media(max-width:860px){.tile.w3,.tile.w2{grid-column:span 6}}
+
+/* ---------- timeline ---------- */
+.tl{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:8px}
+.tl::before{content:'';position:absolute;left:0;right:0;top:9px;height:1px;background:linear-gradient(90deg,var(--lime),var(--uv) 60%,var(--ice))}
+.tl__item{position:relative;padding-top:34px}
+.tl__item::before{content:'';position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:var(--bg);border:1px solid var(--line2)}
+.tl__item::after{content:'';position:absolute;left:6px;top:6px;width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 14px var(--lime)}
+.tl__item:nth-child(3)::after,.tl__item:nth-child(4)::after{background:var(--uv);box-shadow:0 0 14px var(--uv)}
+.tl__item:nth-child(5)::after,.tl__item:nth-child(6)::after{background:var(--ice);box-shadow:0 0 14px var(--ice)}
+.tl__date{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--ink2);margin-bottom:8px}
+.tl__step{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase;margin-bottom:6px}
+.tl__title{font-weight:900;font-size:1.05rem;line-height:1.45}
+.tl__item.hot .tl__date{color:var(--lime)}
+@media(max-width:900px){.tl{grid-template-columns:1fr;gap:0}.tl::before{left:9px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--lime),var(--uv) 60%,var(--ice))}.tl__item{padding:0 0 30px 40px}.tl__item::before{top:2px}.tl__item::after{top:8px}}
+
+/* ---------- criteria ---------- */
+.crit{border-top:1px solid var(--line2)}
+.crit__row{display:grid;grid-template-columns:70px 1fr 1.2fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);position:relative;align-items:start}
+.crit__row::before{content:'';position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--lime);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.crit__row:hover::before{width:100%}
+.crit__no{font-family:var(--disp);font-weight:800;font-size:1.6rem;color:var(--lime);line-height:1;letter-spacing:-.02em}
+.crit__name{font-weight:900;font-size:1.2rem;line-height:1.4}
+.crit__desc{color:var(--ink2);font-size:.95rem}
+@media(max-width:700px){.crit__row{grid-template-columns:50px 1fr}.crit__desc{grid-column:2}}
+.approach{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+.ap{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--panel);position:relative}
+.ap .mono{display:block;margin-bottom:10px}
+.ap b{display:block;font-size:1.1rem;margin-bottom:8px}
+.ap p{font-size:.92rem;color:var(--ink2)}
+.ap.a{border-color:rgba(198,255,77,.35)}.ap.b{border-color:rgba(124,92,255,.5)}
+.ap.a .mono{color:var(--lime)}.ap.b .mono{color:var(--uv)}
+@media(max-width:700px){.approach{grid-template-columns:1fr}}
+.howto{margin-top:48px}
+.howto h3{font-weight:900;font-size:1.3rem;margin-bottom:4px}
+.howto .sub{color:var(--ink3);font-size:.9rem}
+
+/* ---------- apply / entry ---------- */
+.apply{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.apply .tile ul{display:grid;gap:10px}
+.apply .tile ul li{display:flex;align-items:center;gap:12px;font-size:.95rem;padding:10px 14px;border:1px solid var(--line);border-radius:12px}
+.apply .tile ul li .mono{margin:0;color:var(--lime)}
+.form-ph{margin-top:14px;border:1px dashed var(--line2);border-radius:var(--r);padding:44px 24px;text-align:center;color:var(--ink3);background:rgba(16,21,31,.6)}
+.form-ph b{display:block;color:var(--ink);font-size:1.1rem;margin-bottom:6px}
+#entryForm iframe{width:100%;height:340px;min-height:0;border:0;border-radius:var(--r);background:#fff;margin-top:14px}
+@media(max-width:800px){#entryForm iframe{height:300px}}
+@media(max-width:800px){.apply{grid-template-columns:1fr}}
+
+/* ---------- award ---------- */
+.award{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.award>*{min-width:0}
+.top3{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,4.9vw,4.8rem);width:max-content;max-width:100%;padding-right:.15em;white-space:nowrap;line-height:.9;letter-spacing:-.04em;background:linear-gradient(120deg,var(--lime),var(--ice) 55%,var(--uv));-webkit-background-clip:text;background-clip:text;color:transparent}
+.top3 small{display:block;white-space:normal;font-family:var(--sans);font-weight:900;font-size:clamp(1rem,2vw,1.4rem);letter-spacing:.14em;color:var(--ink);-webkit-text-fill-color:var(--ink);margin-top:10px}
+.award__text p{color:var(--ink2);font-size:1rem}
+.award__text h3{font-weight:900;font-size:1.35rem;line-height:1.5;margin-bottom:12px}
+.award__text h3 em{font-style:normal;color:var(--lime)}
+.event{margin-top:24px;border:1px solid var(--line2);border-radius:16px;padding:18px 22px;display:flex;flex-direction:column;gap:4px;background:var(--panel)}
+.event .d{font-family:var(--disp);font-weight:800;font-size:1.5rem;color:var(--ice);letter-spacing:-.02em;line-height:1.1;margin-bottom:4px}
+.event b{font-size:1.02rem;display:block}
+.event span{font-size:.88rem;color:var(--ink2);display:block}
+@media(max-width:800px){.award{grid-template-columns:1fr;gap:20px}}
+
+/* ---------- faq ---------- */
+.faq__cat{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;color:var(--lime);text-transform:uppercase;margin:40px 0 10px;display:flex;align-items:center;gap:12px}
+.faq__cat:first-child{margin-top:0}
+.faq__cat b{font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:.04em;color:var(--ink);text-transform:none}
+.faq__cat::after{content:'';flex:1;height:1px;background:var(--line)}
+.q{border-bottom:1px solid var(--line)}
+.q summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 1fr 28px;gap:12px;align-items:center;padding:18px 0;font-weight:700;font-size:1.02rem}
+.q summary::-webkit-details-marker{display:none}
+.q summary .n{font-family:var(--mono);font-size:.75rem;color:var(--ink3);letter-spacing:.1em}
+.q summary .pm{width:28px;height:28px;border-radius:50%;border:1px solid var(--line2);position:relative;transition:transform .35s,background .35s,border-color .35s}
+.q summary .pm::before,.q summary .pm::after{content:'';position:absolute;left:50%;top:50%;width:10px;height:1px;background:var(--ink);transform:translate(-50%,-50%)}
+.q summary .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.q[open] summary .pm{transform:rotate(45deg);background:var(--lime);border-color:var(--lime)}
+.q[open] summary .pm::before,.q[open] summary .pm::after{background:#06080c}
+.q summary:hover .pm{border-color:var(--ink)}
+.q .a{padding:0 0 22px 56px;color:var(--ink2);font-size:.95rem;display:grid;grid-template-columns:auto 1fr;gap:12px}
+.q .a::before{content:'A';font-family:var(--disp);font-weight:800;color:var(--lime);line-height:1.6}
+@media(max-width:600px){.q summary{grid-template-columns:34px 1fr 28px}.q .a{padding-left:0}}
+
+
+/* ---------- photos (duotone figures) ---------- */
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
+.fig{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:4/3;isolation:isolate}
+.fig.tall{aspect-ratio:4/5}
+.fig.fill{aspect-ratio:auto;min-height:340px}
+.fig.fill img{position:absolute;inset:0}
+.fig img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.92);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.fig:hover img{transform:scale(1.04)}
+.fig::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(124,92,255,.75),rgba(198,255,77,.55));mix-blend-mode:multiply;pointer-events:none}
+.fig::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,9,15,0) 55%,rgba(7,9,15,.85) 100%);pointer-events:none}
+.fig .cap{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.fig .cap b{display:block;font-size:1rem;font-weight:900;letter-spacing:.04em}
+.fig .cap .mono{color:var(--lime);margin-bottom:4px;display:block}
+.fig .cap .tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink2);border:1px solid var(--line2);padding:4px 8px;border-radius:999px;white-space:nowrap;backdrop-filter:blur(6px)}
+.fig .corner{position:absolute;z-index:2;width:14px;height:14px;border-color:var(--lime);border-style:solid;border-width:0}
+.fig .corner.tl{left:12px;top:12px;border-left-width:1px;border-top-width:1px}
+.fig .corner.br{right:12px;bottom:12px;border-right-width:1px;border-bottom-width:1px}
+@media(max-width:800px){.figs{grid-template-columns:repeat(2,1fr);gap:10px}.fig .cap b{font-size:.9rem}}
+
+/* ---------- next stage ---------- */
+.next{background:radial-gradient(900px 500px at 85% 10%,rgba(124,92,255,.16),transparent 60%),radial-gradient(700px 400px at 10% 90%,rgba(198,255,77,.08),transparent 60%)}
+.next__catch{font-weight:900;font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.35;letter-spacing:.01em;margin-bottom:14px}
+.next__catch em{font-style:normal;color:var(--lime)}
+.next__sub{font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:12px}
+.next__body{color:var(--ink2);font-size:.98rem;max-width:62ch}
+.next__grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:36px}
+.stage{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:26px 28px;display:grid;grid-template-columns:1.15fr 1fr;gap:20px 36px;align-items:center}
+.stage svg{width:100%;height:auto}
+.stage .legend{display:grid;gap:10px}
+.stage .legend li{display:grid;grid-template-columns:78px 1fr;gap:12px;align-items:baseline;font-size:.92rem}
+.stage .legend li .mono{color:var(--ink3)}
+.stage .legend li b{display:block;color:var(--ink)}
+.stage .legend li span{color:var(--ink3);font-size:.82rem}
+.stage .legend li.s2 .mono{color:var(--lime)}
+.ext{border:1px solid rgba(198,255,77,.35);border-radius:var(--r);background:linear-gradient(135deg,rgba(198,255,77,.08),rgba(124,92,255,.08));display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden;align-items:stretch}
+.ext__body{padding:26px 28px;display:flex;flex-direction:column;gap:6px;justify-content:center}
+.ext__body .pill{align-self:flex-start;margin-top:6px}
+.ext .mono{display:block;margin-bottom:8px;color:var(--lime)}
+.ext h3{font-size:clamp(1.2rem,2vw,1.5rem);font-weight:900;letter-spacing:.02em;margin-bottom:10px}
+.ext dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:.9rem;color:var(--ink2)}
+.ext dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--ink3);text-transform:uppercase;padding-top:5px}
+.ext .note{font-size:.8rem;color:var(--ink3);margin:6px 0 14px}
+.next__foot{margin-top:18px;font-size:.8rem;color:var(--ink3)}
+@media(max-width:860px){.stage{grid-template-columns:1fr}.ext{grid-template-columns:1fr}.ext-shot{border-right:0;border-bottom:1px solid var(--line)}}
+
+.ext-shot{display:flex;flex-direction:column;justify-content:flex-start;border-right:1px solid var(--line);background:linear-gradient(180deg,#edeaf7,#f7f5ff);color:var(--ink);overflow:hidden}
+.ext-shot:hover img{opacity:.92}
+.ext-shot__chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#edeaf7;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.66rem;color:var(--ink3);letter-spacing:.06em}
+.ext-shot__chrome i{width:9px;height:9px;border-radius:50%;background:#cfc9e6}
+.ext-shot__chrome span{margin-left:8px;background:#fff;border-radius:6px;padding:3px 10px;flex:1;text-align:center}
+.ext-shot img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;display:block}
+.ext-shot__bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-top:1px solid var(--line);font-size:.9rem;color:var(--ink2);margin-top:auto}
+.ext-shot__bar b{color:var(--ink)}.ext-shot__bar .arr{margin-left:auto;font-family:var(--disp);font-weight:700;color:var(--uv)}
+.work-def{margin:0 0 14px;padding:12px 14px;border-left:3px solid var(--uv);background:rgba(109,59,255,.07);border-radius:0 10px 10px 0;font-size:.95rem;color:var(--ink)}
+.work-def b{color:var(--uv)}
+.row dd ul{margin-top:6px}
+/* ---------- cta ---------- */
+.cta{padding:0 0 clamp(72px,10vw,140px)}
+.cta__box{border-radius:calc(var(--r) + 10px);background:var(--lime);color:#06080c;padding:clamp(40px,6vw,80px);display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:end;position:relative;overflow:hidden}
+.cta__box::before{content:'2026';position:absolute;right:-10px;top:-40px;font-family:var(--disp);font-weight:800;font-size:clamp(8rem,26vw,22rem);line-height:1;color:rgba(6,8,12,.07);letter-spacing:-.06em;pointer-events:none}
+.cta__box h2{font-family:var(--disp);font-weight:800;font-size:clamp(2.2rem,6vw,5.4rem);line-height:.95;letter-spacing:-.03em}
+.cta__box h2 small{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(.95rem,1.6vw,1.2rem);letter-spacing:.14em;margin-top:18px}
+.cta__btns{display:flex;flex-direction:column;gap:10px;position:relative}
+.cta__box .pill{border-color:#06080c;color:#06080c;background:transparent;justify-content:space-between}
+.cta__box .pill.dark{background:#06080c;color:var(--lime)}
+.cta__box .pill.dark:hover{background:#1a1f2a}
+.cta__box .pill .chip{background:rgba(6,8,12,.12);color:#06080c}
+.cta__box .pill.dark .chip{background:rgba(198,255,77,.18);color:var(--lime)}
+@media(max-width:800px){.cta__box{grid-template-columns:1fr}.cta__box .pill{white-space:normal;line-height:1.4;text-align:left}.cta__box .pill .arr{margin-left:auto}}
+@media(max-width:600px){.cta__box{padding:32px 24px}.cta__box h2{font-size:clamp(1.9rem,9.2vw,2.6rem)}.cta__box::before{font-size:7rem;top:-20px}}
+
+/* ---------- footer ---------- */
+.footer{border-top:1px solid var(--line);padding:48px 0 40px}
+.footer__grid{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.footer__contact .mono{display:block;margin-bottom:6px}
+.footer__contact a{font-family:var(--disp);font-weight:700;font-size:clamp(1.1rem,2vw,1.5rem);letter-spacing:.02em;color:var(--ink);border-bottom:1px solid var(--line2);transition:border-color .3s}
+.footer__contact a:hover{border-color:var(--lime)}
+.footer__logos{display:flex;align-items:center;gap:18px}
+.footer__logos img{height:44px;width:auto;opacity:.9}
+.footer__members{margin-top:28px;font-size:.82rem;color:var(--ink3);line-height:1.9}
+.footer__bottom{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer__bottom a{color:var(--ink2)}
+@media(max-width:700px){.footer__grid{grid-template-columns:1fr}}
+
+/* ---------- floating entry ---------- */
+.float{position:fixed;right:18px;bottom:18px;z-index:40;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s}
+.float.is-visible{opacity:1;transform:none;pointer-events:auto}
+.float .pill{box-shadow:0 10px 30px rgba(0,0,0,.45)}
+
+/* ============================================================
+   BRIGHT THEME — 暗さを基調にしない。白〜淡ラベンダーの下地にネオン色の帯とカード。
+   ヒーロー・ステージ図・写真だけは濃色の上に白文字(スコープ内で変数を上書き)。
+   ============================================================ */
+:root{
+  --bg:#f7f5ff; --bg2:#ffffff; --panel:#ffffff; --panel2:#f1edff;
+  --line:rgba(20,16,60,.12); --line2:rgba(20,16,60,.26);
+  --ink:#14103a; --ink2:#4a4870; --ink3:#7d7aa0;
+  --lime:#c6ff4d; --uv:#6d3bff; --magenta:#ff2fb3; --ice:#19d3ff; --sun:#ffd43b;
+}
+body{background:var(--bg);background-image:
+  radial-gradient(900px 600px at 8% 12%,rgba(109,59,255,.14),transparent 60%),
+  radial-gradient(800px 600px at 92% 30%,rgba(255,47,179,.12),transparent 60%),
+  radial-gradient(900px 700px at 50% 85%,rgba(25,211,255,.12),transparent 60%);background-attachment:fixed}
+.grain{opacity:.14;mix-blend-mode:multiply}
+section:nth-of-type(even){background:rgba(255,255,255,.55)}
+::selection{background:var(--magenta);color:#fff}
+/* 明るい地の上では、ライム文字は読めないので紫に */
+.sec__no,.row dt,.tl__item.hot .tl__date,.crit__no,.q .a::before,.faq__cat,.ext .mono,.tile ol li::before,.apply .tile ul li .mono,.date .k,.next__catch em,.award__text h3 em{color:var(--uv)}
+.row dd a{color:var(--uv);border-bottom-color:rgba(109,59,255,.35)}
+.row:hover{background:linear-gradient(90deg,rgba(109,59,255,.06),transparent)}
+.row dd ul li::before,.crit__row::before{background:var(--magenta)}
+.statement mark{background-image:linear-gradient(transparent 62%,rgba(198,255,77,.9) 62%)}
+.vn{border-left-color:var(--magenta)}
+/* ヘッダー: ヒーロー上は白、スクロール後は白地に黒 */
+.header{color:#fff}
+.logos .dark{display:none}
+.header.is-scrolled{background:rgba(255,255,255,.86);color:var(--ink);border-color:var(--line)}
+.header.is-scrolled .logos .light{display:none}.header.is-scrolled .logos .dark{display:block}
+.header .logos .sep{background:currentColor;opacity:.35}
+.nav a{color:inherit;opacity:.85}.nav a:hover{opacity:1;color:inherit}.nav a::after{background:var(--magenta)}
+.nav-toggle{color:inherit;border-color:currentColor}
+.header .pill.lime{color:#14103a}
+@media(max-width:900px){.nav{background:rgba(255,255,255,.97);color:var(--ink);border-bottom:1px solid var(--line)}.nav a{border-bottom:1px solid var(--line)}}
+/* ボタン */
+.pill{border-color:var(--line2);color:var(--ink)}
+.pill.ghost:hover{border-color:var(--ink);background:rgba(20,16,60,.04)}
+.pill .chip{background:rgba(20,16,60,.08);color:var(--ink2)}
+.pill.lime{background:var(--lime);color:#14103a;border-color:var(--lime)}
+.pill.lime:hover{background:#d4ff7a}
+/* ヒーロー(濃色のまま): 変数をスコープ内で白系に */
+.hero{--ink:#fff;--ink2:#efeaff;--ink3:#cfc6ff;--line:rgba(255,255,255,.22);--line2:rgba(255,255,255,.42);color:#fff}
+.hero .date .k{color:var(--lime)}
+.hero .pill{color:#fff;border-color:rgba(255,255,255,.5)}.hero .pill.lime{color:#14103a}.hero .pill .chip{background:rgba(255,255,255,.18);color:#fff}.hero .pill.lime .chip{background:rgba(0,0,0,.14);color:#14103a}
+.hero__bg{filter:brightness(1.05) saturate(1.25)}
+.hero__veil{background:linear-gradient(90deg,rgba(20,8,60,.72) 0%,rgba(20,8,60,.42) 45%,rgba(20,8,60,.1) 100%),linear-gradient(180deg,rgba(20,8,60,.25) 0%,rgba(20,8,60,0) 45%,rgba(43,16,104,.92) 100%)}
+.hero__aurora{opacity:.9}
+.marquee{border:0;background:linear-gradient(90deg,var(--uv),var(--magenta) 55%,#ff7a3d);color:#fff}
+.marquee__track span{color:#fff}.marquee__track span i{color:var(--lime)}
+/* 検討段階リボン */
+.status{background:linear-gradient(90deg,rgba(109,59,255,.14),rgba(255,47,179,.1) 60%,rgba(25,211,255,.1));border-bottom:1px solid var(--line)}
+.status__tag{color:var(--uv)}.status__tag .pulse{background:var(--magenta);box-shadow:0 0 0 0 rgba(255,47,179,.6)}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,47,179,0)}100%{box-shadow:0 0 0 0 rgba(255,47,179,0)}}
+/* ベン図(SVG の色は CSS で上書き) */
+/* 写真プレート: 白文字で */
+.fig{color:#fff;border-color:transparent;box-shadow:0 18px 40px rgba(20,16,60,.18)}
+.fig::before{background:linear-gradient(135deg,rgba(109,59,255,.5),rgba(255,47,179,.3))}
+.fig img{filter:grayscale(.6) contrast(1.05)}
+.fig::after{background:linear-gradient(180deg,rgba(20,8,60,0) 50%,rgba(20,8,60,.85) 100%)}
+.fig .cap .mono,.fig .corner{color:var(--lime);border-color:var(--lime)}.fig .cap .tag{color:#fff;border-color:rgba(255,255,255,.5)}
+/* タイル(bento) */
+.tile{box-shadow:0 10px 30px rgba(20,16,60,.06)}
+.tile::after{background:radial-gradient(360px circle at 100% 0%,rgba(255,47,179,.12),transparent 60%)}
+.tile.lime{color:#14103a}
+.tile.uv{background:linear-gradient(145deg,#6d3bff,#ff2fb3);border-color:transparent;color:#fff}
+.tile.uv .mono{color:rgba(255,255,255,.75)}.tile.uv p{color:rgba(255,255,255,.9)}
+.tile.cyan{background:linear-gradient(145deg,#19d3ff,#7ef0ff);border-color:transparent;color:#14103a}
+.tile.cyan .mono{color:rgba(20,16,60,.6)}.tile.cyan p{color:rgba(20,16,60,.78)}
+/* タイムライン */
+.tl::before{background:linear-gradient(90deg,var(--uv),var(--magenta) 60%,var(--ice))}
+.tl__item::before{background:#fff;border-color:var(--line2)}
+.tl__item::after{background:var(--uv);box-shadow:0 0 12px rgba(109,59,255,.6)}
+.tl__item:nth-child(3)::after,.tl__item:nth-child(4)::after{background:var(--magenta);box-shadow:0 0 12px rgba(255,47,179,.6)}
+.tl__item:nth-child(5)::after,.tl__item:nth-child(6)::after{background:var(--ice);box-shadow:0 0 12px rgba(25,211,255,.6)}
+@media(max-width:900px){.tl::before{background:linear-gradient(180deg,var(--uv),var(--magenta) 60%,var(--ice))}}
+/* 審査基準: 鮮やかな帯 */
+#criteria{background:linear-gradient(135deg,#6d3bff 0%,#ff2fb3 60%,#ff7a3d 100%);--ink:#fff;--ink2:#ffeaf8;--ink3:#f5dcff;--line:rgba(255,255,255,.28);--line2:rgba(255,255,255,.5);--panel:rgba(255,255,255,.14);color:#fff}
+#criteria .sec__no,#criteria .crit__no{color:var(--lime)}
+#criteria .crit__row::before{background:var(--lime)}
+#criteria .ap{backdrop-filter:blur(6px);border-color:rgba(255,255,255,.45)}
+#criteria .ap .mono{color:var(--lime)}
+/* 応募方法のプレースホルダ */
+.form-ph{background:var(--panel2);border-color:var(--line2);color:var(--ink3)}
+/* 表彰 */
+.top3{background:linear-gradient(120deg,var(--uv),var(--magenta) 55%,var(--ice));-webkit-background-clip:text;background-clip:text}
+.top3 small{-webkit-text-fill-color:var(--ink)}
+.top3--ja{font-family:var(--sans);font-weight:900;font-size:clamp(2.3rem,4.2vw,4rem);letter-spacing:.02em;line-height:1.1}
+.event .d{color:var(--magenta)}
+/* Q&A */
+.q[open] summary .pm{background:var(--magenta);border-color:var(--magenta)}
+.q[open] summary .pm::before,.q[open] summary .pm::after{background:#fff}
+/* 次のステージ */
+.next{background:radial-gradient(900px 500px at 85% 10%,rgba(255,47,179,.12),transparent 60%),radial-gradient(700px 400px at 10% 90%,rgba(25,211,255,.14),transparent 60%)}
+.stage{background:linear-gradient(160deg,#2b1468,#140a3a);--ink:#fff;--ink2:#ddd6ff;--ink3:#b7afe6;color:#fff;border-color:transparent}
+.stage .legend li.s2 .mono{color:var(--lime)}
+.ext{border-color:rgba(109,59,255,.4);background:linear-gradient(135deg,rgba(109,59,255,.08),rgba(255,47,179,.08))}
+/* CTA: ネオンのグラデーション */
+.cta__box{background:linear-gradient(120deg,#6d3bff 0%,#ff2fb3 55%,#19d3ff 100%);color:#fff;box-shadow:0 24px 60px rgba(109,59,255,.3)}
+.cta__box::before{color:rgba(255,255,255,.12)}
+.cta__box h2{font-weight:700;letter-spacing:-.02em}
+.cta__box h2 small{color:#fff}
+.cta__box .pill{border-color:rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.08)}
+.cta__box .pill .chip{background:rgba(255,255,255,.2);color:#fff}
+.cta__box .pill.dark{background:#14103a;color:#fff;border-color:#14103a}
+.cta__box .pill.dark .chip{background:rgba(198,255,77,.2);color:var(--lime)}
+.cta__box .pill.dark:hover{background:#241a5c}
+/* フッター / 追従ボタン */
+.footer{background:#fff;border-top:1px solid var(--line)}
+.footer__contact a{color:var(--ink);border-bottom-color:var(--line2)}.footer__contact a:hover{border-color:var(--magenta)}
+.float .pill{box-shadow:0 10px 30px rgba(109,59,255,.35)}
+@media(max-width:600px){.catch__row{flex-wrap:wrap;gap:6px}.catch__tail{margin-left:0;padding-top:10px;padding-bottom:0}.catch__brush{inset:-8px -30px -8px 0;width:calc(100% + 30px)}.catch{max-width:100%}}
+.catch--m{display:none}
+@media(max-width:900px){
+  .hero__side .catch{display:none}
+  .catch--m{display:block;margin:0;flex:none;align-self:center;justify-self:end;text-align:right;transform:rotate(-7deg);transform-origin:right center;max-width:none;width:max-content}
+  .catch--m .catch__row{justify-content:flex-end;flex-wrap:wrap;gap:2px}
+  .catch--m .catch__stack{align-items:flex-end}
+  .catch--m .catch__tail{flex-basis:100%;margin-left:0;text-align:right;padding-top:6px}
+  .catch--m .catch__brush{inset:-5px -16px -5px 0;width:calc(100% + 16px);height:calc(100% + 10px)}
+  .title-row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:center}
+  .hero__title{white-space:nowrap}
+  .hero__title .l1,.hero__title .l3{font-size:clamp(1.3rem,6.4vw,3.2rem)}
+  .hero__title .l2{font-size:clamp(1.55rem,7.6vw,3.8rem)}
+  .hero__title .l3 .year{font-size:.85em}
+  .catch--m .catch__stack{padding:7px 8px 5px 8px}
+  .catch--m .catch__w{font-size:clamp(.62rem,2.9vw,1.2rem);-webkit-text-stroke:.8px #14103a;text-shadow:1.5px 1.5px 0 #14103a}
+  .catch--m .catch__tail{font-size:clamp(.72rem,2.6vw,1.1rem);padding-top:4px}
+  .catch--m .catch__line{font-size:clamp(.92rem,3.4vw,1.5rem);margin-top:2px}
+}
+.chip.lock{display:inline-flex;align-items:center;gap:4px;letter-spacing:.06em}
+.chip.lock .lock-ic{flex:none;display:block}
+.form-ph .lock-big{display:block;margin:0 auto 10px;width:30px;height:30px;color:var(--uv,#6d3bff)}
+.impl-def{display:block;margin-top:2px;font-size:.8rem;color:var(--ink3);line-height:1.6}
+.to-guide{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:700;font-size:.9rem;color:var(--uv);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.to-guide:hover{opacity:.8}
+.q .a a,.row dd .note a{color:var(--uv);font-weight:700}
+/* ヒーロー内のアンケート枠 */
+.date--survey{border-color:var(--lime);background:rgba(12,16,24,.62);box-shadow:0 0 0 1px rgba(198,255,77,.25),0 10px 30px rgba(198,255,77,.18)}
+.date--survey .k{color:var(--lime)}.date--survey .k .pulse{background:var(--lime);box-shadow:0 0 0 0 rgba(198,255,77,.7);animation-name:lpulse}
+@keyframes lpulse{70%{box-shadow:0 0 0 9px rgba(198,255,77,0)}100%{box-shadow:0 0 0 0 rgba(198,255,77,0)}}
+.date--survey .s{color:var(--ink2);line-height:1.6;margin-top:4px}.date--survey .s b{color:#fff}
+.date--survey .pulse{width:8px;height:8px;border-radius:50%;display:inline-block;animation:lpulse 1.8s infinite}
+.date__btn{margin-top:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--lime);color:#14103a;font-weight:900;font-size:.9rem;text-decoration:none;align-self:flex-start;transition:transform .2s}
+.date__btn:hover{transform:translateY(-2px)}
+@media(max-width:900px){.date--survey{flex:1 1 100%}.date__btn{align-self:stretch}}
+@media(prefers-reduced-motion:reduce){.survey__tag .pulse,.date--survey .pulse{animation:none}}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dates .date{min-width:0;padding:14px 16px}
+.dates .date .v{font-size:clamp(1.05rem,1.45vw,1.3rem);white-space:normal}
+.date,.date--survey{background:rgba(12,16,24,.42)}
+.date--survey{padding:14px 18px 16px}
+.date--survey .v{font-size:clamp(1.15rem,1.7vw,1.5rem)}
+.date__row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:center}
+.date__row .s{font-size:.8rem;line-height:1.55}
+.date--survey .date__btn{margin:0;white-space:nowrap;align-self:center}
+@media(max-width:1100px){.date__row{grid-template-columns:1fr}.date--survey .date__btn{align-self:stretch;margin-top:8px}}
+@media(max-width:900px){.dates{flex:1 1 100%}.hero__side{gap:12px}}
+@media(max-width:520px){.dates{grid-template-columns:1fr}}
+.dates .nw{white-space:nowrap}
+/* SURVEY 枠: ライム地で色分け・大きめ */
+.date--survey{background:var(--lime);border-color:var(--lime);color:#14103a;padding:18px 22px 20px;box-shadow:0 0 0 1px rgba(198,255,77,.5),0 16px 40px rgba(198,255,77,.28)}
+.hero .date--survey .k,.date--survey .k{color:#14103a}.date--survey .k::after{background:rgba(20,16,60,.35)}
+.date--survey .k .pulse{background:var(--magenta);box-shadow:0 0 0 0 rgba(255,47,179,.6);animation-name:spulse}
+@keyframes spulse{70%{box-shadow:0 0 0 9px rgba(255,47,179,0)}100%{box-shadow:0 0 0 0 rgba(255,47,179,0)}}
+.date--survey .v{color:#14103a;font-size:clamp(1.3rem,1.9vw,1.7rem)}
+.date__lead{margin:10px 0 8px;font-weight:900;font-size:clamp(1rem,1.3vw,1.18rem);line-height:1.5;color:#14103a;letter-spacing:.01em}
+.date--survey .s,.date--survey .date__row .s{color:#2b2650;font-size:.84rem}
+.date--survey .date__btn{background:#14103a;color:#fff;box-shadow:0 8px 20px rgba(20,16,60,.3)}
+.date--survey .date__btn:hover{background:#241a5c}
+@media(max-width:900px){.date__lead br{display:none}}
+.date--survey .nw{white-space:nowrap}
+.date__due{display:block;margin-top:4px;font-size:.78rem;font-weight:700;color:#14103a;white-space:nowrap}
+.date--survey .date__lead{margin-top:12px}
+/* キャッチコピー(回転)の下端が日付枠に重ならないよう余白を確保 */
+.hero__side .catch{margin-bottom:auto;padding-bottom:clamp(30px,3vw,44px)}
+/* ヒーローをファーストビューに収める */
+.hero__inner{padding-top:110px}
+.marquee{margin-top:28px}
+.date__lead{font-size:clamp(.92rem,1.05vw,1rem)}
+@media(min-width:901px) and (max-height:820px){
+  .hero__inner{padding-top:92px}
+  .hero__side{gap:10px}
+  .hero__side .catch{padding-bottom:26px}
+  .hero__side .catch__w{font-size:clamp(1.3rem,1.75vw,1.7rem)}
+  .hero__side .catch__tail{font-size:clamp(.72rem,.95vw,.95rem)}
+  .hero__side .catch__line{font-size:clamp(1.6rem,2.7vw,2.5rem);margin-top:8px}
+  .dates .date{padding:11px 14px}
+  .date--survey{padding:13px 18px 14px}
+  .date__lead{margin:7px 0 5px;font-size:clamp(.88rem,1.05vw,1rem)}
+  .date__row .s{font-size:.76rem}
+  .date--survey .date__btn{padding:9px 14px;font-size:.84rem}
+  .hero__cta{margin-top:22px}
+  .marquee{margin-top:16px}
+  .marquee__track{padding:9px 0}
+}
+
+/* ---------- 参加の流れ ---------- */
+.sec__note{margin-top:18px;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--ink3)}
+.pts{margin-bottom:34px}
+.flow{position:relative;display:grid;gap:0;counter-reset:fl}
+.flow::before{content:'';position:absolute;left:9px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--uv),var(--magenta) 55%,var(--ice));border-radius:2px}
+.flow__step{position:relative;display:grid;grid-template-columns:230px 1fr;gap:10px 28px;padding:22px 0 26px 40px;border-bottom:1px solid var(--line)}
+.flow__step:last-child{border-bottom:0}
+.flow__step::before{content:'';position:absolute;left:0;top:27px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid var(--uv);box-shadow:0 0 0 4px rgba(109,59,255,.12)}
+.flow__step::after{content:'';position:absolute;left:6px;top:33px;width:8px;height:8px;border-radius:50%;background:var(--uv)}
+.flow__step:nth-child(3)::before,.flow__step:nth-child(4)::before{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(255,47,179,.12)}
+.flow__step:nth-child(3)::after,.flow__step:nth-child(4)::after{background:var(--magenta)}
+.flow__step:nth-child(5)::before,.flow__step:nth-child(6)::before{border-color:var(--ice);box-shadow:0 0 0 4px rgba(25,211,255,.14)}
+.flow__step:nth-child(5)::after,.flow__step:nth-child(6)::after{background:var(--ice)}
+.flow__meta{display:flex;flex-direction:column;gap:6px;padding-top:4px}
+.flow__no{font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+.flow__date{font-family:var(--mono);font-size:.84rem;letter-spacing:.08em;color:var(--ink2)}
+.flow__step.hot .flow__date{color:var(--uv);font-weight:700}
+.flow__body h3{font-weight:900;font-size:1.3rem;letter-spacing:.02em;margin-bottom:8px;line-height:1.4}
+.flow__body p{font-size:.98rem;color:var(--ink2);line-height:1.85;max-width:62ch}
+.flow__body p b{color:var(--ink);font-weight:900}
+.flow__body p a{color:var(--uv);font-weight:700;border-bottom:1px solid rgba(109,59,255,.35)}
+.flow__act{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:16px}
+.flow__act .pill{display:inline-flex}
+.flow__act .to-guide{margin-top:0}
+.flow__foot{margin-top:28px;padding-top:22px;border-top:1px solid var(--line2)}
+.flow__foot .to-guide{margin-top:0;font-size:.95rem;display:inline;line-height:1.9}
+@media(max-width:800px){.flow__step{grid-template-columns:1fr;gap:8px;padding-left:34px}.flow__meta{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 14px}.flow::before{left:8px}.flow__step::before{width:18px;height:18px;top:26px}.flow__step::after{left:5px;top:31px}}
 </style>
 </head>
 <body>
-<main class="card">
-  <span class="tag">Niigata University — College of Creative Studies</span>
-  <h1>社会課題 <span class="dx">× DX</span> チャレンジ 2026</h1>
-  <p class="sub">〜 デジタルの力で未来をつくる 〜</p>
-  <p class="org"><b>新潟大学 創生学部</b>(創生学修コース・DX共創コース)の学生を対象とした、DX技術で社会課題に挑むコンテスト企画のサイトです。</p>
-  <div class="status">公式サイトは準備中です。<small>参加登録・応募要領などの情報は、公開でき次第このページでお知らせします。</small></div>
-  <p class="contact"><span class="lbl">問い合わせ</span><a href="mailto:ccs.contest.official@gmail.com">ccs.contest.official@gmail.com</a></p>
-</main>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="logos">
+    <a href="https://www.niigata-u.ac.jp/" target="_blank" rel="noopener"><img class="light" src="assets/img/logo_niigata-u_white.svg" alt="新潟大学"><img class="dark" src="assets/img/logo_niigata-u.svg" alt="新潟大学"></a>
+    <span class="sep"></span>
+    <a href="https://create.niigata-u.ac.jp/" target="_blank" rel="noopener"><img class="light" src="assets/img/logo_create_white.png" alt="新潟大学 創生学部"><img class="dark" src="assets/img/logo_create.png" alt="新潟大学 創生学部"></a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">MENU</button>
+  <nav class="nav" id="nav">
+    <a href="#outline">開催概要</a>
+    <a href="#purpose">目的</a>
+    <a href="#flow">参加の流れ</a>
+    <a href="#criteria">審査基準</a>
+    <a href="#award">表彰</a>
+    <a href="#faq">Q&amp;A</a>
+    <a href="#next">次のステージ</a>
+    <a class="pill lime is-disabled" href="#entry">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
+  </nav>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div>
+      <div class="kicker"><span class="dot"></span><span class="mono">Niigata University — College of Creative Studies / Student Contest</span></div>
+      <div class="title-row">
+      <h1 class="hero__title">
+        <span class="l l1"><span class="psy gl" data-text="社会課題">社会課題</span></span>
+        <span class="l l2"><span class="x">×</span><span class="dx gl" data-text="DX">DX</span></span>
+        <span class="l l3"><span class="psy gl" data-text="チャレンジ">チャレンジ</span><span class="year">2026</span></span>
+      </h1>
+      <div class="catch catch--m" role="text" aria-label="フィールドスタディーズ、DXスタディーズ。見つけた課題と、身につけた技術を、次の一歩へ。">
+        <div class="catch__row"><div class="catch__stack"><svg class="catch__brush g1" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6 Q0 14.0 5 24 L355 21 q26 -8.0 32 -11.0 L350 4 Z"/><path d="M0 25 Q-3 33.5 2 44 L369 43 q17 -8.5 23 -11.5 L364 23 Z"/><path d="M1 44 Q-2 52.0 3 62 L359 59 q22 -8.0 34 -11.0 L356 42 Z"/><path d="M0 63 Q-3 73.0 2 85 L355 82 q14 -10.0 23 -13.0 L354 61 Z"/><path d="M3 82 Q0 91.0 5 102 L363 101 q23 -9.0 30 -12.0 L358 80 Z"/><path d="M4 101 Q1 110.5 6 122 L369 122 q14 -9.5 20 -12.5 L367 99 Z"/><circle class="dot" cx="394" cy="96" r="2.6"/><circle class="dot" cx="392" cy="85" r="2.4"/><circle class="dot" cx="400" cy="30" r="2.3"/><circle class="dot" cx="401" cy="27" r="2.0"/><circle class="dot" cx="395" cy="10" r="1.5"/></svg><svg class="catch__brush g2" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6 Q0 14.0 5 24 L355 21 q26 -8.0 32 -11.0 L350 4 Z"/><path d="M0 25 Q-3 33.5 2 44 L369 43 q17 -8.5 23 -11.5 L364 23 Z"/><path d="M1 44 Q-2 52.0 3 62 L359 59 q22 -8.0 34 -11.0 L356 42 Z"/><path d="M0 63 Q-3 73.0 2 85 L355 82 q14 -10.0 23 -13.0 L354 61 Z"/><path d="M3 82 Q0 91.0 5 102 L363 101 q23 -9.0 30 -12.0 L358 80 Z"/><path d="M4 101 Q1 110.5 6 122 L369 122 q14 -9.5 20 -12.5 L367 99 Z"/><circle class="dot" cx="394" cy="96" r="2.6"/><circle class="dot" cx="392" cy="85" r="2.4"/><circle class="dot" cx="400" cy="30" r="2.3"/><circle class="dot" cx="401" cy="27" r="2.0"/><circle class="dot" cx="395" cy="10" r="1.5"/></svg><svg class="catch__brush" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6 Q0 14.0 5 24 L355 21 q26 -8.0 32 -11.0 L350 4 Z"/><path d="M0 25 Q-3 33.5 2 44 L369 43 q17 -8.5 23 -11.5 L364 23 Z"/><path d="M1 44 Q-2 52.0 3 62 L359 59 q22 -8.0 34 -11.0 L356 42 Z"/><path d="M0 63 Q-3 73.0 2 85 L355 82 q14 -10.0 23 -13.0 L354 61 Z"/><path d="M3 82 Q0 91.0 5 102 L363 101 q23 -9.0 30 -12.0 L358 80 Z"/><path d="M4 101 Q1 110.5 6 122 L369 122 q14 -9.5 20 -12.5 L367 99 Z"/><circle class="dot" cx="394" cy="96" r="2.6"/><circle class="dot" cx="392" cy="85" r="2.4"/><circle class="dot" cx="400" cy="30" r="2.3"/><circle class="dot" cx="401" cy="27" r="2.0"/><circle class="dot" cx="395" cy="10" r="1.5"/></svg><span class="catch__w" data-text="フィールドスタディーズ">フィールドスタディーズ</span><span class="catch__w" data-text="DXスタディーズ">DXスタディーズ</span></div><span class="catch__tail">見つけた課題と、身につけた技術を、</span></div>
+        <div class="catch__line">次の一歩へ。</div>
+      </div>
+      </div>
+      <p class="hero__tag">〜 <b>デジタル</b>の力で<b>未来</b>をつくる 〜</p>
+      <div class="hero__cta">
+        <a class="pill lime is-disabled" href="#entry">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
+        <a class="pill lime" href="guidelines.html">応募要領 <span class="arr">↗</span></a>
+      </div>
+    </div>
+    <div class="hero__side">
+      <div class="catch" role="text" aria-label="フィールドスタディーズ、DXスタディーズ。見つけた課題と、身につけた技術を、次の一歩へ。">
+        <div class="catch__row"><div class="catch__stack"><svg class="catch__brush g1" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6 Q0 14.0 5 24 L355 21 q26 -8.0 32 -11.0 L350 4 Z"/><path d="M0 25 Q-3 33.5 2 44 L369 43 q17 -8.5 23 -11.5 L364 23 Z"/><path d="M1 44 Q-2 52.0 3 62 L359 59 q22 -8.0 34 -11.0 L356 42 Z"/><path d="M0 63 Q-3 73.0 2 85 L355 82 q14 -10.0 23 -13.0 L354 61 Z"/><path d="M3 82 Q0 91.0 5 102 L363 101 q23 -9.0 30 -12.0 L358 80 Z"/><path d="M4 101 Q1 110.5 6 122 L369 122 q14 -9.5 20 -12.5 L367 99 Z"/><circle class="dot" cx="394" cy="96" r="2.6"/><circle class="dot" cx="392" cy="85" r="2.4"/><circle class="dot" cx="400" cy="30" r="2.3"/><circle class="dot" cx="401" cy="27" r="2.0"/><circle class="dot" cx="395" cy="10" r="1.5"/></svg><svg class="catch__brush g2" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6 Q0 14.0 5 24 L355 21 q26 -8.0 32 -11.0 L350 4 Z"/><path d="M0 25 Q-3 33.5 2 44 L369 43 q17 -8.5 23 -11.5 L364 23 Z"/><path d="M1 44 Q-2 52.0 3 62 L359 59 q22 -8.0 34 -11.0 L356 42 Z"/><path d="M0 63 Q-3 73.0 2 85 L355 82 q14 -10.0 23 -13.0 L354 61 Z"/><path d="M3 82 Q0 91.0 5 102 L363 101 q23 -9.0 30 -12.0 L358 80 Z"/><path d="M4 101 Q1 110.5 6 122 L369 122 q14 -9.5 20 -12.5 L367 99 Z"/><circle class="dot" cx="394" cy="96" r="2.6"/><circle class="dot" cx="392" cy="85" r="2.4"/><circle class="dot" cx="400" cy="30" r="2.3"/><circle class="dot" cx="401" cy="27" r="2.0"/><circle class="dot" cx="395" cy="10" r="1.5"/></svg><svg class="catch__brush" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6 Q0 14.0 5 24 L355 21 q26 -8.0 32 -11.0 L350 4 Z"/><path d="M0 25 Q-3 33.5 2 44 L369 43 q17 -8.5 23 -11.5 L364 23 Z"/><path d="M1 44 Q-2 52.0 3 62 L359 59 q22 -8.0 34 -11.0 L356 42 Z"/><path d="M0 63 Q-3 73.0 2 85 L355 82 q14 -10.0 23 -13.0 L354 61 Z"/><path d="M3 82 Q0 91.0 5 102 L363 101 q23 -9.0 30 -12.0 L358 80 Z"/><path d="M4 101 Q1 110.5 6 122 L369 122 q14 -9.5 20 -12.5 L367 99 Z"/><circle class="dot" cx="394" cy="96" r="2.6"/><circle class="dot" cx="392" cy="85" r="2.4"/><circle class="dot" cx="400" cy="30" r="2.3"/><circle class="dot" cx="401" cy="27" r="2.0"/><circle class="dot" cx="395" cy="10" r="1.5"/></svg><span class="catch__w" data-text="フィールドスタディーズ">フィールドスタディーズ</span><span class="catch__w" data-text="DXスタディーズ">DXスタディーズ</span></div><span class="catch__tail">見つけた課題と、身につけた技術を、</span></div>
+        <div class="catch__line">次の一歩へ。</div>
+      </div>
+      <div class="dates">
+      <div class="date"><span class="k">Entry</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">12月31日(木)</span></span><span class="s">参加登録期間</span></div>
+      <div class="date"><span class="k">Deadline</span><span class="v">2027年<span class="nw">2月8日(月)</span></span><span class="s">作品提出締切</span></div>
+      </div>
+      <div class="date date--survey" id="survey"><span class="k"><span class="pulse" aria-hidden="true"></span>Survey / 回答受付中</span><p class="date__lead">本企画は現在検討段階です。<br>学生の皆さんの反応をもとに実施判断をします。</p><div class="date__row"><span class="s">アンケートへのご回答をお願いします<span class="nw">（所要時間 約1分）。</span><span class="date__due">回答期限：10月26日(月) 正午</span></span><a class="date__btn" href="#" data-form="survey">アンケートに回答する<span class="arr" aria-hidden="true">↗</span></a></div></div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>社会課題 × DX チャレンジ 2026 <i>—</i></span><span>デジタルの力で未来をつくる <i>—</i></span><span>新潟大学 創生学部 <i>—</i></span><span>創生学修コース × DX共創コース <i>—</i></span>
+      <span>社会課題 × DX チャレンジ 2026 <i>—</i></span><span>デジタルの力で未来をつくる <i>—</i></span><span>新潟大学 創生学部 <i>—</i></span><span>創生学修コース × DX共創コース <i>—</i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 検討段階のお知らせ ===== -->
+<!-- ===== 01 開催概要 ===== -->
+<section id="outline">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">01</div>
+      <h2 class="sec__title">開催概要</h2>
+      <div class="sec__en">Outline</div>
+    </div>
+    <dl class="rows">
+      <div class="row"><dt><b>名称</b>Title</dt><dd>社会課題×DX チャレンジ 2026 〜デジタルの力で未来をつくる〜</dd></div>
+      <div class="row"><dt><b>テーマ</b>Theme</dt><dd>DX技術を活用した社会課題解決のアイデアと実践</dd></div>
+      <div class="row"><dt><b>対象</b>Eligibility</dt><dd>新潟大学 創生学部の学生（創生学修コース・DX共創コース）<span class="note">両コースの学生を含むグループ（2〜5名を目安）で作品を制作します。個人での参加登録も OK です。</span></dd></div>
+      <div class="row"><dt><b>期間</b>Period</dt><dd>参加登録 11月2日(月)〜12月31日(木) ／ 作品提出 2027年1月1日(金)〜2月8日(月)<span class="note">流れと日程は <a href="#flow">参加の流れ</a> をご覧ください。</span></dd></div>
+      <div class="row"><dt><b>提出するもの</b>Deliverables</dt><dd>作品説明 PDF（2枚）＋ 実装コンテンツ（Google ドライブまたは GitHub のリンクで提出）<span class="note">様式・記載項目などの詳細は <a href="guidelines.html#submit">応募要領</a> をご覧ください。</span></dd></div>
+      <div class="row"><dt><b>表彰</b>Award</dt><dd>優秀な作品を学部長表彰し、賞状を贈呈<span class="note">受賞グループは受賞記念発表会（2027年4月上旬）で成果を発表します。</span></dd></div>
+      <div class="row"><dt><b>主催</b>Organizer</dt><dd>新潟大学 創生学部</dd></div>
+      <div class="row"><dt><b>問い合わせ</b>Contact</dt><dd><a href="mailto:ccs.contest.official@gmail.com">ccs.contest.official@gmail.com</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== 02 目的 ===== -->
+<section id="purpose">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">02</div>
+      <h2 class="sec__title">目的</h2>
+      <div class="sec__en">Purpose</div>
+    </div>
+    <div>
+      <p class="statement">今日の社会課題を解決するには、課題を見つけ、<mark>多様な視点や技術を組み合わせ</mark>、アイデアを形にしていく力が求められます。フィールドスタディーズで見つけた課題や、DXスタディーズで身につけた技術・経験を振り返り、それらを次のチャレンジにつなげてみましょう。</p>
+      <p class="statement" style="margin-top:24px">このコンテストでは、創生学修コースとDX共創コースの学生がそれぞれの強みを持ち寄り、チームで社会課題に挑みます。異なる分野の学生と協働しながら、課題発見から試作・発表までを経験し、<mark>チームで社会課題に挑む力</mark>を身につけることを目指します。</p>
+      <div class="venn">
+        <svg viewBox="0 0 440 300" role="img" aria-label="創生学修コースとDX共創コースの協働">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#19d3ff"/><stop offset="1" stop-color="#6d3bff"/></linearGradient>
+            <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#6d3bff"/><stop offset="1" stop-color="#ff2fb3"/></linearGradient>
+            <clipPath id="c1"><circle cx="160" cy="150" r="118"/></clipPath>
+          </defs>
+          <!-- 元の透明感のまま、A をライム→シアン系に変更(背景に溶けないように) -->
+          <circle cx="160" cy="150" r="118" fill="rgba(25,211,255,.12)" stroke="url(#g1)" stroke-width="2"/>
+          <circle cx="280" cy="150" r="118" fill="rgba(255,47,179,.10)" stroke="url(#g2)" stroke-width="2"/>
+          <circle cx="280" cy="150" r="118" fill="rgba(109,59,255,.18)" clip-path="url(#c1)"/>
+          <text x="100" y="152" text-anchor="middle" fill="#14103a" font-family="Noto Sans JP, sans-serif" font-weight="900" font-size="13">創生学修コース</text>
+          <text x="340" y="152" text-anchor="middle" fill="#14103a" font-family="Noto Sans JP, sans-serif" font-weight="900" font-size="13">DX共創コース</text>
+          <text x="220" y="156" text-anchor="middle" fill="#6d3bff" font-family="Noto Sans JP, sans-serif" font-weight="900" font-size="16">協働</text>
+          <text x="220" y="280" text-anchor="middle" fill="#14103a" font-family="Noto Sans JP, sans-serif" font-weight="700" font-size="12" letter-spacing="1">強みを持ち寄り、チームで社会課題に挑む</text>
+        </svg>
+        <div class="venn__notes">
+          <div class="vn"><span class="mono">Outcome</span><b>チームで社会課題に挑む力</b><p>分野を越えて連携できる人材へ。</p></div>
+          <div class="vn"><span class="mono">Beyond</span><b>コース間の連携・交流</b><p>お互いの強みを生かして学び合う。</p></div>
+        </div>
+      </div>
+      <div style="margin:36px 0 14px;display:flex;align-items:center;gap:14px">
+        <span class="mono" style="color:var(--ink3);text-transform:none;letter-spacing:.06em;font-size:1rem;font-weight:700">前期の学びを振り返ってみよう</span>
+        <span style="flex:1;height:1px;background:var(--line)"></span>
+      </div>
+      <div class="figs">
+        <figure class="fig"><img src="assets/img/activity/fs-workshop.jpg" width="1200" height="900" alt="ホワイトボードを使ってグループで課題を分析するワークショップの様子" loading="lazy"></figure>
+        <figure class="fig"><img src="assets/img/activity/dx-nodegraph.jpg" width="1200" height="800" alt="ノードグラフのビジュアルプログラミング画面を操作する学生" loading="lazy"></figure>
+        <figure class="fig"><img src="assets/img/activity/fs-presentation.jpg" width="1200" height="900" alt="大型スクリーンの前でグループ発表をする学生たち" loading="lazy"></figure>
+        <figure class="fig"><img src="assets/img/activity/dx-routing.jpg" width="1200" height="800" alt="地図ルーティングソフトウェアを使ってデータを分析する学生" loading="lazy"></figure>
+        <figure class="fig"><img src="assets/img/activity/fs-field.jpg" width="900" height="1200" alt="地域会場でのフィールドスタディーズ活動の様子" loading="lazy"></figure>
+        <figure class="fig"><img src="assets/img/activity/dx-ar.jpg" width="1200" height="800" alt="ARマーカーを使ったAR技術のデモンストレーション" loading="lazy"></figure>
+      </div>
+      <p style="margin-top:20px;font-size:.95rem;color:var(--ink2);line-height:1.85">農業、建設、製造、教育、医療・介護、地域、環境など、社会課題のテーマはさまざまです。前期の活動をさらに発展させても、そこで得た経験を別の課題に応用しても、まったく新しいテーマから始めても構いません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 参加の流れ ===== -->
+<section id="flow">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">03</div>
+      <h2 class="sec__title">参加の流れ</h2>
+      <div class="sec__en">How it works</div>
+      <p class="sec__note">※詳細日程は後日案内します。</p>
+    </div>
+    <div>
+      <div class="bento pts">
+        <div class="tile w2 lime"><span class="mono">Solo OK</span><div class="big">個人<small>参加OK</small></div><p>個人で登録した人には、仲間を見つける「マッチングの場」を設けます。</p></div>
+        <div class="tile w2 cyan"><span class="mono">Team size</span><div class="big">2–5<small>名が目安</small></div><p>創生学修コース・DX共創コースの両方の学生を含むグループで制作します。</p></div>
+        <div class="tile w2 uv"><span class="mono">AI allowed</span><div class="big">AI<small>の利用OK！</small></div><p>AIを使った部分も含め、制作内容を自分たちで説明できればOK。</p></div>
+      </div>
+      <ol class="flow">
+        <li class="flow__step hot" id="entry">
+          <div class="flow__meta"><span class="flow__no">Step 01</span><span class="flow__date">11月2日(月)〜12月31日(木)</span></div>
+          <div class="flow__body"><h3>参加登録</h3><p>グループでも個人でも登録できます。まずは登録して、スタートラインに立ちましょう。</p>
+            <div class="flow__act" id="entryForm"><a class="pill lime is-disabled" href="#">参加登録フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a></div></div>
+        </li>
+        <li class="flow__step hot">
+          <div class="flow__meta"><span class="flow__no">Step 02</span><span class="flow__date">11月中旬</span></div>
+          <div class="flow__body"><h3>グループマッチング</h3><p>個人や、まだ両コースがそろっていないグループ向けに、仲間と出会う場を設けます。グループができたら、改めてグループで登録します。</p></div>
+        </li>
+        <li class="flow__step">
+          <div class="flow__meta"><span class="flow__no">Step 03</span><span class="flow__date">2027年1月1日(金)〜2月8日(月)</span></div>
+          <div class="flow__body"><h3>制作・作品提出</h3><p>課題解決の案と、それを形にした実装コンテンツ（アプリ、Webコンテンツ、デバイスなど）を「作品」としてまとめます。提出するのは <b>作品説明 PDF（2枚）</b> と <b>実装コンテンツ</b> の2点です（実装コンテンツは Google ドライブまたは GitHub のリンクで提出）。</p>
+            <div class="flow__act"><a class="pill ghost is-disabled" href="#">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a><a class="to-guide" href="guidelines.html#submit">様式・提出方法は応募要領へ <span aria-hidden="true">→</span></a></div></div>
+        </li>
+        <li class="flow__step">
+          <div class="flow__meta"><span class="flow__no">Step 04</span><span class="flow__date">2027年2月上旬〜中旬</span></div>
+          <div class="flow__body"><h3>プレゼン審査</h3><p>提出された作品の書面審査に加えて、口頭で発表するプレゼン審査を行います。いずれも <a href="#criteria">4つの評価軸</a> で評価します。</p></div>
+        </li>
+        <li class="flow__step">
+          <div class="flow__meta"><span class="flow__no">Step 05</span><span class="flow__date">2027年2月下旬</span></div>
+          <div class="flow__body"><h3>受賞者決定</h3><p>審査結果と、受賞記念発表会のご案内をお知らせします。</p></div>
+        </li>
+        <li class="flow__step last">
+          <div class="flow__meta"><span class="flow__no">Step 06</span><span class="flow__date">2027年4月上旬</span></div>
+          <div class="flow__body"><h3>表彰・受賞記念発表会</h3><p>優秀な作品を学部長表彰。受賞グループが成果を発表します。</p></div>
+        </li>
+      </ol>
+      <div class="flow__foot"><a class="to-guide" href="guidelines.html">応募資格・提出物・審査・AI利用のルールなど、正式な要領は「応募要領」へ <span aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 審査基準 ===== -->
+<section id="criteria">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">04</div>
+      <h2 class="sec__title">審査基準</h2>
+      <div class="sec__en">Criteria</div>
+    </div>
+    <div>
+      <div class="crit">
+        <div class="crit__row"><div class="crit__no">01</div><div class="crit__name">社会課題への理解とアプローチ</div><div class="crit__desc">社会課題の設定が明確で、技術との接続が論理的か</div></div>
+        <div class="crit__row"><div class="crit__no">02</div><div class="crit__name">DX技術の活用度</div><div class="crit__desc">DX技術を効果的に応用できているか</div></div>
+        <div class="crit__row"><div class="crit__no">03</div><div class="crit__name">実装完成度</div><div class="crit__desc">作品としての完成度・動作性・UI等</div></div>
+        <div class="crit__row"><div class="crit__no">04</div><div class="crit__name">創造性</div><div class="crit__desc">アイデアの独自性、新規性、切り口の面白さ</div></div>
+      </div>
+      <div class="howto">
+        <h3>制作の進め方</h3>
+        <p class="sub">技術から考え始めても、課題から考え始めても OK。</p>
+        <div class="approach">
+          <div class="ap a"><span class="mono">Approach A — Tech first</span><b>DX技術を起点とするアプローチ</b><p>「DX技術をどう社会課題に応用できるか」から考え始める。</p></div>
+          <div class="ap b"><span class="mono">Approach B — Issue first</span><b>社会課題を起点とするアプローチ</b><p>「解決すべき社会課題を定め、それにどうDX技術を応用できるか」から考え始める。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 表彰 ===== -->
+<section id="award">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">05</div>
+      <h2 class="sec__title">表彰</h2>
+      <div class="sec__en">Award</div>
+    </div>
+    <div class="award">
+      <div class="top3 top3--ja">学部長表彰<small>優秀作品に賞状を贈呈</small></div>
+      <div class="award__text">
+        <h3>優秀な作品に対して<em>学部長表彰</em>を行い、賞状を贈呈します。</h3>
+        <p>受賞グループは、受賞記念発表会で成果を発表します。</p>        <div class="event"><span class="d">2027.04</span><b>表彰および受賞記念発表会（次年度4月上旬）</b><span>コンテストの受賞グループによる発表を中心としたイベント</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 Q&A ===== -->
+<section id="faq">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">06</div>
+      <h2 class="sec__title">Q&amp;A</h2>
+      <div class="sec__en">Questions — 随時追加予定</div>
+    </div>
+    <div>
+      <div class="faq__cat"><b>参加・チームについて</b></div>
+      <details class="q"><summary><span class="n">Q01</span>個人でも参加登録できますか？<span class="pm"></span></summary><div class="a">はい、個人でも参加登録できます。11月中旬に「マッチングの場」を設けるので、そこで個人同士でグループを結成したり、結成済みのグループに加わったりできます。</div></details>
+      <details class="q"><summary><span class="n">Q02</span>グループの人数や条件はありますか？<span class="pm"></span></summary><div class="a">人数は2〜5名を目安とします。創生学修コース・DX共創コースの両方の学生を含むグループで制作してください。メンバーは全員、新潟大学 創生学部の学生である必要があります（他学部の学生は加えられません）。詳しくは <a href="guidelines.html#eligibility">応募要領</a> をご覧ください。</div></details>
+
+      <div class="faq__cat"><b>制作について</b></div>
+      <details class="q"><summary><span class="n">Q03</span>何から始めればよいですか？<span class="pm"></span></summary><div class="a">「DX技術をどう社会課題に応用できるか」という技術起点でも、「解決すべき社会課題を定め、それにどうDX技術を応用できるか」という課題起点でも、どちらから始めてもかまいません。前期のフィールドスタディーズ・DXスタディーズでの経験を振り返ってみるのもおすすめです。</div></details>
+      <details class="q"><summary><span class="n">Q04</span>生成AIなどのツールを使ってもよいですか？<span class="pm"></span></summary><div class="a">使えます。ただし、AIを使った部分も含め、制作内容を自分たちで説明できることが必要です。十分に説明できない場合は、理解度の評価に反映されます。</div></details>
+      <details class="q"><summary><span class="n">Q05</span>公開されているコードや画像を使ってもよいですか？<span class="pm"></span></summary><div class="a">利用条件（ライセンス）を守り、出典を作品説明 PDF に明記すれば利用できます。他者の作品・アイデア・画像などを自分たちのものとして提出すること（盗作・剽窃）は禁止です。詳しくは <a href="guidelines.html#ai">応募要領</a> をご覧ください。</div></details>
+
+      <div class="faq__cat"><b>提出・審査について</b></div>
+      <details class="q"><summary><span class="n">Q06</span>何を提出すればよいですか？<span class="pm"></span></summary><div class="a">作品説明 PDF（2枚）と、実装コンテンツの2点です。実装コンテンツは Google ドライブまたは GitHub のリンクで提出します。提出後、口頭でプレゼンを行います。様式のダウンロードや記載項目は <a href="guidelines.html#submit">応募要領</a> をご覧ください。</div></details>
+      <details class="q"><summary><span class="n">Q07</span>アプリやデバイスは完成していないとダメですか？<span class="pm"></span></summary><div class="a">完成品でなくてもかまいません。実現可能性が分かる試作品や、一部の機能を実際に動かしたものでも提出できます。デバイスなど現物をリンクで出せない場合は、挙動が分かる写真・動画・図面などをまとめて提出してください。</div></details>
+
+      <div class="faq__cat"><b>表彰・発表会について</b></div>
+      <details class="q"><summary><span class="n">Q08</span>受賞するとどうなりますか？<span class="pm"></span></summary><div class="a">優秀な作品を学部長表彰し、賞状を贈呈します。受賞グループは、2027年4月上旬の「表彰および受賞記念発表会」で成果を発表します。</div></details>
+      <details class="q"><summary><span class="n">Q09</span>発表会の時点で卒業している場合はどうなりますか？<span class="pm"></span></summary><div class="a">卒業などで参加が難しい場合は、ビデオメッセージなど別の方法での参加も可能です。お気軽にご相談ください。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 さらなるステージへ ===== -->
+<section class="next" id="next">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">07</div>
+      <h2 class="sec__title">さらなる<br>ステージへ。</h2>
+      <div class="sec__en">Next stage</div>
+    </div>
+    <div>
+      <h3 class="next__catch">創生学部で生まれたアイデアを、<br><em>次の挑戦につなげよう。</em></h3>
+      <p class="next__sub">このコンテストで形にしたアイデアや成果を、学部内で終わらせず、ぜひ次の挑戦へつなげてください。</p>
+      <p class="next__body">新潟大学には、全学の学部生・大学院生を対象とした『新潟大学 生成AIコンテスト』があります。このコンテストでの取り組みをさらに発展させ、ぜひ全学コンテストへの挑戦につなげてください。さらに、取り組みの内容や発展に応じて、全国的なAIコンテストなど、学外での挑戦へつなげていくことも想定しています。</p>
+
+      <div class="next__grid">
+        <div class="stage">
+          <svg viewBox="0 0 520 240" role="img" aria-label="ステージ図：学部から全学、そして学外へ">
+            <defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#c6ff4d"/><stop offset=".6" stop-color="#9ad9ff"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs>
+            <g stroke="rgba(233,238,245,.14)" stroke-width="1"><line x1="20" y1="200" x2="500" y2="200"/><line x1="20" y1="140" x2="500" y2="140"/><line x1="20" y1="80" x2="500" y2="80"/></g>
+            <path d="M30 200 H170 V140 H330 V80 H490" fill="none" stroke="url(#sg)" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="30" y="200" width="140" height="22" rx="4" fill="rgba(198,255,77,.12)" stroke="rgba(198,255,77,.5)"/>
+            <rect x="170" y="140" width="160" height="82" rx="4" fill="rgba(154,217,255,.08)" stroke="rgba(154,217,255,.5)"/>
+            <rect x="330" y="80" width="160" height="142" rx="4" fill="rgba(124,92,255,.12)" stroke="rgba(124,92,255,.6)"/>
+            <circle cx="100" cy="200" r="5" fill="#c6ff4d"/><circle cx="250" cy="140" r="5" fill="#9ad9ff"/><circle cx="410" cy="80" r="5" fill="#7c5cff"/>
+            <text x="100" y="186" text-anchor="middle" fill="#c6ff4d" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2">STAGE 1</text>
+            <text x="250" y="126" text-anchor="middle" fill="#9ad9ff" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2">STAGE 2</text>
+            <text x="410" y="66" text-anchor="middle" fill="#b9a7ff" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2">BEYOND</text>
+            <text x="100" y="236" text-anchor="middle" fill="#aab3c2" font-family="Noto Sans JP, sans-serif" font-size="10">創生学部</text>
+            <text x="250" y="236" text-anchor="middle" fill="#aab3c2" font-family="Noto Sans JP, sans-serif" font-size="10">全学</text>
+            <text x="410" y="236" text-anchor="middle" fill="#aab3c2" font-family="Noto Sans JP, sans-serif" font-size="10">学外・社会へ</text>
+            <path d="M455 40 l25 0 l-8 -8 M480 40 l-8 8" fill="none" stroke="#7c5cff" stroke-width="1.5"/>
+          </svg>
+          <ul class="legend">
+            <li class="s1"><span class="mono">Stage 1</span><div><b>社会課題×DX チャレンジ 2026</b><span>創生学部 — アイデアを形にする</span></div></li>
+            <li class="s2"><span class="mono">Stage 2</span><div><b>新潟大学 生成AIコンテスト</b><span>全学 — 取り組みをさらに発展させる</span></div></li>
+            <li class="s3"><span class="mono">Beyond</span><div><b>学外・社会へ</b><span>社会課題の現場に届ける</span></div></li>
+          </ul>
+        </div>
+        <div class="ext">
+          <a class="ext-shot" href="https://www.ohbsn.com/niigata-univ-ai-contest/" target="_blank" rel="noopener">
+            <span class="ext-shot__chrome" aria-hidden="true"><i></i><i></i><i></i><span>ohbsn.com/niigata-univ-ai-contest</span></span>
+            <img src="assets/img/photos/ext-aicontest.jpg" alt="新潟大学 生成AIコンテスト 公式サイトのトップページ（スクリーンショット）" loading="lazy">
+          </a>
+          <div class="ext__body">
+            <span class="mono">全学コンテスト</span>
+            <h3>新潟大学 生成AIコンテスト</h3>
+            <dl>
+              <dt>主催</dt><dd>新潟大学</dd>
+              <dt>運営</dt><dd>BSN新潟放送・BSNアイネット</dd>
+              <dt>対象</dt><dd>新潟大学の学部生・大学院生（個人または最大5名のチーム）</dd>
+            </dl>
+            <p class="note">※日程・要項は外部サイトの最新情報をご確認ください。</p>
+            <a class="pill lime" href="https://www.ohbsn.com/niigata-univ-ai-contest/" target="_blank" rel="noopener">コンテストのサイトを見る <span class="arr">↗</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<div class="cta">
+  <div class="wrap">
+    <div class="cta__box rv">
+      <h2>Join the<br>challenge.<small>社会課題×DX チャレンジ 2026 — 参加者募集</small></h2>
+      <div class="cta__btns">
+        <a class="pill lime is-disabled" href="#entry" style="background:var(--lime);color:#06080c;border-color:var(--lime)">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
+        <a class="pill lime" href="#survey" data-form="survey" style="background:var(--lime);color:#06080c;border-color:var(--lime)">アンケートに回答する<span class="arr">↗</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__contact"><span class="mono">Contact / 問い合わせ</span><a href="mailto:ccs.contest.official@gmail.com">ccs.contest.official@gmail.com</a></div>
+      <div class="footer__logos">
+        <a href="https://www.niigata-u.ac.jp/" target="_blank" rel="noopener"><img src="assets/img/logo_niigata-u.svg" alt="新潟大学"></a>
+        <a href="https://create.niigata-u.ac.jp/" target="_blank" rel="noopener"><img src="assets/img/logo_create.png" alt="新潟大学 創生学部"></a>
+      </div>
+    </div>
+    <p class="footer__members">主催：新潟大学 創生学部<br>運営メンバー：創生学部教員　西海、小山、金子、田中、高橋、小形、熊野、澤邉、佐藤、今村、寺口、遊佐</p>
+    <div class="footer__bottom mono"><span>© 2026 College of Creative Studies, Niigata University · Photos: Unsplash · 外部サイトのサムネイルは当該サイトのスクリーンショット</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<div class="float" id="float"><a class="pill lime is-disabled" href="#entry">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a></div>
+
+<script>
+/* ============================================================
+   Googleフォームの URL が決まったらここに入れる。
+   空のままだとボタンは「ロック中」表示のままになる。
+   entry: 参加登録 / submit: 作品提出 / survey: 企画への印象アンケート
+   ============================================================ */
+const FORMS = {
+  entry:  "https://docs.google.com/forms/d/e/1FAIpQLScmAUYuAwyUiHznWluTao2-bdzDY5m2k2oXhrdfnz3ZEKHZ4w/viewform",
+  submit: "https://script.google.com/macros/s/AKfycbwE2MGpGzH04W08woYIFZYXO0u1M4pKiomqkRC8UW0lQgwV2jnGKWxxXgjffifq_mA1/exec",
+  survey: "https://docs.google.com/forms/d/e/1FAIpQLSeh7PSVYafn8czyxwBEHEJDO26xu8Xpecjl0tftlQpxIpDciw/viewform"
+};
+
+(function(){
+  // フォームURLをボタンに反映
+  document.querySelectorAll('[data-form]').forEach(el => {
+    const url = FORMS[el.dataset.form];
+    if (url) {
+      el.href = url; el.target = '_blank'; el.rel = 'noopener';
+      el.classList.remove('is-disabled');
+      const chip = el.querySelector('.chip'); if (chip) chip.remove();
+    } else {
+      el.addEventListener('click', e => { if (el.getAttribute('href') === '#') e.preventDefault(); });
+    }
+  });
+  if (FORMS.entry) {
+    document.getElementById('entryForm').innerHTML =
+      '<a class="pill lime is-disabled" style="margin-top:14px;display:inline-flex">参加登録フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>';
+  }
+
+  // ヘッダー・追従ボタン
+  const header = document.getElementById('header'), fl = document.getElementById('float');
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+    fl.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.9);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // モバイルメニュー
+  const toggle = document.getElementById('navToggle'), nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => { const o = nav.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', o); });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('is-open')));
+
+
+  // スクロール出現
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } }), {threshold:.1});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+})();
+</script>
 </body>
 </html>
