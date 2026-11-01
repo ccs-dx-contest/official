@@ -920,7 +920,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       <p class="sec__note">※テーマ選びのヒントです。これ以外のテーマでも構いません。</p>
     </div>
     <div>
-      <p class="ideas__lead">身近な課題に DX 技術をどう当てはめるか、7つの例を挙げます。それぞれに「期間内に実装するための工夫例」を添えました。完成品でなくても、模擬検証や範囲を絞った試作で提出できます。</p>
+      <p class="ideas__lead">身近な課題に DX 技術をどう当てはめるか、3つの例を挙げます。それぞれに「期間内に実装するための工夫例」を添えました。完成品でなくても、模擬検証や範囲を絞った試作で提出できます。</p>
       <div class="ideas">
 
         <article class="idea">
@@ -934,47 +934,9 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
           <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>プライバシーや施設利用の観点から、実際にカメラを常設したと仮定した模擬検証を行う。許可を得た学生に利用者になってもらい、適当な場所で利用状況を撮影し、画像解析を行う。また、現在の利用状況を Web ページ等に反映させるなど、簡易的なアウトプットを実装する。</p></details>
         </article>
 
-        <article class="idea">
-          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="14" width="48" height="42" rx="6"/><path d="M8 26h48"/><path d="M20 10v8M44 10v8"/><rect x="15" y="33" width="8" height="7" rx="1.5" fill="currentColor" stroke="none" opacity=".9"/><rect x="28" y="33" width="8" height="7" rx="1.5"/><rect x="41" y="33" width="8" height="7" rx="1.5"/><rect x="15" y="44" width="8" height="7" rx="1.5"/><rect x="28" y="44" width="8" height="7" rx="1.5" fill="currentColor" stroke="none" opacity=".9"/><path d="M52 4l4 4-4 4" /><path d="M46 8h10"/></svg></div>
-          <h3>大学のイベント情報集約</h3>
-          <dl class="idea__dl">
-            <div><dt>課題</dt><dd>イベント情報がメールや SNS に分散し、必要な人に十分行き渡らない</dd></div>
-            <div><dt>解決案</dt><dd>あらゆるイベント情報をまとめたカレンダーを作成する</dd></div>
-            <div><dt>解決法</dt><dd>メールや SNS を巡回する BOT を作成する</dd></div>
-          </dl>
-          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>収集する情報を制限して試験的に実装を行う。全学共通あるいは本学部のみを対象とするイベントを公式 Web ページのお知らせ欄や SNS の投稿から収集してデータベース化する。Web ページやアプリ等にカレンダー形式で表示し、イベントの重要度に応じて色分けするなど視覚的効果を追加する。</p></details>
-        </article>
 
-        <article class="idea">
-          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10h28l8 8v36H14z"/><path d="M42 10v8h8"/><path d="M21 28h8M21 36h8M21 44h8"/><path d="M34 29l2.5 2.5L41 27"/><path d="M34 37l2.5 2.5L41 35"/><circle cx="48" cy="48" r="9" fill="#fff"/><path d="M48 43v5l3 2"/></svg></div>
-          <h3>課題・レポート作業管理</h3>
-          <dl class="idea__dl">
-            <div><dt>課題</dt><dd>レポートや試験の準備を忘れたり、締切を見逃したりしてしまう</dd></div>
-            <div><dt>解決案</dt><dd>内容と締切から重要度を判断し、リマインドや作業の計画を作成する</dd></div>
-            <div><dt>解決法</dt><dd>Google カレンダーや手入力情報からイベントを取得し優先度を計算する</dd></div>
-          </dl>
-          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>実験用に Google アカウントを作成し、カレンダーに1か月間程度の予定と説明文を入力する。カレンダーの API やエクスポート機能を用いて予定を抽出し、説明文に入力された試験やレポートの内容から予測される作業時間や優先度に応じた作業計画およびリマインド計画を作成する。</p></details>
-        </article>
 
-        <article class="idea">
-          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="36" height="52" rx="5"/><path d="M14 26h36"/><path d="M20 15v6M20 33v9"/><path d="M28 40c0-5 3-7 6-7s6 2 6 7-3 8-6 8-6-3-6-8z" fill="currentColor" opacity=".15"/><path d="M34 33v-4"/><path d="M26 18h12" stroke-dasharray="2 3"/></svg></div>
-          <h3>冷蔵庫の食品ロス</h3>
-          <dl class="idea__dl">
-            <div><dt>課題</dt><dd>冷蔵庫の奥にしばしば食材が長期間放置される</dd></div>
-            <div><dt>解決案</dt><dd>食材、購入日、消費期限などから献立候補を作成する</dd></div>
-          </dl>
-          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>開始時点の食材情報を入力し、栄養素の管理や追加購入の提案などを実装しながら、数週間程度の消費、購入、保存に関するシミュレーションを行う。時系列的に庫内の食材を可視化し、効率的に食材を消費できているか、栄養素に偏りがないかなどを分析する。</p></details>
-        </article>
 
-        <article class="idea">
-          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14h36a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6H26l-10 9v-9h-6a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z"/><path d="M22 22v12"/><path d="M19 22v5a3 3 0 0 0 6 0v-5"/><path d="M32 22c-2 2-2 6 0 8v4"/><circle cx="52" cy="48" r="7"/><path d="M49 48h6M52 45v6"/></svg></div>
-          <h3>地域飲食店のコンシェルジュ</h3>
-          <dl class="idea__dl">
-            <div><dt>課題</dt><dd>地域の飲食店の魅力が十分に伝わっていない</dd></div>
-            <div><dt>解決案</dt><dd>各店舗を紹介するチャットボットを作成する</dd></div>
-          </dl>
-          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>店舗（大学周辺など）や利用者層（大学生など）を絞って、好みや利用用途からおすすめの店舗やメニューを提案できるように、事前情報をチャットボットに学習させる。実際の店舗でメニューに関する情報を得るなどして信頼性を向上させる。</p></details>
-        </article>
 
         <article class="idea">
           <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18l16-6 16 6 16-6v34l-16 6-16-6-16 6z"/><path d="M24 12v34M40 18v34"/><path d="M46 8l9 16H37z" fill="#fff"/><path d="M46 14v5M46 21.5v.5"/><path d="M12 38c4-2 8-2 12 0s8 2 12 0" stroke-dasharray="3 3"/></svg></div>
