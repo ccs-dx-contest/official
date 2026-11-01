@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>応募要領 | 社会課題×DX チャレンジ 2026</title>
-<meta name="description" content="社会課題×DX チャレンジ 2026 の応募要領。参加登録・作品提出・プレゼン審査について。">
+<meta name="description" content="社会課題×DX チャレンジ 2026 の応募要領。マッチング登録・エントリー・作品提出・プレゼン審査について。">
 <link rel="canonical" href="https://ccs-dx-contest.github.io/official/guidelines.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,6 +171,8 @@ section+section{border-top:1px solid var(--line)}
 .crit-g span{font-family:var(--disp);font-weight:800;color:var(--uv)}.crit-g b{display:block;margin:2px 0 4px}.crit-g p{font-size:.88rem;color:var(--ink2)}
 .sched{width:100%;border-collapse:collapse;font-size:.95rem}
 .sched th,.sched td{text-align:left;padding:12px 4px;border-bottom:1px solid var(--line)}.sched th{width:42%;color:var(--ink2);font-weight:700}
+.nw{white-space:nowrap}
+.sched--mini{margin:14px 0 18px;font-size:.92rem}.sched--mini th{width:5.5em;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--uv)}.sched--mini th,.sched--mini td{padding:9px 4px}
 .faq-link a{color:var(--uv);font-weight:700}
 @media(max-width:800px){.keydates{grid-template-columns:repeat(2,minmax(0,1fr))}.crit-g{grid-template-columns:1fr}.spec>div{grid-template-columns:1fr}}
 .ktl{margin-top:30px;padding:20px 22px 18px;border:1px solid var(--line2);border-radius:18px;background:var(--panel)}
@@ -190,6 +192,7 @@ section+section{border-top:1px solid var(--line)}
   .ktl__item{display:grid;grid-template-columns:16px 1fr;grid-template-areas:"dot when" "dot what" "dot note";column-gap:14px;row-gap:0;text-align:left;align-items:start;padding:0}
   .ktl__dot{grid-area:dot;margin-top:3px}.ktl__when{grid-area:when}.ktl__what{grid-area:what}.ktl__note{grid-area:note}
 }
+.sec__title--sm{font-size:clamp(1.5rem,2.4vw,2.1rem);letter-spacing:.01em}
 </style>
 </head>
 <body>
@@ -206,7 +209,7 @@ section+section{border-top:1px solid var(--line)}
   <nav class="nav" id="nav">
     <a href="index.html">← コンテストトップ</a>
     <a href="#eligibility">応募資格</a>
-    <a href="#entry">参加登録</a>
+    <a href="#entry">マッチング登録・エントリー</a>
     <a href="#submit">作品提出</a>
     <a href="#review">書面審査</a>
     <a href="#presentation">プレゼン審査</a>
@@ -235,43 +238,70 @@ section+section{border-top:1px solid var(--line)}
     </div>
     <div class="content-body">
       <dl class="spec">
-        <div><dt>対象</dt><dd>新潟大学 創生学部に所属する学生（創生学修コース・DX共創コース）</dd></div>
-        <div><dt>参加登録の単位</dt><dd>グループまたは個人。個人やグループ未完成の状態でも参加登録できます。</dd></div>
-        <div><dt>作品提出の単位</dt><dd>グループ（2〜5名を目安）。創生学修コース・DX共創コースの学生をそれぞれ1名以上含むことが必要です。</dd></div>
+        <div><dt>対象</dt><dd>新潟大学 創生学部に所属する学生（創生学修コース・DX共創コース）。学年は問いません。</dd></div>
+        <div><dt>マッチング登録の単位</dt><dd>個人、またはグループ未完成の状態。</dd></div>
+        <div><dt>エントリーの単位</dt><dd>創生学修コース・DX共創コースの学生をそれぞれ1名以上含むグループ。</dd></div>
+        <div><dt>作品提出の単位</dt><dd>グループ（2〜5名を目安）。創生学修コース・DX共創コースの学生をそれぞれ1名以上含むことが必要です。学年の異なる学生でグループを編成してもかまいません。</dd></div>
       </dl>
       <div class="note-list">
-        <p class="note-item">両コースの学生が協働することが本企画のねらいです。参加登録締め切りの時点で、両コースの学生を含むグループになっている必要があります。</p>
+        <p class="note-item">両コースの学生が協働することが本企画のねらいです。エントリー締め切り（12月31日）の時点で、両コースの学生を含むグループになっている必要があります。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 01 参加登録 ===== -->
+<!-- ===== 01 マッチング登録・エントリー ===== -->
 <section id="entry">
   <div class="wrap sec rv">
     <div class="sec__head">
       <p class="sec__no">01</p>
-      <h2 class="sec__title">参加登録</h2>
-      <p class="sec__en">Registration</p>
+      <h2 class="sec__title sec__title--sm">マッチング登録・<br>エントリー</h2>
+      <p class="sec__en">Matching &amp; Entry</p>
     </div>
     <div class="content-body">
-      <p>本コンテストへの参加登録は、以下のフォームから行ってください。</p>
+      <h3 class="sub-h" id="matching">《マッチング登録》</h3>
+      <p>「テーマはあるけどDX技術が不安」「他コースの学生がみつからない」「やってみたいけど一人は不安」などあるかと思います。本コンテストでは、そういった学生に向けてマッチングの機会を設けます。興味がある方は、まずはこちらのマッチング登録をしてください。</p>
+      <div class="note-list">
+        <p class="note-item">すでにグループ構成ができている場合は、《エントリー》の方に進んでください。</p>
+        <p class="note-item">マッチングは学生の希望に応じて、昼休みの時間に3回（11/16・11/26・12/2）実施します。</p>
+      </div>
+      <p>マッチングの日程は次のとおりです。参加する回は問いません。</p>
+      <table class="sched sched--mini">
+        <tr><th>第1回</th><td><span class="nw">11月16日(月) 12:10〜12:50</span> <span class="nw">＠総合研学修室1</span></td></tr>
+        <tr><th>第2回</th><td><span class="nw">11月26日(木) 12:10〜12:50</span> <span class="nw">＠総合研学修室1</span></td></tr>
+        <tr><th>第3回</th><td><span class="nw">12月2日(水) 12:10〜12:50</span> <span class="nw">＠総合研学修室1</span></td></tr>
+      </table>
+      <p>マッチング登録は、以下のフォームから行ってください。</p>
       <div class="form-block">
-        <span class="form-block__label">Registration Form</span>
-        <span class="pill ghost is-disabled" style="display:inline-flex">参加登録フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></span>
+        <span class="form-block__label">Matching Form</span>
+        <a class="pill ghost" href="#" data-form="matching" style="display:inline-flex">マッチング登録フォーム<span class="arr">↗</span></a>
         <div class="deadline">
-          <span class="k">Period</span>
-          <span>参加登録期間：<b>2026年11月2日(月)〜12月31日(木)</b></span>
+          <span class="k">Deadline</span>
+          <span>登録締め切り：<b>2026年11月30日(月)</b></span>
+        </div>
+      </div>
+
+      <h3 class="sub-h">《エントリー》</h3>
+      <p>本コンテストへの応募は、以下のエントリーフォームから行ってください。</p>
+      <div class="form-block">
+        <span class="form-block__label">Entry Form</span>
+        <a class="pill ghost" href="#" data-form="entry" style="display:inline-flex">エントリーフォーム<span class="arr">↗</span></a>
+        <div class="deadline">
+          <span class="k">Deadline</span>
+          <span>登録締め切り：<b>2026年12月31日(木)</b></span>
         </div>
       </div>
       <div class="note-list">
-        <p class="note-item">参加登録は、個人や未完成グループ（創生学修コース・DX共創コースの学生を含まないグループ）でも可能です。後日（11月中旬）、マッチングの場を設けますので、マッチング後にグループができた場合は、改めてグループでの登録をしてください。</p>
+        <p class="note-item">エントリーは、グループ構成（創生学修・DXコース生を含む）が完了した場合に行なってください。</p>
+        <p class="note-item">エントリー後にメンバー変更などがある場合は、連絡の上再登録を行ってください。</p>
+        <p class="note-item">マッチングのため、エントリー後にメンバー追加について相談の可能性があります。</p>
       </div>
+
       <h3 class="sub-h">参加から提出までの流れ</h3>
       <ol class="steps">
-        <li><b>参加登録</b><span>グループ・個人のどちらでも登録できます（11月2日〜12月31日）。</span></li>
-        <li><b>グループマッチング</b><span>個人・未完成グループ向けに、11月中旬にマッチングの場を設けます。</span></li>
-        <li><b>グループで再登録</b><span>マッチングでグループができた場合は、改めてグループで参加登録してください。</span></li>
+        <li><b>マッチング登録</b><span>個人・未完成グループが対象です（11月2日〜11月30日）。</span></li>
+        <li><b>グループマッチング</b><span>11月16日(月)・11月26日(木)・12月2日(水) の 12:10〜12:50 に、総合研学修室1でマッチングの場を設けます。</span></li>
+        <li><b>エントリー</b><span>両コースの学生を含む完成グループで行います（11月2日〜12月31日）。すでに完成グループができている場合は、01・02 を経ずにここから進みます。</span></li>
         <li><b>制作・作品提出</b><span>両コースの学生を含むグループで作品を制作し、提出します（1月1日〜2月8日）。</span></li>
       </ol>
     </div>
@@ -294,14 +324,14 @@ section+section{border-top:1px solid var(--line)}
       <p>作品は、以下の作品提出フォームから提出してください。提出物の内容は、このあとの説明をご覧ください。</p>
       <div class="form-block">
         <span class="form-block__label">Submission Form</span>
-        <span class="pill ghost is-disabled" style="display:inline-flex">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></span>
+        <a class="pill ghost is-disabled" href="#" data-form="submit" style="display:inline-flex">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
         <div class="deadline">
           <span class="k">Period</span>
           <span>作品提出期間：<b>2027年1月1日(金)〜2月8日(月)</b></span>
         </div>
       </div>
       <div class="note-list">
-        <p class="note-item">作品提出は、参加登録を行ったグループに限ります。</p>
+        <p class="note-item">作品提出は、エントリーを行ったグループに限ります。</p>
         <p class="note-item">作品提出は、各グループ（創生学修コース・DX共創コースの学生をそれぞれ1名以上含む）の代表者が行ってください。</p>
       </div>
       <div class="work-box">
@@ -316,12 +346,11 @@ section+section{border-top:1px solid var(--line)}
       <ul class="check">
         <li>グループのメンバー全員が、新潟大学 創生学部の学生である</li>
         <li>グループに創生学修コース・DX共創コースの学生がそれぞれ1名以上含まれている</li>
-        <li>グループで参加登録を済ませている</li>
+        <li>グループでエントリーを済ませている</li>
         <li>作品説明 PDF は所定の様式を使い、A4・2頁以内に収まっている</li>
         <li>作品説明 PDF に、4つの記載項目(① 社会的課題と背景 ② 作品の説明 ③ 期待される効果と独自性・創造性 ④ 展望と今後の課題)がすべて含まれている</li>
         <li>実装コンテンツのリンクが、審査員が閲覧できる共有設定になっている</li>
         <li>ソフトウェアを含む作品の場合、ソースコードを提出物に含めている</li>
-        <li>生成AIを使った部分も含め、制作内容を自分たちで説明できる</li>
         <li>他者の作品・アイデア・画像などを自分たちのものとして使っていない（利用した素材は利用条件を守り、出典を作品説明 PDF に明記している）</li>
       </ul>
     </div>
@@ -455,14 +484,15 @@ section+section{border-top:1px solid var(--line)}
     </div>
     <div class="content-body">
       <table class="sched">
-        <tr><th>参加登録期間</th><td>2026年11月2日(月)〜12月31日(木)</td></tr>
-        <tr><th>グループマッチング</th><td>2026年11月中旬</td></tr>
+        <tr><th>マッチング登録期間</th><td>2026年11月2日(月)〜11月30日(月)</td></tr>
+        <tr><th>グループマッチング</th><td>2026年11月16日(月)・11月26日(木)・12月2日(水)<br>各回 12:10〜12:50 ＠総合研学修室1</td></tr>
+        <tr><th>エントリー期間</th><td>2026年11月2日(月)〜12月31日(木)</td></tr>
         <tr><th>作品提出期間</th><td>2027年1月1日(金)〜2月8日(月)</td></tr>
         <tr><th>プレゼン審査</th><td>2027年2月上旬〜中旬</td></tr>
         <tr><th>受賞者決定・発表会案内</th><td>2027年2月下旬</td></tr>
         <tr><th>表彰・受賞記念発表会</th><td>2027年4月上旬</td></tr>
       </table>
-      <div class="note-list"><p class="note-item">詳細日程は後日案内します。</p></div>
+      <div class="note-list"><p class="note-item">プレゼン審査の日程は後日案内します。</p></div>
       <p class="faq-link">その他のよくある質問は、<a href="index.html#faq">コンテストトップの Q&amp;A</a> をご覧ください。</p>
     </div>
   </div>
@@ -484,7 +514,24 @@ section+section{border-top:1px solid var(--line)}
 </footer>
 
 <script>
+/* フォームの URL と公開状態（index.html と同じ値にそろえる）。open:false のボタンは「ロック中」表示。 */
+const FORMS = {
+  matching: { url: "matching.html", open: true },
+  entry:    { url: "entry.html", open: true },
+  submit:   { url: "submit.html", open: false }
+};
 (function(){
+  document.querySelectorAll('[data-form]').forEach(el => {
+    const f = FORMS[el.dataset.form];
+    if (f && f.open && f.url) {
+      el.href = f.url;
+      if (/^https?:/.test(f.url)) { el.target = '_blank'; el.rel = 'noopener'; }
+      el.classList.remove('is-disabled');
+      const chip = el.querySelector('.chip'); if (chip) chip.remove();
+    } else {
+      el.addEventListener('click', e => { if (el.getAttribute('href') === '#') e.preventDefault(); });
+    }
+  });
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     header.classList.toggle('is-scrolled', window.scrollY > 40);

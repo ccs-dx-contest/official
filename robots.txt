@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /matching.html
+Disallow: /entry.html
+Disallow: /submit.html
 
 Sitemap: https://ccs-dx-contest.github.io/official/sitemap.xml

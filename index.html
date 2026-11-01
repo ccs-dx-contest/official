@@ -73,7 +73,7 @@ section+section{border-top:1px solid var(--line)}
 .pill .chip{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.1);color:var(--ink2);white-space:nowrap}
 .pill.lime .chip{background:rgba(0,0,0,.14);color:#06080c}
 .nav-toggle{display:none;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;background:none;border:1px solid var(--line2);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
-@media(max-width:1000px){
+@media(max-width:1240px){
   .nav{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(7,9,15,.96);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--line)}
   .nav.is-open{display:flex}
   .nav a{padding:14px var(--gutter);border-bottom:1px solid var(--line);font-size:.95rem}
@@ -156,7 +156,7 @@ section+section{border-top:1px solid var(--line)}
 @media(max-width:900px){.hero__inner{grid-template-columns:1fr;gap:28px;padding-top:110px}.hero__side{flex-direction:row;flex-wrap:wrap}.date{flex:1 1 220px}.catch{flex:1 1 100%;align-self:flex-start;text-align:left;margin:0 0 10px;transform:rotate(-4deg);transform-origin:left top}.catch__row{justify-content:flex-start}}
 @media(max-width:520px){.hero__title .l2{gap:.1em}.hero__title .l3 .year{display:block;margin:.05em 0 0;font-size:.9em}.date{min-width:0;flex:1 1 100%}}
 
-/* ---------- status ribbon (検討段階) ---------- */
+/* ---------- status ribbon ---------- */
 .status{background:linear-gradient(90deg,rgba(124,92,255,.22),rgba(124,92,255,.06) 60%,transparent);border-bottom:1px solid var(--line)}
 .status__in{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
 .status__tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--ice);text-transform:uppercase}
@@ -286,9 +286,9 @@ section+section{border-top:1px solid var(--line)}
 .q[open] summary .pm{transform:rotate(45deg);background:var(--lime);border-color:var(--lime)}
 .q[open] summary .pm::before,.q[open] summary .pm::after{background:#06080c}
 .q summary:hover .pm{border-color:var(--ink)}
-.q .a{padding:0 0 22px 56px;color:var(--ink2);font-size:.95rem;display:grid;grid-template-columns:auto 1fr;gap:12px}
-.q .a::before{content:'A';font-family:var(--disp);font-weight:800;color:var(--lime);line-height:1.6}
-@media(max-width:600px){.q summary{grid-template-columns:34px 1fr 28px}.q .a{padding-left:0}}
+.q .a{position:relative;display:block;padding:0 0 22px 84px;color:var(--ink2);font-size:.95rem;line-height:1.8}
+.q .a::before{content:'A';position:absolute;left:56px;top:0;font-family:var(--disp);font-weight:800;color:var(--lime);line-height:1.6}
+@media(max-width:600px){.q summary{grid-template-columns:34px 1fr 28px}.q .a{padding-left:28px}.q .a::before{left:0}}
 
 
 /* ---------- photos (duotone figures) ---------- */
@@ -413,7 +413,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .nav a{color:inherit;opacity:.85}.nav a:hover{opacity:1;color:inherit}.nav a::after{background:var(--magenta)}
 .nav-toggle{color:inherit;border-color:currentColor}
 .header .pill.lime{color:#14103a}
-@media(max-width:900px){.nav{background:rgba(255,255,255,.97);color:var(--ink);border-bottom:1px solid var(--line)}.nav a{border-bottom:1px solid var(--line)}}
+@media(max-width:1240px){.nav{background:rgba(255,255,255,.97);color:var(--ink);border-bottom:1px solid var(--line)}.nav a{border-bottom:1px solid var(--line)}}
 /* ボタン */
 .pill{border-color:var(--line2);color:var(--ink)}
 .pill.ghost:hover{border-color:var(--ink);background:rgba(20,16,60,.04)}
@@ -429,7 +429,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .hero__aurora{opacity:.9}
 .marquee{border:0;background:linear-gradient(90deg,var(--uv),var(--magenta) 55%,#ff7a3d);color:#fff}
 .marquee__track span{color:#fff}.marquee__track span i{color:var(--lime)}
-/* 検討段階リボン */
+/* ステータスリボン */
 .status{background:linear-gradient(90deg,rgba(109,59,255,.14),rgba(255,47,179,.1) 60%,rgba(25,211,255,.1));border-bottom:1px solid var(--line)}
 .status__tag{color:var(--uv)}.status__tag .pulse{background:var(--magenta);box-shadow:0 0 0 0 rgba(255,47,179,.6)}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,47,179,0)}100%{box-shadow:0 0 0 0 rgba(255,47,179,0)}}
@@ -516,7 +516,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .to-guide{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:700;font-size:.9rem;color:var(--uv);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
 .to-guide:hover{opacity:.8}
 .q .a a,.row dd .note a{color:var(--uv);font-weight:700}
-/* ヒーロー内のアンケート枠 */
+/* ヒーロー内の告知枠（旧アンケート枠のスタイルを流用） */
 .date--survey{border-color:var(--lime);background:rgba(12,16,24,.62);box-shadow:0 0 0 1px rgba(198,255,77,.25),0 10px 30px rgba(198,255,77,.18)}
 .date--survey .k{color:var(--lime)}.date--survey .k .pulse{background:var(--lime);box-shadow:0 0 0 0 rgba(198,255,77,.7);animation-name:lpulse}
 @keyframes lpulse{70%{box-shadow:0 0 0 9px rgba(198,255,77,0)}100%{box-shadow:0 0 0 0 rgba(198,255,77,0)}}
@@ -585,10 +585,10 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .flow__step:last-child{border-bottom:0}
 .flow__step::before{content:'';position:absolute;left:0;top:27px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid var(--uv);box-shadow:0 0 0 4px rgba(109,59,255,.12)}
 .flow__step::after{content:'';position:absolute;left:6px;top:33px;width:8px;height:8px;border-radius:50%;background:var(--uv)}
-.flow__step:nth-child(3)::before,.flow__step:nth-child(4)::before{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(255,47,179,.12)}
-.flow__step:nth-child(3)::after,.flow__step:nth-child(4)::after{background:var(--magenta)}
-.flow__step:nth-child(5)::before,.flow__step:nth-child(6)::before{border-color:var(--ice);box-shadow:0 0 0 4px rgba(25,211,255,.14)}
-.flow__step:nth-child(5)::after,.flow__step:nth-child(6)::after{background:var(--ice)}
+.flow__step:nth-child(4)::before,.flow__step:nth-child(5)::before{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(255,47,179,.12)}
+.flow__step:nth-child(4)::after,.flow__step:nth-child(5)::after{background:var(--magenta)}
+.flow__step:nth-child(6)::before,.flow__step:nth-child(7)::before{border-color:var(--ice);box-shadow:0 0 0 4px rgba(25,211,255,.14)}
+.flow__step:nth-child(6)::after,.flow__step:nth-child(7)::after{background:var(--ice)}
 .flow__meta{display:flex;flex-direction:column;gap:6px;padding-top:4px}
 .flow__no{font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
 .flow__date{font-family:var(--mono);font-size:.84rem;letter-spacing:.08em;color:var(--ink2)}
@@ -603,6 +603,67 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .flow__foot{margin-top:28px;padding-top:22px;border-top:1px solid var(--line2)}
 .flow__foot .to-guide{margin-top:0;font-size:.95rem;display:inline;line-height:1.9}
 @media(max-width:800px){.flow__step{grid-template-columns:1fr;gap:8px;padding-left:34px}.flow__meta{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 14px}.flow::before{left:8px}.flow__step::before{width:18px;height:18px;top:26px}.flow__step::after{left:5px;top:31px}}
+/* 11/2 公開版: ヒーロー告知・参加の流れ追加分 */
+.date__sub{margin:6px 0 0;font-size:.9rem;line-height:1.65;color:#2b2650;font-weight:700}
+.date--news .k .pulse{background:var(--magenta)}
+.dates{grid-template-columns:1fr 1fr}
+.dates .date:last-child{grid-column:span 2;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.dates .date:last-child .k{flex-basis:100%}
+.dates .date:last-child .v{font-size:clamp(1.05rem,1.45vw,1.3rem)}
+.dates .date:last-child .s{margin-top:0}
+@media(max-width:520px){.dates{grid-template-columns:1fr}.dates .date:last-child{grid-column:auto}}
+.flow-fig{margin:0 0 30px}
+.flow-fig img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 14px 40px rgba(20,16,58,.08)}
+.flow__notes{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:4px;font-size:.88rem;line-height:1.7;color:var(--ink3)}
+.flow__lead{margin-top:12px}
+.flow__due{font-family:var(--mono);font-size:.84rem;letter-spacing:.06em;font-weight:700;color:var(--uv)}
+.flow__body .flow__act+.flow__notes{margin-top:14px}
+.flow__sched{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.flow__sched li{display:grid;grid-template-columns:auto auto auto 1fr;gap:4px 14px;align-items:baseline;padding:8px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.55);font-size:.9rem}
+.flow__sched-no{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;font-weight:700;color:var(--uv)}
+.flow__sched-d{font-weight:800}
+.flow__sched-t{font-family:var(--mono);font-size:.84rem;letter-spacing:.04em;color:var(--ink2)}
+.flow__sched-v{color:var(--ink2)}
+.flow__sched-v::before{content:"＠";opacity:.6}
+@media(max-width:520px){.flow__sched li{grid-template-columns:auto 1fr}.flow__sched-v{grid-column:2}}
+.date--news{padding:14px 20px 16px}
+.date--news .date__lead{margin:8px 0 0}
+.hero__side{gap:12px}
+.marquee{margin-top:16px}
+@media(min-width:901px) and (max-height:820px){.hero__side .catch{padding-bottom:14px}.marquee{margin-top:8px}.date--news{padding:11px 18px 12px}.dates .date{padding:9px 14px}.hero__side{gap:9px}}
+.tile .big.big--sm{font-size:clamp(1.3rem,1.9vw,1.6rem);line-height:1.2;white-space:nowrap}
+.flow__who{display:inline-block;width:max-content;font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:3px 10px;border-radius:999px;background:rgba(25,211,255,.16);color:#0b6f8a}
+.flow__who--all{background:rgba(109,59,255,.12);color:var(--uv)}
+/* ヘッダー常設の登録ボタン(マッチング登録・エントリーの2つ一組) */
+.header__cta{display:flex;align-items:center;gap:8px;margin-left:18px}
+.header__cta .pill{padding:9px 14px;font-size:.8rem;gap:6px;white-space:nowrap}
+@media(max-width:640px){
+  .header{flex-wrap:wrap;row-gap:10px}
+  .header__cta{order:3;flex-basis:100%;margin-left:0;justify-content:stretch}
+  .header__cta .pill{flex:1 1 0;justify-content:center;padding:10px 10px;font-size:.84rem}
+  .hero__inner{padding-top:150px}
+}
+/* ---------- アイデア事例 ---------- */
+.ideas__lead{font-size:1rem;color:var(--ink2);line-height:1.9;max-width:64ch;margin-bottom:26px}
+.ideas{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.idea{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 24px 20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 30px rgba(20,16,60,.05);transition:border-color .3s,transform .3s}
+.idea:hover{border-color:var(--line2);transform:translateY(-2px)}
+.idea__ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:var(--uv);background:linear-gradient(145deg,rgba(109,59,255,.12),rgba(255,47,179,.10))}
+.idea__ic svg{width:44px;height:44px}
+.idea:nth-child(3n+2) .idea__ic{color:#0b8fb0;background:linear-gradient(145deg,rgba(25,211,255,.16),rgba(109,59,255,.10))}
+.idea:nth-child(3n) .idea__ic{color:#c4228a;background:linear-gradient(145deg,rgba(255,47,179,.14),rgba(198,255,77,.22))}
+.idea h3{font-size:1.15rem;font-weight:900;letter-spacing:.02em;line-height:1.4}
+.idea__dl{display:grid;gap:8px;margin:0}
+.idea__dl>div{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:start}
+.idea__dl dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--uv);padding-top:5px;white-space:nowrap}
+.idea__dl dd{font-size:.93rem;color:var(--ink);line-height:1.7;margin:0}
+.idea__tip{margin-top:auto;border-top:1px solid var(--line);padding-top:10px}
+.idea__tip summary{list-style:none;cursor:pointer;font-size:.84rem;font-weight:700;color:var(--ink2);display:flex;align-items:center;gap:8px}
+.idea__tip summary::-webkit-details-marker{display:none}
+.idea__tip summary::before{content:'+';display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid var(--line2);font-size:.9rem;line-height:1;color:var(--ink)}
+.idea__tip[open] summary::before{content:'−';background:var(--magenta);border-color:var(--magenta);color:#fff}
+.idea__tip p{margin-top:10px;font-size:.88rem;color:var(--ink2);line-height:1.8}
+@media(max-width:800px){.ideas{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -621,11 +682,15 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <a href="#purpose">目的</a>
     <a href="#flow">参加の流れ</a>
     <a href="#criteria">審査基準</a>
+    <a href="#ideas">アイデア例</a>
     <a href="#award">表彰</a>
     <a href="#faq">Q&amp;A</a>
     <a href="#next">次のステージ</a>
-    <a class="pill lime is-disabled" href="#entry">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
   </nav>
+  <div class="header__cta">
+    <a class="pill lime" href="#matching" data-form="matching">マッチング登録<span class="arr">↗</span></a>
+    <a class="pill lime" href="#entry" data-form="entry">エントリー<span class="arr">↗</span></a>
+  </div>
 </header>
 
 <!-- ===== Hero ===== -->
@@ -649,8 +714,8 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       </div>
       <p class="hero__tag">〜 <b>デジタル</b>の力で<b>未来</b>をつくる 〜</p>
       <div class="hero__cta">
-        <a class="pill lime is-disabled" href="#entry">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
-        <a class="pill lime" href="guidelines.html">応募要領 <span class="arr">↗</span></a>
+        <a class="pill ghost" href="guidelines.html">応募要領 <span class="arr">↗</span></a>
+        <a class="pill ghost" href="#flow">参加の流れ <span class="arr">↓</span></a>
       </div>
     </div>
     <div class="hero__side">
@@ -659,10 +724,12 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
         <div class="catch__line">次の一歩へ。</div>
       </div>
       <div class="dates">
-      <div class="date"><span class="k">Entry</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">12月31日(木)</span></span><span class="s">参加登録期間</span></div>
+      <div class="date"><span class="k">Matching</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">11月30日(月)</span></span><span class="s">マッチング登録</span></div>
+      <div class="date"><span class="k">Entry</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">12月31日(木)</span></span><span class="s">エントリー</span></div>
       <div class="date"><span class="k">Deadline</span><span class="v">2027年<span class="nw">2月8日(月)</span></span><span class="s">作品提出締切</span></div>
       </div>
-      <div class="date date--survey" id="survey"><span class="k"><span class="pulse" aria-hidden="true"></span>Survey / 回答受付中</span><p class="date__lead">本企画は現在検討段階です。<br>学生の皆さんの反応をもとに実施判断をします。</p><div class="date__row"><span class="s">アンケートへのご回答をお願いします<span class="nw">（所要時間 約1分）。</span><span class="date__due">回答期限：10月26日(月) 正午</span></span><a class="date__btn" href="#" data-form="survey">アンケートに回答する<span class="arr" aria-hidden="true">↗</span></a></div></div>
+      <!-- 告知文は仮案（最終文言は西海が決定） -->
+      <div class="date date--survey date--news" id="news"><span class="k"><span class="pulse" aria-hidden="true"></span>News / 開催決定</span><p class="date__lead">社会課題×DX チャレンジ 2026 の開催が決定しました。</p><p class="date__sub">マッチング登録・エントリーの受付は 11月2日(月) に開始します。</p></div>
     </div>
   </div>
   <div class="marquee" aria-hidden="true">
@@ -673,7 +740,6 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
   </div>
 </section>
 
-<!-- ===== 検討段階のお知らせ ===== -->
 <!-- ===== 01 開催概要 ===== -->
 <section id="outline">
   <div class="wrap sec rv">
@@ -685,8 +751,8 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <dl class="rows">
       <div class="row"><dt><b>名称</b>Title</dt><dd>社会課題×DX チャレンジ 2026 〜デジタルの力で未来をつくる〜</dd></div>
       <div class="row"><dt><b>テーマ</b>Theme</dt><dd>DX技術を活用した社会課題解決のアイデアと実践</dd></div>
-      <div class="row"><dt><b>対象</b>Eligibility</dt><dd>新潟大学 創生学部の学生（創生学修コース・DX共創コース）<span class="note">両コースの学生を含むグループ（2〜5名を目安）で作品を制作します。個人での参加登録も OK です。</span></dd></div>
-      <div class="row"><dt><b>期間</b>Period</dt><dd>参加登録 11月2日(月)〜12月31日(木) ／ 作品提出 2027年1月1日(金)〜2月8日(月)<span class="note">流れと日程は <a href="#flow">参加の流れ</a> をご覧ください。</span></dd></div>
+      <div class="row"><dt><b>対象</b>Eligibility</dt><dd>新潟大学 創生学部の学生（創生学修コース・DX共創コース）。学年は問いません。<span class="note">両コースの学生を含むグループ（2〜5名を目安）で作品を制作します。学年の異なるメンバーでグループを組んでもかまいません。個人や未完成グループは、まずマッチング登録をしてください。</span></dd></div>
+      <div class="row"><dt><b>期間</b>Period</dt><dd>マッチング登録 11月2日(月)〜11月30日(月) ／ エントリー 11月2日(月)〜12月31日(木) ／ 作品提出 2027年1月1日(金)〜2月8日(月)<span class="note">流れと日程は <a href="#flow">参加の流れ</a> をご覧ください。</span></dd></div>
       <div class="row"><dt><b>提出するもの</b>Deliverables</dt><dd>作品説明 PDF（2枚）＋ 実装コンテンツ（Google ドライブまたは GitHub のリンクで提出）<span class="note">様式・記載項目などの詳細は <a href="guidelines.html#submit">応募要領</a> をご覧ください。</span></dd></div>
       <div class="row"><dt><b>表彰</b>Award</dt><dd>優秀な作品を学部長表彰し、賞状を贈呈<span class="note">受賞グループは受賞記念発表会（2027年4月上旬）で成果を発表します。</span></dd></div>
       <div class="row"><dt><b>主催</b>Organizer</dt><dd>新潟大学 創生学部</dd></div>
@@ -751,39 +817,64 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       <div class="sec__no">03</div>
       <h2 class="sec__title">参加の流れ</h2>
       <div class="sec__en">How it works</div>
-      <p class="sec__note">※詳細日程は後日案内します。</p>
+      <p class="sec__note">※プレゼン審査の日程は後日案内します。</p>
     </div>
     <div>
+      <figure class="flow-fig"><img src="assets/img/flow-entry.svg" alt="参加の流れ。個人・未完成グループは、マッチング登録(11月30日締切)、マッチングの場に参加(11月16日・11月26日・12月2日の12:10〜12:50、総合研学修室1)、完成グループになる、エントリー(12月31日締切)の順に進む。完成グループはそのままエントリー。場合によっては、マッチングの場での組み込み調整(メンバー追加の相談)がある。" width="1200" height="720" loading="lazy"></figure>
       <div class="bento pts">
-        <div class="tile w2 lime"><span class="mono">Solo OK</span><div class="big">個人<small>参加OK</small></div><p>個人で登録した人には、仲間を見つける「マッチングの場」を設けます。</p></div>
+        <div class="tile w2 lime"><span class="mono">Solo / Pre-team OK</span><div class="big big--sm">個人・未完成<br>グループ<small>もOK</small></div><p>まずはマッチング登録へ。仲間を見つける「マッチングの場」を設けます。</p></div>
         <div class="tile w2 cyan"><span class="mono">Team size</span><div class="big">2–5<small>名が目安</small></div><p>創生学修コース・DX共創コースの両方の学生を含むグループで制作します。</p></div>
         <div class="tile w2 uv"><span class="mono">AI allowed</span><div class="big">AI<small>の利用OK！</small></div><p>AIを使った部分も含め、制作内容を自分たちで説明できればOK。</p></div>
       </div>
       <ol class="flow">
-        <li class="flow__step hot" id="entry">
-          <div class="flow__meta"><span class="flow__no">Step 01</span><span class="flow__date">11月2日(月)〜12月31日(木)</span></div>
-          <div class="flow__body"><h3>参加登録</h3><p>グループでも個人でも登録できます。まずは登録して、スタートラインへ。</p>
-            <div class="flow__act" id="entryForm"><a class="pill lime is-disabled" href="#">参加登録フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a></div></div>
+        <li class="flow__step hot" id="matching">
+          <div class="flow__meta"><span class="flow__no">Step 01</span><span class="flow__date">11月2日(月)〜11月30日(月)</span><span class="flow__who">個人・未完成グループ</span></div>
+          <div class="flow__body"><h3>マッチング登録</h3>
+            <p>「テーマはあるけどDX技術が不安」「他コースの学生がみつからない」「やってみたいけど一人は不安」などあるかと思います。本コンテストでは、そういった学生に向けてマッチングの機会を設けます。興味がある方は、まずはこちらのマッチング登録をしてください。</p>
+            <ul class="flow__notes">
+              <li>＊すでにグループ構成ができている場合は、《エントリー》の方に進んでください。</li>
+              <li>＊マッチングは学生の希望に応じて、昼休みの時間に3回（11/16・11/26・12/2）実施します。</li>
+            </ul>
+            <p class="flow__lead">マッチング登録は、以下のフォームから行ってください。</p>
+            <div class="flow__act"><a class="pill lime" href="#" data-form="matching">マッチング登録フォーム<span class="arr">↗</span></a><span class="flow__due">登録締め切り：2026年11月30日</span></div></div>
         </li>
         <li class="flow__step hot">
-          <div class="flow__meta"><span class="flow__no">Step 02</span><span class="flow__date">11月中旬</span></div>
-          <div class="flow__body"><h3>グループマッチング</h3><p>個人や、まだ両コースがそろっていないグループ向けに、仲間と出会う場を設けます。グループができたら、改めてグループで登録します。</p></div>
+          <div class="flow__meta"><span class="flow__no">Step 02</span><span class="flow__date">11月16日(月)・11月26日(木)・12月2日(水) 12:10〜12:50</span><span class="flow__who">個人・未完成グループ</span></div>
+          <div class="flow__body"><h3>グループマッチング</h3><p>個人や、まだ両コースがそろっていないグループ向けに、昼休みの時間にマッチングの場を3回設けます。参加する回は問いません。グループができたらエントリーに進んでください。</p>
+            <ul class="flow__sched">
+              <li><span class="flow__sched-no">第1回</span><span class="flow__sched-d">11月16日(月)</span><span class="flow__sched-t">12:10〜12:50</span><span class="flow__sched-v">総合研学修室1</span></li>
+              <li><span class="flow__sched-no">第2回</span><span class="flow__sched-d">11月26日(木)</span><span class="flow__sched-t">12:10〜12:50</span><span class="flow__sched-v">総合研学修室1</span></li>
+              <li><span class="flow__sched-no">第3回</span><span class="flow__sched-d">12月2日(水)</span><span class="flow__sched-t">12:10〜12:50</span><span class="flow__sched-v">総合研学修室1</span></li>
+            </ul>
+          </div>
+        </li>
+        <li class="flow__step hot" id="entry">
+          <div class="flow__meta"><span class="flow__no">Step 03</span><span class="flow__date">11月2日(月)〜12月31日(木)</span><span class="flow__who flow__who--all">完成グループはここから</span></div>
+          <div class="flow__body"><h3>エントリー</h3>
+            <p>すでに完成グループ（創生学修コース・DX共創コースの学生を含むグループ）ができている場合は、Step 01・02 を経ずに、ここからエントリーしてください。マッチングでグループができた場合も同じです。</p>
+            <p class="flow__lead">本コンテストへの応募は、以下のエントリーフォームから行ってください。</p>
+            <div class="flow__act"><a class="pill lime" href="#" data-form="entry">エントリーフォーム<span class="arr">↗</span></a><span class="flow__due">登録締め切り：2026年12月31日</span></div>
+            <ul class="flow__notes">
+              <li>＊エントリーは、グループ構成（創生学修・DXコース生を含む）が完了した場合に行なってください。</li>
+              <li>＊エントリー後にメンバー変更などがある場合は、連絡の上再登録を行ってください。</li>
+              <li>＊マッチングのため、エントリー後にメンバー追加について相談の可能性があります。</li>
+            </ul></div>
         </li>
         <li class="flow__step">
-          <div class="flow__meta"><span class="flow__no">Step 03</span><span class="flow__date">2027年1月1日(金)〜2月8日(月)</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 04</span><span class="flow__date">2027年1月1日(金)〜2月8日(月)</span></div>
           <div class="flow__body"><h3>制作・作品提出</h3><p>課題解決の案と、それを形にした実装コンテンツ（アプリ、Webコンテンツ、デバイスなど）を「作品」としてまとめます。提出するのは <b>作品説明 PDF（2枚）</b> と <b>実装コンテンツ</b> の2点です（実装コンテンツは Google ドライブまたは GitHub のリンクで提出）。</p>
-            <div class="flow__act"><a class="pill ghost is-disabled" href="#">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a><a class="to-guide" href="guidelines.html#submit">様式・提出方法は応募要領へ <span aria-hidden="true">→</span></a></div></div>
+            <div class="flow__act"><a class="pill ghost is-disabled" href="#" data-form="submit">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a><a class="to-guide" href="guidelines.html#submit">様式・提出方法は応募要領へ <span aria-hidden="true">→</span></a></div></div>
         </li>
         <li class="flow__step">
-          <div class="flow__meta"><span class="flow__no">Step 04</span><span class="flow__date">2027年2月上旬〜中旬</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 05</span><span class="flow__date">2027年2月上旬〜中旬</span></div>
           <div class="flow__body"><h3>プレゼン審査</h3><p>提出された作品の書面審査に加えて、口頭で発表するプレゼン審査を行います。いずれも <a href="#criteria">4つの評価軸</a> で評価します。</p></div>
         </li>
         <li class="flow__step">
-          <div class="flow__meta"><span class="flow__no">Step 05</span><span class="flow__date">2027年2月下旬</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 06</span><span class="flow__date">2027年2月下旬</span></div>
           <div class="flow__body"><h3>受賞者決定</h3><p>審査結果と、受賞記念発表会のご案内をお知らせします。</p></div>
         </li>
         <li class="flow__step last">
-          <div class="flow__meta"><span class="flow__no">Step 06</span><span class="flow__date">2027年4月上旬</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 07</span><span class="flow__date">2027年4月上旬</span></div>
           <div class="flow__body"><h3>表彰・受賞記念発表会</h3><p>優秀な作品を学部長表彰。受賞グループが成果を発表します。</p></div>
         </li>
       </ol>
@@ -819,11 +910,102 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
   </div>
 </section>
 
-<!-- ===== 05 表彰 ===== -->
-<section id="award">
+<!-- ===== 05 アイデア事例 ===== -->
+<section id="ideas">
   <div class="wrap sec rv">
     <div class="sec__head">
       <div class="sec__no">05</div>
+      <h2 class="sec__title">アイデア<br>事例</h2>
+      <div class="sec__en">Idea examples</div>
+      <p class="sec__note">※テーマ選びのヒントです。これ以外のテーマでも構いません。</p>
+    </div>
+    <div>
+      <p class="ideas__lead">身近な課題に DX 技術をどう当てはめるか、7つの例を挙げます。それぞれに「期間内に実装するための工夫例」を添えました。完成品でなくても、模擬検証や範囲を絞った試作で提出できます。</p>
+      <div class="ideas">
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="18" width="48" height="32" rx="6"/><circle cx="32" cy="34" r="9"/><circle cx="32" cy="34" r="3.5"/><path d="M22 18l4-6h12l4 6"/><path d="M47 25h3"/><path d="M12 56h40" stroke-dasharray="3 4"/></svg></div>
+          <h3>施設利用状況の自動取得</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>現地に行かないと利用可能かどうか確認できない</dd></div>
+            <div><dt>解決案</dt><dd>現在の利用状況を映像で自動認識する</dd></div>
+            <div><dt>解決法</dt><dd>カメラの画像認識で対象物をカウントし、使用度を算出する</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>プライバシーや施設利用の観点から、実際にカメラを常設したと仮定した模擬検証を行う。許可を得た学生に利用者になってもらい、適当な場所で利用状況を撮影し、画像解析を行う。また、現在の利用状況を Web ページ等に反映させるなど、簡易的なアウトプットを実装する。</p></details>
+        </article>
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="14" width="48" height="42" rx="6"/><path d="M8 26h48"/><path d="M20 10v8M44 10v8"/><rect x="15" y="33" width="8" height="7" rx="1.5" fill="currentColor" stroke="none" opacity=".9"/><rect x="28" y="33" width="8" height="7" rx="1.5"/><rect x="41" y="33" width="8" height="7" rx="1.5"/><rect x="15" y="44" width="8" height="7" rx="1.5"/><rect x="28" y="44" width="8" height="7" rx="1.5" fill="currentColor" stroke="none" opacity=".9"/><path d="M52 4l4 4-4 4" /><path d="M46 8h10"/></svg></div>
+          <h3>大学のイベント情報集約</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>イベント情報がメールや SNS に分散し、必要な人に十分行き渡らない</dd></div>
+            <div><dt>解決案</dt><dd>あらゆるイベント情報をまとめたカレンダーを作成する</dd></div>
+            <div><dt>解決法</dt><dd>メールや SNS を巡回する BOT を作成する</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>収集する情報を制限して試験的に実装を行う。全学共通あるいは本学部のみを対象とするイベントを公式 Web ページのお知らせ欄や SNS の投稿から収集してデータベース化する。Web ページやアプリ等にカレンダー形式で表示し、イベントの重要度に応じて色分けするなど視覚的効果を追加する。</p></details>
+        </article>
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10h28l8 8v36H14z"/><path d="M42 10v8h8"/><path d="M21 28h8M21 36h8M21 44h8"/><path d="M34 29l2.5 2.5L41 27"/><path d="M34 37l2.5 2.5L41 35"/><circle cx="48" cy="48" r="9" fill="#fff"/><path d="M48 43v5l3 2"/></svg></div>
+          <h3>課題・レポート作業管理</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>レポートや試験の準備を忘れたり、締切を見逃したりしてしまう</dd></div>
+            <div><dt>解決案</dt><dd>内容と締切から重要度を判断し、リマインドや作業の計画を作成する</dd></div>
+            <div><dt>解決法</dt><dd>Google カレンダーや手入力情報からイベントを取得し優先度を計算する</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>実験用に Google アカウントを作成し、カレンダーに1か月間程度の予定と説明文を入力する。カレンダーの API やエクスポート機能を用いて予定を抽出し、説明文に入力された試験やレポートの内容から予測される作業時間や優先度に応じた作業計画およびリマインド計画を作成する。</p></details>
+        </article>
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="36" height="52" rx="5"/><path d="M14 26h36"/><path d="M20 15v6M20 33v9"/><path d="M28 40c0-5 3-7 6-7s6 2 6 7-3 8-6 8-6-3-6-8z" fill="currentColor" opacity=".15"/><path d="M34 33v-4"/><path d="M26 18h12" stroke-dasharray="2 3"/></svg></div>
+          <h3>冷蔵庫の食品ロス</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>冷蔵庫の奥にしばしば食材が長期間放置される</dd></div>
+            <div><dt>解決案</dt><dd>食材、購入日、消費期限などから献立候補を作成する</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>開始時点の食材情報を入力し、栄養素の管理や追加購入の提案などを実装しながら、数週間程度の消費、購入、保存に関するシミュレーションを行う。時系列的に庫内の食材を可視化し、効率的に食材を消費できているか、栄養素に偏りがないかなどを分析する。</p></details>
+        </article>
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14h36a6 6 0 0 1 6 6v16a6 6 0 0 1-6 6H26l-10 9v-9h-6a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z"/><path d="M22 22v12"/><path d="M19 22v5a3 3 0 0 0 6 0v-5"/><path d="M32 22c-2 2-2 6 0 8v4"/><circle cx="52" cy="48" r="7"/><path d="M49 48h6M52 45v6"/></svg></div>
+          <h3>地域飲食店のコンシェルジュ</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>地域の飲食店の魅力が十分に伝わっていない</dd></div>
+            <div><dt>解決案</dt><dd>各店舗を紹介するチャットボットを作成する</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>店舗（大学周辺など）や利用者層（大学生など）を絞って、好みや利用用途からおすすめの店舗やメニューを提案できるように、事前情報をチャットボットに学習させる。実際の店舗でメニューに関する情報を得るなどして信頼性を向上させる。</p></details>
+        </article>
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18l16-6 16 6 16-6v34l-16 6-16-6-16 6z"/><path d="M24 12v34M40 18v34"/><path d="M46 8l9 16H37z" fill="#fff"/><path d="M46 14v5M46 21.5v.5"/><path d="M12 38c4-2 8-2 12 0s8 2 12 0" stroke-dasharray="3 3"/></svg></div>
+          <h3>災害情報共有システム</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>災害時に発生状況や避難上の問題などが十分共有されていない</dd></div>
+            <div><dt>解決法</dt><dd>被害状況の投稿写真などから画像解析により状況を分析する</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>災害が発生したと仮定して、その影響を再現した写真と位置情報から状況（冠水、渋滞、土砂崩れ、事故など）を自動認識させ、地図アプリ上に注意情報を反映させる。また、周辺にも同様の状況が想定されるエリアを網掛けなどで可視化する。</p></details>
+        </article>
+
+        <article class="idea">
+          <div class="idea__ic" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 26h44a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4h-9l-4-5h-18l-4 5h-9a4 4 0 0 1-4-4V30a4 4 0 0 1 4-4z"/><circle cx="22" cy="35" r="3.5"/><circle cx="42" cy="35" r="3.5"/><path d="M8 56c6-6 12-8 24-8s18 2 24 8"/><path d="M12 56v-5M24 52v-4M40 52v-4M52 56v-5"/><path d="M20 14c4-4 8-6 12-6s8 2 12 6" stroke-dasharray="2 3"/></svg></div>
+          <h3>新潟の歴史を追体験</h3>
+          <dl class="idea__dl">
+            <div><dt>課題</dt><dd>活気にあふれていた昔の新潟をアピールしたい</dd></div>
+            <div><dt>解決法</dt><dd>VR により当時の街並みや重要文化財を体験させる</dd></div>
+          </dl>
+          <details class="idea__tip"><summary>期間内に実装するための工夫例</summary><p>万代橋、古町、新潟港、沼垂など、場所を絞って当時の様子と現在を VR や 360 度パノラマで再現する。再現自体は簡素なものにとどめ、にぎわっている雰囲気が十分伝わるように効果音やナレーション等を加えるなどして実装を行う。</p></details>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 表彰 ===== -->
+<section id="award">
+  <div class="wrap sec rv">
+    <div class="sec__head">
+      <div class="sec__no">06</div>
       <h2 class="sec__title">表彰</h2>
       <div class="sec__en">Award</div>
     </div>
@@ -837,23 +1019,29 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
   </div>
 </section>
 
-<!-- ===== 06 Q&A ===== -->
+<!-- ===== 07 Q&A ===== -->
 <section id="faq">
   <div class="wrap sec rv">
     <div class="sec__head">
-      <div class="sec__no">06</div>
+      <div class="sec__no">07</div>
       <h2 class="sec__title">Q&amp;A</h2>
       <div class="sec__en">Questions — 随時追加予定</div>
     </div>
     <div>
       <div class="faq__cat"><b>参加・チームについて</b></div>
-      <details class="q"><summary><span class="n">Q01</span>個人でも参加登録できますか？<span class="pm"></span></summary><div class="a">はい、個人でも参加登録できます。11月中旬に「マッチングの場」を設けるので、そこで個人同士でグループを結成したり、結成済みのグループに加わったりできます。</div></details>
-      <details class="q"><summary><span class="n">Q02</span>グループの人数や条件はありますか？<span class="pm"></span></summary><div class="a">人数は2〜5名を目安とします。創生学修コース・DX共創コースの両方の学生を含むグループで制作してください。メンバーは全員、新潟大学 創生学部の学生である必要があります（他学部の学生は加えられません）。詳しくは <a href="guidelines.html#eligibility">応募要領</a> をご覧ください。</div></details>
+      <details class="q"><summary><span class="n">Q01</span>個人でも参加できますか？<span class="pm"></span></summary><div class="a">はい。個人や、両コースがそろっていないグループは、まず「マッチング登録」（11月30日まで）をしてください。11月16日・11月26日・12月2日の昼休み（12:10〜12:50、総合研学修室1）に設ける「マッチングの場」で、個人同士でグループを結成したり、結成済みのグループに加わったりできます。グループができたら「エントリー」（12月31日まで）に進んでください。</div></details>
+      <details class="q"><summary><span class="n">Q02</span>グループの人数や条件はありますか？<span class="pm"></span></summary><div class="a">人数は2〜5名を目安とします。創生学修コース・DX共創コースの両方の学生を含むグループで制作してください。学年は問いません。異なる学年の学生同士でグループを組んでもまったく問題ありません。メンバーは全員、新潟大学 創生学部の学生である必要があります（他学部の学生は加えられません）。詳しくは <a href="guidelines.html#eligibility">応募要領</a> をご覧ください。</div></details>
+      <details class="q"><summary><span class="n">Q10</span>創生学修コースとDX共創コースの学生は、具体的にどのように協働するのですか？<span class="pm"></span></summary><div class="a">本コンテストでは、両コースの学生がそれぞれの知識や強みを生かしながら、社会や地域の課題解決に取り組むことを期待しています。例えば、創生学修コースの学生が課題の発見・分析、利用者の視点からの提案、成果の検証などに取り組み、DX共創コースの学生がデジタル技術の選択や実装を中心に担当するといった協働が考えられます。ただし、役割分担をコースごとに固定するわけではありません。課題設定から作品制作、成果の検証まで、チーム全員で考え、協力することが重要です。<br><br>また、本コンテストでの協働は、それぞれのコースならではの学び方を互いに体験する機会にもなります。例えば創生学修コースの学生はDX共創コースのDXスタディーズに、DX共創コースの学生は創生学修コースのフィールドスタディーズに触れ、互いに培った経験や知識を持ち寄り、相手のコースの学びを共に体験することで、自分のコースだけでは得られない視点が身につくことを期待しています。</div></details>
+      <details class="q"><summary><span class="n">Q11</span>グループの人数は2〜5名が目安とされていますが、6名以上でもエントリーできますか？<span class="pm"></span></summary><div class="a">グループの人数は、全員が主体的に参加し、協働しやすい規模として2〜5名を目安としています。6名以上での応募については、希望状況や活動内容などを踏まえて検討します。人数が目安を超える場合は、事前に運営側へご相談ください。なお、作品の提出にあたっては、創生学修コースとDX共創コースの学生をそれぞれ1名以上含むことが必要です。</div></details>
+      <details class="q"><summary><span class="n">Q12</span>一緒に参加するメンバーがいない場合や、知らない人とグループを組むことが不安な場合はどうすればよいですか？<span class="pm"></span></summary><div class="a">メンバーが決まっていなくても、個人でマッチング登録することができます。11月中旬以降に3回のマッチング機会（11/16・11/26・12/2 の 12:10〜12:50、総合研学修室1）を設けています。マッチングでは、参加希望者同士が交流し、それぞれの関心や取り組みたい課題を共有することもできます。知らない人とチームを組むことに不安がある場合も、他の学生がどのようなことに興味を持っているのかを知るところから始めてみてください。マッチングを通じてグループができたら、エントリーしてください。</div></details>
+      <details class="q"><summary><span class="n">Q13</span>コンテストへの参加で学生に期待されていることはどんなことですか？<span class="pm"></span></summary><div class="a">本コンテストでは、普段の授業やコース内の学修だけでは得られない経験ができることを期待しています。例えば、異なる専門性や関心を持つ学生と協働する経験、創生学修コースのフィールドスタディーズとDX共創コースのDXスタディーズを互いに体験する経験、身近な課題を発見して解決策を考える経験、デジタル技術を実際の課題解決に活用する経験などが挙げられます。また、自分たちのアイデアを作品として具体化し、教員による審査や発表を通じてフィードバックを得ることもできます。必ずしも高度なDXスキルを身につけている必要はありません。自分の得意分野を生かしながら、新しい知識や技術に挑戦する機会として参加してほしいと考えています。</div></details>
+      <details class="q"><summary><span class="n">Q14</span>コンテストに参加すると具体的にどのようなメリットがありますか？<span class="pm"></span></summary><div class="a">本コンテストは、学内外のさまざまなコンテストに挑戦するための足がかりにもなります。学外には、ハッカソンやアイデアソン、ビジネスプランコンテスト、自治体や企業が主催するデータ活用・DX関連のコンテストなど、学生が応募できる機会が数多くあります。本コンテストで、チームで課題を設定し、作品をつくり、人に伝わるように発表するという一連の流れを経験しておけば、こうした場にも挑戦しやすくなります。本コンテストで制作した作品やアイデアを発展させて、他のコンテストに応募することも歓迎します。<br><br>さらに、就職活動でのアピールにもつながります。就職活動では、「学生時代に力を入れたこと」として、何に取り組み、どのような役割を担い、どのような成果を出したかを具体的に説明することが求められます。本コンテストへの参加を通じて、異なる専門性を持つメンバーとの協働、課題の発見から解決策の実装・検証までの過程、作品という形に残る成果など、自分の言葉で語れる経験を得ることができます。デジタル技術を活用して社会や地域の課題に取り組んだ経験は、業種や職種を問わず評価されやすいものです。</div></details>
 
       <div class="faq__cat"><b>制作について</b></div>
       <details class="q"><summary><span class="n">Q03</span>何から始めればよいですか？<span class="pm"></span></summary><div class="a">「DX技術をどう社会課題に応用できるか」という技術起点でも、「解決すべき社会課題を定め、それにどうDX技術を応用できるか」という課題起点でも、どちらから始めてもかまいません。前期のフィールドスタディーズ・DXスタディーズでの経験を振り返ってみるのもおすすめです。</div></details>
       <details class="q"><summary><span class="n">Q04</span>生成AIなどのツールを使ってもよいですか？<span class="pm"></span></summary><div class="a">使えます。ただし、AIを使った部分も含め、制作内容を自分たちで説明できることが必要です。十分に説明できない場合は、理解度の評価に反映されます。</div></details>
       <details class="q"><summary><span class="n">Q05</span>公開されているコードや画像を使ってもよいですか？<span class="pm"></span></summary><div class="a">利用条件（ライセンス）を守り、出典を作品説明 PDF に明記すれば利用できます。他者の作品・アイデア・画像などを自分たちのものとして提出すること（盗作・剽窃）は禁止です。詳しくは <a href="guidelines.html#ai">応募要領</a> をご覧ください。</div></details>
+      <details class="q"><summary><span class="n">Q15</span>DXの知識があまりなく、どのようなテーマを考えればよいか分かりません。<span class="pm"></span></summary><div class="a">DXについて専門的な知識がなくても、参加することは可能です。最初からデジタル技術を使ったアイデアを考える必要はありません。まずは、普段の生活や大学での学び、地域での活動などの中から「困っていること」「改善したいこと」を見つけてみてください。例えば、食品ロスの削減、地域イベントの情報発信、大学生活における不便の解消など、身近な問題もテーマになります。その課題に対して、AI、データ分析、プログラミング、IoTなどのデジタル技術をどのように活用できるか、チームで考えていくことができます。なお、最終的にはDXツールを活用した作品の提出が必要ですが、応募を考え始める段階で完成したアイデアを持っている必要はありません。</div></details>
 
       <div class="faq__cat"><b>提出・審査について</b></div>
       <details class="q"><summary><span class="n">Q06</span>何を提出すればよいですか？<span class="pm"></span></summary><div class="a">作品説明 PDF（2枚）と、実装コンテンツの2点です。実装コンテンツは Google ドライブまたは GitHub のリンクで提出します。提出後、口頭でプレゼンを行います。様式のダウンロードや記載項目は <a href="guidelines.html#submit">応募要領</a> をご覧ください。</div></details>
@@ -862,22 +1050,23 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       <div class="faq__cat"><b>表彰・発表会について</b></div>
       <details class="q"><summary><span class="n">Q08</span>受賞するとどうなりますか？<span class="pm"></span></summary><div class="a">優秀な作品を学部長表彰し、賞状を贈呈します。受賞グループは、2027年4月上旬の「表彰および受賞記念発表会」で成果を発表します。</div></details>
       <details class="q"><summary><span class="n">Q09</span>発表会の時点で卒業している場合はどうなりますか？<span class="pm"></span></summary><div class="a">卒業などで参加が難しい場合は、ビデオメッセージなど別の方法での参加も可能です。お気軽にご相談ください。</div></details>
+      <details class="q"><summary><span class="n">Q16</span>賞金やAIライセンス、機材、単位などの褒賞はありますか？<span class="pm"></span></summary><div class="a">本コンテストでは、優れた作品を表彰するとともに、受賞したチームが成果を発表する機会を設ける予定です。AIライセンス、機材、賞金などについては、予算や運営体制を踏まえ、今後実現可能性を検討します。本コンテストへの参加で単位を付与することは予定していません。単位認定については、大学の教育課程や履修制度との関係があるため、今年度の実施状況を踏まえて、今後検討します。</div></details>
     </div>
   </div>
 </section>
 
-<!-- ===== 07 さらなるステージへ ===== -->
+<!-- ===== 08 さらなるステージへ ===== -->
 <section class="next" id="next">
   <div class="wrap sec rv">
     <div class="sec__head">
-      <div class="sec__no">07</div>
+      <div class="sec__no">08</div>
       <h2 class="sec__title">さらなる<br>ステージへ。</h2>
       <div class="sec__en">Next stage</div>
     </div>
     <div>
       <h3 class="next__catch">創生学部で生まれたアイデアを、<br><em>次の挑戦へ。</em></h3>
       <p class="next__sub">このコンテストで形にしたアイデアや成果を、学部内で終わらせず、ぜひ次の挑戦へつなげてください。</p>
-      <p class="next__body">新潟大学には、全学の学部生・大学院生を対象とした『新潟大学 生成AIコンテスト』があります。このコンテストでの取り組みをさらに発展させ、ぜひ全学コンテストへの挑戦につなげてください。さらに、取り組みの内容や発展に応じて、全国的なAIコンテストなど、学外での挑戦へつなげていくことも想定しています。</p>
+      <p class="next__body">新潟大学には、全学の学部生・大学院生を対象とした『新潟大学 生成AIコンテスト』があります。このコンテストでの取り組みをさらに発展させ、ぜひ全学コンテストへの挑戦につなげてください。さらに、取り組みの内容や発展に応じて、全国的なAIコンテストなど、学外での挑戦へつなげていくことも推奨します。</p>
 
       <div class="next__grid">
         <div class="stage">
@@ -932,8 +1121,8 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <div class="cta__box rv">
       <h2>Join the<br>challenge.<small>社会課題×DX チャレンジ 2026 — 参加者募集</small></h2>
       <div class="cta__btns">
-        <a class="pill lime is-disabled" href="#entry" style="background:var(--lime);color:#06080c;border-color:var(--lime)">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>
-        <a class="pill lime" href="#survey" data-form="survey" style="background:var(--lime);color:#06080c;border-color:var(--lime)">アンケートに回答する<span class="arr">↗</span></a>
+        <a class="pill lime" href="guidelines.html" style="background:#fff;color:#14103a;border-color:#fff">応募要領<span class="arr">↗</span></a>
+        <a class="pill lime" href="#flow" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.6)">参加の流れ<span class="arr">↑</span></a>
       </div>
     </div>
   </div>
@@ -954,43 +1143,35 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
   </div>
 </footer>
 
-<div class="float" id="float"><a class="pill lime is-disabled" href="#entry">参加登録 <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a></div>
 
 <script>
 /* ============================================================
-   Googleフォームの URL が決まったらここに入れる。
-   空のままだとボタンは「ロック中」表示のままになる。
-   entry: 参加登録 / submit: 作品提出 / survey: 企画への印象アンケート
+   フォームの URL と公開状態。
+   open:false のボタンは「ロック中」表示。submit は URL 確定後(2027/1/1)に open:true にする。
    ============================================================ */
 const FORMS = {
-  entry:  "https://docs.google.com/forms/d/e/1FAIpQLScmAUYuAwyUiHznWluTao2-bdzDY5m2k2oXhrdfnz3ZEKHZ4w/viewform",
-  submit: "https://script.google.com/macros/s/AKfycbwE2MGpGzH04W08woYIFZYXO0u1M4pKiomqkRC8UW0lQgwV2jnGKWxxXgjffifq_mA1/exec",
-  survey: "https://docs.google.com/forms/d/e/1FAIpQLSeh7PSVYafn8czyxwBEHEJDO26xu8Xpecjl0tftlQpxIpDciw/viewform"
+  matching: { url: "matching.html", open: true },   // マッチング登録ページ（締切 11/30）
+  entry:    { url: "entry.html", open: true },   // エントリーページ（締切 12/31）
+  submit:   { url: "submit.html", open: false }                                        // 作品提出ページ（2027/1/1 に open:true へ）
 };
 
 (function(){
-  // フォームURLをボタンに反映
+  // フォームURLをボタンに反映（open かつ URL ありのときだけロック解除）
   document.querySelectorAll('[data-form]').forEach(el => {
-    const url = FORMS[el.dataset.form];
-    if (url) {
-      el.href = url; el.target = '_blank'; el.rel = 'noopener';
+    const f = FORMS[el.dataset.form];
+    if (f && f.open && f.url) {
+      el.href = f.url;
+      if (/^https?:/.test(f.url)) { el.target = '_blank'; el.rel = 'noopener'; }
       el.classList.remove('is-disabled');
       const chip = el.querySelector('.chip'); if (chip) chip.remove();
     } else {
       el.addEventListener('click', e => { if (el.getAttribute('href') === '#') e.preventDefault(); });
     }
   });
-  if (FORMS.entry) {
-    document.getElementById('entryForm').innerHTML =
-      '<a class="pill lime is-disabled" style="margin-top:14px;display:inline-flex">参加登録フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a>';
-  }
 
-  // ヘッダー・追従ボタン
-  const header = document.getElementById('header'), fl = document.getElementById('float');
-  const onScroll = () => {
-    header.classList.toggle('is-scrolled', window.scrollY > 40);
-    fl.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.9);
-  };
+  // ヘッダー
+  const header = document.getElementById('header');
+  const onScroll = () => { header.classList.toggle('is-scrolled', window.scrollY > 40); };
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   // モバイルメニュー

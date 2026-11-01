@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="参加の流れ。左: 個人・未完成グループは、マッチング登録(11月30日締切)、マッチングの場に参加、完成グループになる、エントリー(12月31日締切)の順に進む。右: 完成グループはそのままエントリー。場合によっては、マッチングの場での組み込み調整(メンバー追加の相談)がある。" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif" fill="#14103a">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#14103a"/></marker>
+    <marker id="ah-mt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#9a94bd"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="720" rx="28" fill="#f7f5ff"/>
+
+  <!-- ===== 見出し行 ===== -->
+  <g>
+    <rect x="80" y="40" width="480" height="84" rx="22" fill="#fff" stroke="#19d3ff" stroke-width="2.5"/>
+    <text x="320" y="76" text-anchor="middle" font-size="24" font-weight="900">個人 ／ 未完成グループ</text>
+    <text x="320" y="106" text-anchor="middle" font-size="14" fill="#4a4570">創生学修コース・DX共創コースの学生がそろっていない</text>
+    <rect x="640" y="40" width="480" height="84" rx="22" fill="#fff" stroke="#6d3bff" stroke-width="2.5"/>
+    <text x="880" y="76" text-anchor="middle" font-size="24" font-weight="900">完成グループ</text>
+    <text x="880" y="106" text-anchor="middle" font-size="14" fill="#4a4570">創生学修コース・DX共創コースの学生を含むグループ</text>
+  </g>
+
+  <!-- ===== 左カラム ===== -->
+  <line x1="320" y1="124" x2="320" y2="170" stroke="#14103a" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- マッチング登録 (サイトのボタンと同じライム色) -->
+  <g>
+    <rect x="120" y="176" width="400" height="72" rx="36" fill="#c6ff4d"/>
+    <text x="300" y="222" text-anchor="middle" font-size="26" font-weight="900">マッチング登録</text>
+    <rect x="440" y="196" width="112" height="32" rx="16" fill="#14103a"/>
+    <text x="496" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">締切 11/30</text>
+  </g>
+  <line x1="320" y1="248" x2="320" y2="300" stroke="#14103a" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- マッチングの場に参加 -->
+  <g>
+    <rect x="80" y="306" width="480" height="90" rx="20" fill="#fff" stroke="#19d3ff" stroke-width="2"/>
+    <text x="320" y="344" text-anchor="middle" font-size="24" font-weight="900">マッチングの場に参加</text>
+    <text x="320" y="376" text-anchor="middle" font-size="14" fill="#4a4570">11/16・11/26・12/2 の 12:10〜12:50 ＠総合研学修室1</text>
+  </g>
+  <line x1="320" y1="396" x2="320" y2="448" stroke="#14103a" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 完成グループになる -->
+  <g>
+    <rect x="80" y="454" width="480" height="90" rx="20" fill="#fff" stroke="#19d3ff" stroke-width="2"/>
+    <text x="320" y="492" text-anchor="middle" font-size="24" font-weight="900">完成グループになる</text>
+    <text x="320" y="524" text-anchor="middle" font-size="14" fill="#4a4570">両コースの学生がそろう</text>
+  </g>
+  <line x1="320" y1="544" x2="320" y2="596" stroke="#14103a" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- エントリー (左) -->
+  <g>
+    <rect x="120" y="602" width="400" height="72" rx="36" fill="#c6ff4d"/>
+    <text x="300" y="648" text-anchor="middle" font-size="26" font-weight="900">エントリー</text>
+    <rect x="440" y="622" width="112" height="32" rx="16" fill="#14103a"/>
+    <text x="496" y="644" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">締切 12/31</text>
+  </g>
+
+  <!-- ===== 右カラム ===== -->
+  <line x1="880" y1="124" x2="880" y2="170" stroke="#14103a" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- エントリー (右・左のマッチング登録と同じ高さ) -->
+  <g>
+    <rect x="680" y="176" width="400" height="72" rx="36" fill="#c6ff4d"/>
+    <text x="860" y="222" text-anchor="middle" font-size="26" font-weight="900">エントリー</text>
+    <rect x="1000" y="196" width="112" height="32" rx="16" fill="#14103a"/>
+    <text x="1056" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">締切 12/31</text>
+  </g>
+  <!-- 場合によっては（控えめな包含領域: 組み込み調整） -->
+  <g>
+    <rect x="620" y="274" width="520" height="150" rx="22" fill="rgba(109,59,255,0.045)" stroke="#b9b3d6" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <text x="644" y="300" font-size="13" font-weight="700" fill="#7a74a0" letter-spacing="1">場合によっては</text>
+  </g>
+  <path d="M880 248 L880 312" fill="none" stroke="#9a94bd" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ah-mt)"/>
+  <g>
+    <rect x="660" y="318" width="440" height="84" rx="18" fill="#fff" stroke="#b9b3d6" stroke-width="1.5"/>
+    <text x="880" y="353" text-anchor="middle" font-size="22" font-weight="900" fill="#3b355f">組み込み調整</text>
+    <text x="880" y="383" text-anchor="middle" font-size="13" fill="#6f6a90">個人・未完成グループのメンバー追加について相談</text>
+  </g>
+  <!-- 左「マッチングの場に参加」→ 組み込み調整 -->
+  <path d="M560 351 L654 351" fill="none" stroke="#9a94bd" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ah-mt)"/>
+</svg>
