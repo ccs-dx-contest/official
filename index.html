@@ -559,7 +559,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .hero__inner{padding-top:110px}
 .marquee{margin-top:28px}
 .date__lead{font-size:clamp(.92rem,1.05vw,1rem)}
-@media(min-width:901px) and (max-height:820px){
+@media(min-width:901px) and (max-height:940px){
   .hero__inner{padding-top:92px}
   .hero__side{gap:10px}
   .hero__side .catch{padding-bottom:26px}
@@ -606,6 +606,13 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 /* 11/2 公開版: ヒーロー告知・参加の流れ追加分 */
 .date__sub{margin:6px 0 0;font-size:.9rem;line-height:1.65;color:#2b2650;font-weight:700}
 .date--news .k .pulse{background:var(--magenta)}
+.date__alert{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0;padding:10px 12px;border-radius:12px;background:var(--magenta);color:#fff;font-size:.86rem;line-height:1.6;font-weight:700;box-shadow:0 0 0 2px rgba(255,255,255,.7),0 8px 24px rgba(255,47,179,.35);animation:alertglow 1.6s ease-in-out infinite alternate}
+.date__alert>span:last-child{text-wrap:pretty}
+.date__alert a{color:#fff;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+.date__alert-ic{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#fff;color:var(--magenta);font-family:var(--disp);font-weight:900;font-size:.95rem;display:inline-grid;place-items:center;margin-top:1px}
+@keyframes alertglow{from{box-shadow:0 0 0 2px rgba(255,255,255,.7),0 8px 24px rgba(255,47,179,.3)}to{box-shadow:0 0 0 4px rgba(255,255,255,.95),0 8px 32px rgba(255,47,179,.6)}}
+@media(prefers-reduced-motion:reduce){.date__alert{animation:none}}
+@media(min-width:901px) and (max-height:940px){.date__alert{margin-top:8px;padding:8px 11px;font-size:.82rem;line-height:1.5}.date__sub{margin-top:4px;font-size:.86rem}.hero__inner{padding-top:84px}.date--news .date__lead{margin-top:6px}}
 .dates{grid-template-columns:1fr 1fr}
 .dates .date:last-child{grid-column:span 2;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
 .dates .date:last-child .k{flex-basis:100%}
@@ -630,7 +637,8 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .date--news .date__lead{margin:8px 0 0}
 .hero__side{gap:12px}
 .marquee{margin-top:16px}
-@media(min-width:901px) and (max-height:820px){.hero__side .catch{padding-bottom:14px}.marquee{margin-top:8px}.date--news{padding:11px 18px 12px}.dates .date{padding:9px 14px}.hero__side{gap:9px}}
+@media(min-width:901px) and (max-height:940px){.hero__side .catch{padding-bottom:14px}.marquee{margin-top:8px}.date--news{padding:11px 18px 12px}.dates .date{padding:9px 14px}.hero__side{gap:9px}}
+@media(min-width:901px) and (max-height:760px){.hero__inner{padding-top:72px}.hero__side{gap:7px}.hero__side .catch{padding-bottom:8px}.hero__side .catch__w{font-size:clamp(1.15rem,1.5vw,1.45rem)}.hero__side .catch__line{font-size:clamp(1.4rem,2.3vw,2.1rem);margin-top:6px}.dates .date{padding:7px 12px}.dates .date .v{font-size:clamp(1rem,1.4vw,1.25rem)}.date--news{padding:9px 16px 10px}.date__alert{padding:7px 10px;font-size:.78rem}.hero__cta{margin-top:14px}.marquee{margin-top:6px}.marquee__track{padding:7px 0}}
 .tile .big.big--sm{font-size:clamp(1.3rem,1.9vw,1.6rem);line-height:1.2;white-space:nowrap}
 .flow__who{display:inline-block;width:max-content;font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:3px 10px;border-radius:999px;background:rgba(25,211,255,.16);color:#0b6f8a}
 .flow__who--all{background:rgba(109,59,255,.12);color:var(--uv)}
@@ -729,7 +737,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       <div class="date"><span class="k">Deadline</span><span class="v">2027年<span class="nw">2月8日(月)</span></span><span class="s">作品提出締切</span></div>
       </div>
       <!-- 告知文は仮案（最終文言は西海が決定） -->
-      <div class="date date--survey date--news" id="news"><span class="k"><span class="pulse" aria-hidden="true"></span>News / 開催決定</span><p class="date__lead">社会課題×DX チャレンジ 2026 の開催が決定しました。</p><p class="date__sub">マッチング登録・エントリーの受付は 11月2日(月) に開始します。</p></div>
+      <div class="date date--survey date--news" id="news"><span class="k"><span class="pulse" aria-hidden="true"></span>News / 開催決定</span><p class="date__lead">社会課題×DX チャレンジ 2026 の開催が決定しました。</p><p class="date__sub">マッチング登録・エントリーを受付中です。</p><p class="date__alert" role="alert"><span class="date__alert-ic" aria-hidden="true">!</span><span>マッチング登録画面へのアクセスが一部の端末でうまくいかない報告がありました。うまくいかない場合は運営（<a href="mailto:ccs.contest.official@gmail.com">ccs.contest.official@gmail.com</a>）までメールください。</span></p></div>
     </div>
   </div>
   <div class="marquee" aria-hidden="true">
