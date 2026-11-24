@@ -271,10 +271,10 @@ section+section{border-top:1px solid var(--line)}
         <tr><th>第2回</th><td><span class="nw">11月26日(木) 12:10〜12:50</span> <span class="nw">＠総合研学修室1</span></td></tr>
         <tr><th>第3回</th><td><span class="nw">12月2日(水) 12:10〜12:50</span> <span class="nw">＠総合研学修室1</span></td></tr>
       </table>
-      <p>マッチング登録は、以下のフォームから行ってください。</p>
+      <p>マッチング登録は「マッチング掲示板」でのシート作成で行います。作成したシートは氏名をイニシャル2文字にして掲示され、他の参加者と自由にコメントをやり取りできます。</p>
       <div class="form-block">
-        <span class="form-block__label">Matching Form</span>
-        <a class="pill ghost" href="#" data-form="matching" style="display:inline-flex">マッチング登録フォーム<span class="arr">↗</span></a>
+        <span class="form-block__label">Matching Board</span>
+        <a class="pill ghost" href="#" data-form="matching" style="display:inline-flex">マッチング登録・掲示板<span class="arr">↗</span></a>
         <div class="deadline">
           <span class="k">Deadline</span>
           <span>登録締め切り：<b>2026年11月30日(月)</b></span>
@@ -516,7 +516,7 @@ section+section{border-top:1px solid var(--line)}
 <script>
 /* フォームの URL と公開状態（index.html と同じ値にそろえる）。open:false のボタンは「ロック中」表示。 */
 const FORMS = {
-  matching: { url: "matching.html", open: true },
+  matching: { url: "matching.html", open: true },   // 開発版はダミー表示。公開時は tools/publish_pages.sh が ?demo=1 を外す
   entry:    { url: "entry.html", open: true },
   submit:   { url: "submit.html", open: false }
 };

@@ -73,7 +73,7 @@ section+section{border-top:1px solid var(--line)}
 .pill .chip{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.1);color:var(--ink2);white-space:nowrap}
 .pill.lime .chip{background:rgba(0,0,0,.14);color:#06080c}
 .nav-toggle{display:none;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;background:none;border:1px solid var(--line2);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
-@media(max-width:1240px){
+@media(max-width:1300px){
   .nav{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(7,9,15,.96);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--line)}
   .nav.is-open{display:flex}
   .nav a{padding:14px var(--gutter);border-bottom:1px solid var(--line);font-size:.95rem}
@@ -413,7 +413,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .nav a{color:inherit;opacity:.85}.nav a:hover{opacity:1;color:inherit}.nav a::after{background:var(--magenta)}
 .nav-toggle{color:inherit;border-color:currentColor}
 .header .pill.lime{color:#14103a}
-@media(max-width:1240px){.nav{background:rgba(255,255,255,.97);color:var(--ink);border-bottom:1px solid var(--line)}.nav a{border-bottom:1px solid var(--line)}}
+@media(max-width:1300px){.nav{background:rgba(255,255,255,.97);color:var(--ink);border-bottom:1px solid var(--line)}.nav a{border-bottom:1px solid var(--line)}}
 /* ボタン */
 .pill{border-color:var(--line2);color:var(--ink)}
 .pill.ghost:hover{border-color:var(--ink);background:rgba(20,16,60,.04)}
@@ -698,7 +698,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <a href="#next">次のステージ</a>
   </nav>
   <div class="header__cta">
-    <a class="pill lime" href="#matching" data-form="matching">マッチング登録<span class="arr">↗</span></a>
+    <a class="pill lime" href="#matching" data-form="matching">マッチング登録/掲示板<span class="arr">↗</span></a>
     <a class="pill lime" href="#entry" data-form="entry">エントリー<span class="arr">↗</span></a>
   </div>
 </header>
@@ -725,6 +725,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       <p class="hero__tag">〜 <b>デジタル</b>の力で<b>未来</b>をつくる 〜</p>
       <div class="hero__cta">
         <a class="pill ghost" href="guidelines.html">応募要領 <span class="arr">↗</span></a>
+        <a class="pill ghost" href="matching.html">マッチング掲示板 <span class="arr">↗</span></a>
         <a class="pill ghost" href="#flow">参加の流れ <span class="arr">↓</span></a>
       </div>
     </div>
@@ -832,21 +833,21 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <div>
       <figure class="flow-fig"><img src="assets/img/flow-entry.svg" alt="参加の流れ。個人・未完成グループは、マッチング登録(11月30日締切)、マッチングの場に参加(11月16日・11月26日・12月2日の12:10〜12:50、総合研学修室1)、完成グループになる、エントリー(12月31日締切)の順に進む。完成グループはそのままエントリー。場合によっては、マッチングの場での組み込み調整(メンバー追加の相談)がある。" width="1200" height="720" loading="lazy"></figure>
       <div class="bento pts">
-        <div class="tile w2 lime"><span class="mono">Solo / Pre-team OK</span><div class="big big--sm">個人・未完成<br>グループ<small>もOK</small></div><p>まずはマッチング登録へ。仲間を見つける「マッチングの場」を設けます。</p></div>
+        <div class="tile w2 lime"><span class="mono">Solo / Pre-team OK</span><div class="big big--sm">個人・未完成<br>グループ<small>もOK</small></div><p>まずはマッチング掲示板でシートを作成（＝マッチング登録）。仲間を見つける「マッチングの場」も設けます。</p></div>
         <div class="tile w2 cyan"><span class="mono">Team size</span><div class="big">2–5<small>名が目安</small></div><p>創生学修コース・DX共創コースの両方の学生を含むグループで制作します。</p></div>
         <div class="tile w2 uv"><span class="mono">AI allowed</span><div class="big">AI<small>の利用OK！</small></div><p>AIを使った部分も含め、制作内容を自分たちで説明できればOK。</p></div>
       </div>
       <ol class="flow">
         <li class="flow__step hot" id="matching">
           <div class="flow__meta"><span class="flow__no">Step 01</span><span class="flow__date">11月2日(月)〜11月30日(月)</span><span class="flow__who">個人・未完成グループ</span></div>
-          <div class="flow__body"><h3>マッチング登録</h3>
+          <div class="flow__body"><h3>マッチング掲示板チェック/登録</h3>
             <p>「テーマはあるけどDX技術が不安」「他コースの学生がみつからない」「やってみたいけど一人は不安」などあるかと思います。本コンテストでは、そういった学生に向けてマッチングの機会を設けます。興味がある方は、まずはこちらのマッチング登録をしてください。</p>
             <ul class="flow__notes">
               <li>＊すでにグループ構成ができている場合は、《エントリー》の方に進んでください。</li>
               <li>＊マッチングは学生の希望に応じて、昼休みの時間に3回（11/16・11/26・12/2）実施します。</li>
             </ul>
-            <p class="flow__lead">マッチング登録は、以下のフォームから行ってください。</p>
-            <div class="flow__act"><a class="pill lime" href="#" data-form="matching">マッチング登録フォーム<span class="arr">↗</span></a><span class="flow__due">登録締め切り：2026年11月30日</span></div></div>
+            <p class="flow__lead">マッチング登録は「マッチング掲示板」でのシート作成で行います。作成したシートは氏名をイニシャル2文字にして掲示され、他の参加者と自由にコメントをやり取りできます。</p>
+            <div class="flow__act"><a class="pill lime" href="#" data-form="matching">マッチング登録・掲示板<span class="arr">↗</span></a><span class="flow__due">登録締め切り：2026年11月30日</span></div></div>
         </li>
         <li class="flow__step hot">
           <div class="flow__meta"><span class="flow__no">Step 02</span><span class="flow__date">11月16日(月)・11月26日(木)・12月2日(水) 12:10〜12:50</span><span class="flow__who">個人・未完成グループ</span></div>
@@ -1122,7 +1123,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
    open:false のボタンは「ロック中」表示。submit は URL 確定後(2027/1/1)に open:true にする。
    ============================================================ */
 const FORMS = {
-  matching: { url: "matching.html", open: true },   // マッチング登録ページ（締切 11/30）
+  matching: { url: "matching.html", open: true },   // マッチング登録・掲示板ページ（締切 11/30）。開発版はダミー表示(?demo=1)。公開時は tools/publish_pages.sh が ?demo=1 を外す
   entry:    { url: "entry.html", open: true },   // エントリーページ（締切 12/31）
   submit:   { url: "submit.html", open: false }                                        // 作品提出ページ（2027/1/1 に open:true へ）
 };
