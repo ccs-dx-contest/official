@@ -585,15 +585,16 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 .flow__step:last-child{border-bottom:0}
 .flow__step::before{content:'';position:absolute;left:0;top:27px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid var(--uv);box-shadow:0 0 0 4px rgba(109,59,255,.12)}
 .flow__step::after{content:'';position:absolute;left:6px;top:33px;width:8px;height:8px;border-radius:50%;background:var(--uv)}
-.flow__step:nth-child(4)::before,.flow__step:nth-child(5)::before{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(255,47,179,.12)}
-.flow__step:nth-child(4)::after,.flow__step:nth-child(5)::after{background:var(--magenta)}
-.flow__step:nth-child(6)::before,.flow__step:nth-child(7)::before{border-color:var(--ice);box-shadow:0 0 0 4px rgba(25,211,255,.14)}
-.flow__step:nth-child(6)::after,.flow__step:nth-child(7)::after{background:var(--ice)}
+.flow__step:nth-child(3)::before,.flow__step:nth-child(4)::before{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(255,47,179,.12)}
+.flow__step:nth-child(3)::after,.flow__step:nth-child(4)::after{background:var(--magenta)}
+.flow__step:nth-child(5)::before,.flow__step:nth-child(6)::before{border-color:var(--ice);box-shadow:0 0 0 4px rgba(25,211,255,.14)}
+.flow__step:nth-child(5)::after,.flow__step:nth-child(6)::after{background:var(--ice)}
 .flow__meta{display:flex;flex-direction:column;gap:6px;padding-top:4px}
 .flow__no{font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
 .flow__date{font-family:var(--mono);font-size:.84rem;letter-spacing:.08em;color:var(--ink2)}
 .flow__step.hot .flow__date{color:var(--uv);font-weight:700}
 .flow__body h3{font-weight:900;font-size:1.3rem;letter-spacing:.02em;margin-bottom:8px;line-height:1.4}
+.flow__body h3 small{display:block;font-size:.72em;font-weight:700;color:var(--ink2);letter-spacing:.04em}
 .flow__body p{font-size:.98rem;color:var(--ink2);line-height:1.85;max-width:62ch}
 .flow__body p b{color:var(--ink);font-weight:900}
 .flow__body p a{color:var(--uv);font-weight:700;border-bottom:1px solid rgba(109,59,255,.35)}
@@ -616,11 +617,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
 @media(prefers-reduced-motion:reduce){.date__alert{animation:none}}
 @media(min-width:901px) and (max-height:940px){.date__alert{margin-top:8px;padding:8px 11px;font-size:.82rem;line-height:1.5}.date__sub{margin-top:4px;font-size:.86rem}.hero__inner{padding-top:84px}.date--news .date__lead{margin-top:6px}}
 .dates{grid-template-columns:1fr 1fr}
-.dates .date:last-child{grid-column:span 2;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
-.dates .date:last-child .k{flex-basis:100%}
-.dates .date:last-child .v{font-size:clamp(1.05rem,1.45vw,1.3rem)}
-.dates .date:last-child .s{margin-top:0}
-@media(max-width:520px){.dates{grid-template-columns:1fr}.dates .date:last-child{grid-column:auto}}
+@media(max-width:520px){.dates{grid-template-columns:1fr}}
 .flow-fig{margin:0 0 30px}
 .flow-fig img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 14px 40px rgba(20,16,58,.08)}
 .flow__notes{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:4px;font-size:.88rem;line-height:1.7;color:var(--ink3)}
@@ -698,7 +695,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <a href="#next">次のステージ</a>
   </nav>
   <div class="header__cta">
-    <a class="pill lime" href="#matching" data-form="matching">マッチング登録/掲示板<span class="arr">↗</span></a>
+    <a class="pill lime" href="#matching" data-form="matching">マッチング掲示板<span class="arr">↗</span></a>
     <a class="pill lime" href="#entry" data-form="entry">エントリー<span class="arr">↗</span></a>
   </div>
 </header>
@@ -735,12 +732,11 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
         <div class="catch__line">次の一歩へ。</div>
       </div>
       <div class="dates">
-      <div class="date"><span class="k">Matching</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">11月30日(月)</span></span><span class="s">マッチング登録</span></div>
-      <div class="date"><span class="k">Entry</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">12月31日(木)</span></span><span class="s">エントリー</span></div>
-      <div class="date"><span class="k">Deadline</span><span class="v">2027年<span class="nw">2月8日(月)</span></span><span class="s">作品提出締切</span></div>
+      <div class="date"><span class="k">Matching &amp; Entry</span><span class="v"><span class="nw">11月2日(月)〜</span><span class="nw">12月31日(木)</span></span><span class="s"><span class="nw">マッチング掲示板</span>・<span class="nw">エントリー</span></span></div>
+      <div class="date"><span class="k">Submission</span><span class="v">2027年<span class="nw">2月8日(月)</span></span><span class="s">作品提出締切</span></div>
       </div>
       <!-- 告知文は仮案（最終文言は西海が決定） -->
-      <div class="date date--survey date--news" id="news"><span class="k"><span class="pulse" aria-hidden="true"></span>News / 開催決定</span><p class="date__lead">社会課題×DX チャレンジ 2026 の開催が決定しました。</p><p class="date__sub">マッチング登録・エントリーを受付中です。</p><p class="date__alert" role="alert"><span class="date__alert-ic" aria-hidden="true">!</span><span>マッチング登録画面へのアクセスが一部の端末でうまくいかない報告がありました。うまくいかない場合は<a class="date__alert-link" href="https://forms.gle/izSeMpmhXZKrhPRdA" target="_blank" rel="noopener">こちら<span class="arr" aria-hidden="true">↗</span></a>から</span></p></div>
+      <div class="date date--survey date--news" id="news"><span class="k"><span class="pulse" aria-hidden="true"></span>News / 開催決定</span><p class="date__lead">社会課題×DX チャレンジ 2026 の開催が決定しました。</p><p class="date__sub">マッチング掲示板・エントリーを受付中です。</p><p class="date__alert" role="alert"><span class="date__alert-ic" aria-hidden="true">!</span><span>マッチング掲示板のシート作成画面へのアクセスが一部の端末でうまくいかない報告がありました。うまくいかない場合は<a class="date__alert-link" href="https://forms.gle/izSeMpmhXZKrhPRdA" target="_blank" rel="noopener">こちら<span class="arr" aria-hidden="true">↗</span></a>から</span></p></div>
     </div>
   </div>
   <div class="marquee" aria-hidden="true">
@@ -762,8 +758,8 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     <dl class="rows">
       <div class="row"><dt><b>名称</b>Title</dt><dd>社会課題×DX チャレンジ 2026 〜デジタルの力で未来をつくる〜</dd></div>
       <div class="row"><dt><b>テーマ</b>Theme</dt><dd>DX技術を活用した社会課題解決のアイデアと実践</dd></div>
-      <div class="row"><dt><b>対象</b>Eligibility</dt><dd>新潟大学 創生学部の学生（創生学修コース・DX共創コース）。学年は問いません。<span class="note">両コースの学生を含むグループ（2〜5名を目安）で作品を制作します。学年の異なるメンバーでグループを組んでもかまいません。個人や未完成グループは、まずマッチング登録をしてください。</span></dd></div>
-      <div class="row"><dt><b>期間</b>Period</dt><dd>マッチング登録 11月2日(月)〜11月30日(月) ／ エントリー 11月2日(月)〜12月31日(木) ／ 作品提出 2027年1月1日(金)〜2月8日(月)<span class="note">流れと日程は <a href="#flow">参加の流れ</a> をご覧ください。</span></dd></div>
+      <div class="row"><dt><b>対象</b>Eligibility</dt><dd>新潟大学 創生学部の学生（創生学修コース・DX共創コース）。学年は問いません。<span class="note">両コースの学生を含むグループ（2〜5名を目安）で作品を制作します。学年の異なるメンバーでグループを組んでもかまいません。個人や未完成グループは、まずマッチング掲示板へ。</span></dd></div>
+      <div class="row"><dt><b>期間</b>Period</dt><dd>マッチング・エントリー 11月2日(月)〜12月31日(木) ／ 作品提出 2027年1月1日(金)〜2月8日(月)<span class="note">流れと日程は <a href="#flow">参加の流れ</a> をご覧ください。</span></dd></div>
       <div class="row"><dt><b>提出するもの</b>Deliverables</dt><dd>作品説明 PDF（2枚）＋ 実装コンテンツ（Google ドライブまたは GitHub のリンクで提出）<span class="note">様式・記載項目などの詳細は <a href="guidelines.html#submit">応募要領</a> をご覧ください。</span></dd></div>
       <div class="row"><dt><b>表彰</b>Award</dt><dd>優秀な作品を学部長表彰し、賞状を贈呈<span class="note">受賞グループは受賞記念発表会（2027年4月上旬）で成果を発表します。</span></dd></div>
       <div class="row"><dt><b>主催</b>Organizer</dt><dd>新潟大学 創生学部</dd></div>
@@ -831,38 +827,31 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
       <p class="sec__note">※プレゼン審査の日程は後日案内します。</p>
     </div>
     <div>
-      <figure class="flow-fig"><img src="assets/img/flow-entry.svg" alt="参加の流れ。個人・未完成グループは、マッチング登録(11月30日締切)、マッチングの場に参加(11月16日・11月26日・12月2日の12:10〜12:50、総合研学修室1)、完成グループになる、エントリー(12月31日締切)の順に進む。完成グループはそのままエントリー。場合によっては、マッチングの場での組み込み調整(メンバー追加の相談)がある。" width="1200" height="720" loading="lazy"></figure>
+      <figure class="flow-fig"><img src="assets/img/flow-entry.svg" alt="参加の流れ。個人・未完成グループは、マッチング掲示板へアクセス、マッチングの場に参加(11月16日・11月26日・12月2日の12:10〜12:50、総合研学修室1)、完成グループになる、エントリー(12月31日締切)の順に進む。完成グループはそのままエントリー。場合によっては、マッチングの場での組み込み調整(メンバー追加の相談)がある。" width="1200" height="720" loading="lazy"></figure>
       <div class="bento pts">
-        <div class="tile w2 lime"><span class="mono">Solo / Pre-team OK</span><div class="big big--sm">個人・未完成<br>グループ<small>もOK</small></div><p>まずはマッチング掲示板でシートを作成（＝マッチング登録）。仲間を見つける「マッチングの場」も設けます。</p></div>
+        <div class="tile w2 lime"><span class="mono">Solo / Pre-team OK</span><div class="big big--sm">個人・未完成<br>グループ<small>もOK</small></div><p>まずはマッチング掲示板へ。仲間を見つける「マッチングの場」も設けます。</p></div>
         <div class="tile w2 cyan"><span class="mono">Team size</span><div class="big">2–5<small>名が目安</small></div><p>創生学修コース・DX共創コースの両方の学生を含むグループで制作します。</p></div>
         <div class="tile w2 uv"><span class="mono">AI allowed</span><div class="big">AI<small>の利用OK！</small></div><p>AIを使った部分も含め、制作内容を自分たちで説明できればOK。</p></div>
       </div>
       <ol class="flow">
         <li class="flow__step hot" id="matching">
-          <div class="flow__meta"><span class="flow__no">Step 01</span><span class="flow__date">11月2日(月)〜11月30日(月)</span><span class="flow__who">個人・未完成グループ</span></div>
-          <div class="flow__body"><h3>マッチング掲示板チェック/登録</h3>
-            <p>「テーマはあるけどDX技術が不安」「他コースの学生がみつからない」「やってみたいけど一人は不安」などあるかと思います。本コンテストでは、そういった学生に向けてマッチングの機会を設けます。興味がある方は、まずはこちらのマッチング登録をしてください。</p>
-            <ul class="flow__notes">
-              <li>＊すでにグループ構成ができている場合は、《エントリー》の方に進んでください。</li>
-              <li>＊マッチングは学生の希望に応じて、昼休みの時間に3回（11/16・11/26・12/2）実施します。</li>
-            </ul>
-            <p class="flow__lead">マッチング登録は「マッチング掲示板」でのシート作成で行います。作成したシートは氏名をイニシャル2文字にして掲示され、他の参加者と自由にコメントをやり取りできます。</p>
-            <div class="flow__act"><a class="pill lime" href="#" data-form="matching">マッチング登録・掲示板<span class="arr">↗</span></a><span class="flow__due">登録締め切り：2026年11月30日</span></div></div>
-        </li>
-        <li class="flow__step hot">
-          <div class="flow__meta"><span class="flow__no">Step 02</span><span class="flow__date">11月16日(月)・11月26日(木)・12月2日(水) 12:10〜12:50</span><span class="flow__who">個人・未完成グループ</span></div>
-          <div class="flow__body"><h3>グループマッチング</h3><p>個人や、まだ両コースがそろっていないグループ向けに、昼休みの時間にマッチングの場を3回設けます。参加する回は問いません。グループができたらエントリーに進んでください。</p>
+          <div class="flow__meta"><span class="flow__no">Step 01</span><span class="flow__date">11月2日(月)〜12月31日(木)</span><span class="flow__who">個人・未完成グループ</span></div>
+          <div class="flow__body"><h3>マッチング掲示板<small>へアクセス</small></h3>
+            <p>「他コースの学生がみつからない」「一人は不安」という人は、まずマッチング掲示板へ。シートを作成すると氏名はイニシャル2文字で掲示され、気になるシートには誰でもコメントできます。昼休みの「マッチングの場」では直接話せます。</p>
             <ul class="flow__sched">
               <li><span class="flow__sched-no">第1回</span><span class="flow__sched-d">11月16日(月)</span><span class="flow__sched-t">12:10〜12:50</span><span class="flow__sched-v">総合研学修室1</span></li>
               <li><span class="flow__sched-no">第2回</span><span class="flow__sched-d">11月26日(木)</span><span class="flow__sched-t">12:10〜12:50</span><span class="flow__sched-v">総合研学修室1</span></li>
               <li><span class="flow__sched-no">第3回</span><span class="flow__sched-d">12月2日(水)</span><span class="flow__sched-t">12:10〜12:50</span><span class="flow__sched-v">総合研学修室1</span></li>
             </ul>
-          </div>
+            <ul class="flow__notes">
+              <li>＊すでにグループ構成ができている場合は、《エントリー》の方に進んでください。</li>
+            </ul>
+            <div class="flow__act"><a class="pill lime" href="#" data-form="matching">マッチング掲示板<span class="arr">↗</span></a><span class="flow__due">エントリー期日：2026年12月31日</span></div></div>
         </li>
         <li class="flow__step hot" id="entry">
-          <div class="flow__meta"><span class="flow__no">Step 03</span><span class="flow__date">11月2日(月)〜12月31日(木)</span><span class="flow__who flow__who--all">完成グループはここから</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 02</span><span class="flow__date">11月2日(月)〜12月31日(木)</span><span class="flow__who flow__who--all">完成グループはここから</span></div>
           <div class="flow__body"><h3>エントリー</h3>
-            <p>すでに完成グループ（創生学修コース・DX共創コースの学生を含むグループ）ができている場合は、Step 01・02 を経ずに、ここからエントリーしてください。マッチングでグループができた場合も同じです。</p>
+            <p>すでに完成グループ（創生学修コース・DX共創コースの学生を含むグループ）ができている場合は、Step 01 を経ずに、ここからエントリーしてください。マッチングでグループができた場合も同じです。</p>
             <p class="flow__lead">本コンテストへの応募は、以下のエントリーフォームから行ってください。</p>
             <div class="flow__act"><a class="pill lime" href="#" data-form="entry">エントリーフォーム<span class="arr">↗</span></a><span class="flow__due">登録締め切り：2026年12月31日</span></div>
             <ul class="flow__notes">
@@ -872,20 +861,20 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
             </ul></div>
         </li>
         <li class="flow__step">
-          <div class="flow__meta"><span class="flow__no">Step 04</span><span class="flow__date">2027年1月1日(金)〜2月8日(月)</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 03</span><span class="flow__date">2027年1月1日(金)〜2月8日(月)</span></div>
           <div class="flow__body"><h3>制作・作品提出</h3><p>課題解決の案と、それを形にした実装コンテンツ（アプリ、Webコンテンツ、デバイスなど）を「作品」としてまとめます。提出するのは <b>作品説明 PDF（2枚）</b> と <b>実装コンテンツ</b> の2点です（実装コンテンツは Google ドライブまたは GitHub のリンクで提出）。</p>
             <div class="flow__act"><a class="pill ghost is-disabled" href="#" data-form="submit">作品提出フォーム <span class="chip lock"><svg class="lock-ic" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path fill="currentColor" fill-rule="evenodd" d="M4.5 7h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2ZM8 9.35a1.25 1.25 0 0 0-.6 2.35v1.5a.6.6 0 0 0 1.2 0v-1.5A1.25 1.25 0 0 0 8 9.35Z"/></svg>ロック中</span><span class="arr">↗</span></a><a class="to-guide" href="guidelines.html#submit">様式・提出方法は応募要領へ <span aria-hidden="true">→</span></a></div></div>
         </li>
         <li class="flow__step">
-          <div class="flow__meta"><span class="flow__no">Step 05</span><span class="flow__date">2027年2月上旬〜中旬</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 04</span><span class="flow__date">2027年2月上旬〜中旬</span></div>
           <div class="flow__body"><h3>プレゼン審査</h3><p>提出された作品の書面審査に加えて、口頭で発表するプレゼン審査を行います。いずれも <a href="#criteria">4つの評価軸</a> で評価します。</p></div>
         </li>
         <li class="flow__step">
-          <div class="flow__meta"><span class="flow__no">Step 06</span><span class="flow__date">2027年2月下旬</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 05</span><span class="flow__date">2027年2月下旬</span></div>
           <div class="flow__body"><h3>受賞者決定</h3><p>審査結果と、受賞記念発表会のご案内をお知らせします。</p></div>
         </li>
         <li class="flow__step last">
-          <div class="flow__meta"><span class="flow__no">Step 07</span><span class="flow__date">2027年4月上旬</span></div>
+          <div class="flow__meta"><span class="flow__no">Step 06</span><span class="flow__date">2027年4月上旬</span></div>
           <div class="flow__body"><h3>表彰・受賞記念発表会</h3><p>優秀な作品を学部長表彰。受賞グループが成果を発表します。</p></div>
         </li>
       </ol>
@@ -1002,11 +991,11 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
     </div>
     <div>
       <div class="faq__cat"><b>参加・チームについて</b></div>
-      <details class="q"><summary><span class="n">Q01</span>個人でも参加できますか？<span class="pm"></span></summary><div class="a">はい。個人や、両コースがそろっていないグループは、まず「マッチング登録」（11月30日まで）をしてください。11月16日・11月26日・12月2日の昼休み（12:10〜12:50、総合研学修室1）に設ける「マッチングの場」で、個人同士でグループを結成したり、結成済みのグループに加わったりできます。グループができたら「エントリー」（12月31日まで）に進んでください。</div></details>
+      <details class="q"><summary><span class="n">Q01</span>個人でも参加できますか？<span class="pm"></span></summary><div class="a">はい。個人や、両コースがそろっていないグループは、まず「マッチング掲示板」にアクセスしてください。11月16日・11月26日・12月2日の昼休み（12:10〜12:50、総合研学修室1）に設ける「マッチングの場」で、個人同士でグループを結成したり、結成済みのグループに加わったりできます。グループができたら「エントリー」（12月31日まで）に進んでください。</div></details>
       <details class="q"><summary><span class="n">Q02</span>グループの人数や条件はありますか？<span class="pm"></span></summary><div class="a">人数は2〜5名を目安とします。創生学修コース・DX共創コースの両方の学生を含むグループで制作してください。学年は問いません。異なる学年の学生同士でグループを組んでもまったく問題ありません。メンバーは全員、新潟大学 創生学部の学生である必要があります（他学部の学生は加えられません）。詳しくは <a href="guidelines.html#eligibility">応募要領</a> をご覧ください。</div></details>
       <details class="q"><summary><span class="n">Q10</span>創生学修コースとDX共創コースの学生は、具体的にどのように協働するのですか？<span class="pm"></span></summary><div class="a">本コンテストでは、両コースの学生がそれぞれの知識や強みを生かしながら、社会や地域の課題解決に取り組むことを期待しています。例えば、創生学修コースの学生が課題の発見・分析、利用者の視点からの提案、成果の検証などに取り組み、DX共創コースの学生がデジタル技術の選択や実装を中心に担当するといった協働が考えられます。ただし、役割分担をコースごとに固定するわけではありません。課題設定から作品制作、成果の検証まで、チーム全員で考え、協力することが重要です。<br><br>また、本コンテストでの協働は、それぞれのコースならではの学び方を互いに体験する機会にもなります。例えば創生学修コースの学生はDX共創コースのDXスタディーズに、DX共創コースの学生は創生学修コースのフィールドスタディーズに触れ、互いに培った経験や知識を持ち寄り、相手のコースの学びを共に体験することで、自分のコースだけでは得られない視点が身につくことを期待しています。</div></details>
       <details class="q"><summary><span class="n">Q11</span>グループの人数は2〜5名が目安とされていますが、6名以上でもエントリーできますか？<span class="pm"></span></summary><div class="a">グループの人数は、全員が主体的に参加し、協働しやすい規模として2〜5名を目安としています。6名以上での応募については、希望状況や活動内容などを踏まえて検討します。人数が目安を超える場合は、事前に運営側へご相談ください。なお、作品の提出にあたっては、創生学修コースとDX共創コースの学生をそれぞれ1名以上含むことが必要です。</div></details>
-      <details class="q"><summary><span class="n">Q12</span>一緒に参加するメンバーがいない場合や、知らない人とグループを組むことが不安な場合はどうすればよいですか？<span class="pm"></span></summary><div class="a">メンバーが決まっていなくても、個人でマッチング登録することができます。11月中旬以降に3回のマッチング機会（11/16・11/26・12/2 の 12:10〜12:50、総合研学修室1）を設けています。マッチングでは、参加希望者同士が交流し、それぞれの関心や取り組みたい課題を共有することもできます。知らない人とチームを組むことに不安がある場合も、他の学生がどのようなことに興味を持っているのかを知るところから始めてみてください。マッチングを通じてグループができたら、エントリーしてください。</div></details>
+      <details class="q"><summary><span class="n">Q12</span>一緒に参加するメンバーがいない場合や、知らない人とグループを組むことが不安な場合はどうすればよいですか？<span class="pm"></span></summary><div class="a">メンバーが決まっていなくても、個人でマッチング掲示板にシートを作成できます。11月中旬以降に3回のマッチング機会（11/16・11/26・12/2 の 12:10〜12:50、総合研学修室1）を設けています。マッチングでは、参加希望者同士が交流し、それぞれの関心や取り組みたい課題を共有することもできます。知らない人とチームを組むことに不安がある場合も、他の学生がどのようなことに興味を持っているのかを知るところから始めてみてください。マッチングを通じてグループができたら、エントリーしてください。</div></details>
       <details class="q"><summary><span class="n">Q13</span>コンテストへの参加で学生に期待されていることはどんなことですか？<span class="pm"></span></summary><div class="a">本コンテストでは、普段の授業やコース内の学修だけでは得られない経験ができることを期待しています。例えば、異なる専門性や関心を持つ学生と協働する経験、創生学修コースのフィールドスタディーズとDX共創コースのDXスタディーズを互いに体験する経験、身近な課題を発見して解決策を考える経験、デジタル技術を実際の課題解決に活用する経験などが挙げられます。また、自分たちのアイデアを作品として具体化し、教員による審査や発表を通じてフィードバックを得ることもできます。必ずしも高度なDXスキルを身につけている必要はありません。自分の得意分野を生かしながら、新しい知識や技術に挑戦する機会として参加してほしいと考えています。</div></details>
       <details class="q"><summary><span class="n">Q14</span>コンテストに参加すると具体的にどのようなメリットがありますか？<span class="pm"></span></summary><div class="a">本コンテストは、学内外のさまざまなコンテストに挑戦するための足がかりにもなります。学外には、ハッカソンやアイデアソン、ビジネスプランコンテスト、自治体や企業が主催するデータ活用・DX関連のコンテストなど、学生が応募できる機会が数多くあります。本コンテストで、チームで課題を設定し、作品をつくり、人に伝わるように発表するという一連の流れを経験しておけば、こうした場にも挑戦しやすくなります。本コンテストで制作した作品やアイデアを発展させて、他のコンテストに応募することも歓迎します。<br><br>さらに、就職活動でのアピールにもつながります。就職活動では、「学生時代に力を入れたこと」として、何に取り組み、どのような役割を担い、どのような成果を出したかを具体的に説明することが求められます。本コンテストへの参加を通じて、異なる専門性を持つメンバーとの協働、課題の発見から解決策の実装・検証までの過程、作品という形に残る成果など、自分の言葉で語れる経験を得ることができます。デジタル技術を活用して社会や地域の課題に取り組んだ経験は、業種や職種を問わず評価されやすいものです。</div></details>
 
@@ -1123,7 +1112,7 @@ section:nth-of-type(even){background:rgba(255,255,255,.55)}
    open:false のボタンは「ロック中」表示。submit は URL 確定後(2027/1/1)に open:true にする。
    ============================================================ */
 const FORMS = {
-  matching: { url: "matching.html", open: true },   // マッチング登録・掲示板ページ（締切 11/30）。開発版はダミー表示(?demo=1)。公開時は tools/publish_pages.sh が ?demo=1 を外す
+  matching: { url: "matching.html", open: true },   // マッチング掲示板ページ。開発版はダミー表示(?demo=1)。公開時は tools/publish_pages.sh が ?demo=1 を外す
   entry:    { url: "entry.html", open: true },   // エントリーページ（締切 12/31）
   submit:   { url: "submit.html", open: false }                                        // 作品提出ページ（2027/1/1 に open:true へ）
 };

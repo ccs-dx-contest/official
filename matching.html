@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>マッチング登録・掲示板 | 社会課題×DX チャレンジ 2026</title>
-<meta name="description" content="社会課題×DX チャレンジ 2026 のマッチング登録・掲示板。マッチングシートの作成がマッチング登録を兼ね、内容は氏名をイニシャル2文字にして掲示されます。シートにはコメントで気軽に声をかけられます。">
+<title>マッチング掲示板 | 社会課題×DX チャレンジ 2026</title>
+<meta name="description" content="社会課題×DX チャレンジ 2026 のマッチング掲示板。マッチングシートを作成すると、氏名を自動的にイニシャル2文字にした上で掲示されます。シートにはコメントで気軽に声をかけられます。">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +49,9 @@ button{font:inherit;color:inherit}
 .intro__lead b{color:var(--ink)}
 .intro__act{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:14px}
 .intro__due{font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;font-weight:700;color:var(--uv)}
+.intro__entry{margin-top:12px;padding:9px 14px;border-radius:10px;background:rgba(255,47,179,.08);border:1px solid rgba(255,47,179,.35);font-size:.86rem;color:var(--ink2);max-width:58ch}
+.intro__entry b{color:var(--magenta)}
+.intro__entry a{margin-left:8px;color:var(--uv);font-weight:700;white-space:nowrap}
 
 /* マッチングの場(呼び込み) */
 .invite{position:relative;border-radius:16px;padding:16px 18px 16px;background:linear-gradient(160deg,#14103a 0%,#2a1a6e 60%,#3b2290 100%);color:#fff;overflow:hidden;box-shadow:0 18px 44px rgba(20,16,60,.22);display:flex;flex-direction:column}
@@ -109,6 +112,15 @@ button{font:inherit;color:inherit}
 .ms__chips{display:flex;flex-wrap:wrap;gap:4px}
 .ms__chip{font-size:.62rem;font-weight:700;padding:1px 7px;border-radius:999px;background:#fff;border:1px solid var(--ms-line);color:var(--ms-ink)}
 .ms__chip::before{content:'✓ ';color:var(--ms-green)}
+
+/* 紙シート(スキャン画像) */
+.thumb--img{background:#fff}
+.thumb--img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.thumb--img::after{display:none}
+.thumb__chip{position:absolute;left:8px;bottom:8px;z-index:1;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;padding:3px 8px;border-radius:999px;background:rgba(20,16,60,.78);color:#fff}
+.sheet__img{display:block;background:#fff;line-height:0}
+.sheet__img img{width:100%;height:auto;display:block}
+.sheet__img:hover img{opacity:.96}
 
 /* 最新コメント */
 .latest{display:flex;flex-direction:column;gap:4px;padding:9px 12px 10px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:.8rem;line-height:1.55;color:var(--ink2);min-height:84px}
@@ -221,8 +233,8 @@ footer a{color:var(--uv);text-decoration:none}
     <span class="sep" aria-hidden="true"></span>
     <img src="assets/img/logo_create.png" alt="新潟大学 創生学部">
   </div>
-  <span class="bar__title">マッチング登録・掲示板</span>
-  <span class="bar__sub">個人・未完成グループ向け ／ 登録締め切り 2026年11月30日(月)</span>
+  <span class="bar__title">マッチング掲示板</span>
+  <span class="bar__sub">個人・未完成グループ向け ／ エントリー期日 2026年12月31日(木)</span>
   <a class="bar__back" href="index.html"><span aria-hidden="true">←</span> <span class="bar__back-l">コンテストトップ</span><span class="bar__back-s">トップ</span></a>
 </header>
 
@@ -230,17 +242,17 @@ footer a{color:var(--uv);text-decoration:none}
   <div class="intro">
     <div>
       <p class="intro__en">Matching Board</p>
-      <h1>マッチング掲示板<small>ここでのシート作成がマッチング登録を兼ねます</small></h1>
-      <p class="intro__lead">作成したシートは<b>氏名をイニシャル2文字にして</b>掲示され、気になるシートには誰でもコメントで声をかけられます。気になる人がいたら、昼休みの「マッチングの場」で直接話してみてください。</p>
+      <h1>マッチング掲示板</h1>
+      <p class="intro__lead">作成したシートは<b>氏名をイニシャル2文字にして</b>掲示され、気になるシートには誰でもコメントで声をかけられます。気になる人がいたら、昼休みの「マッチングの場」で直接話してみてください。マッチングの場以外でも、テーマや技術の相談など好きな内容で自由に意見交換し、活用してください。</p>
+      <p class="intro__entry"><b>完成したグループでのエントリー期日は 2026年12月31日(木)</b>。お忘れなく。<a href="index.html#entry">エントリーはこちら</a></p>
       <div class="intro__act">
-        <a class="pill lime" id="writeBtn" href="#" target="_blank" rel="noopener">シートを作成する（マッチング登録）<span class="arr">↗</span></a>
-        <span class="intro__due">登録締め切り：2026年11月30日(月)</span>
+        <a class="pill lime" id="writeBtn" href="#" target="_blank" rel="noopener">シートを作成する<span class="arr">↗</span></a>
       </div>
     </div>
     <aside class="invite" aria-labelledby="inviteTitle">
       <p class="invite__en">Matching Sessions</p>
       <h2 id="inviteTitle">昼休みの「マッチングの場」へ、ふらっとどうぞ</h2>
-      <p>登録・予約なし、1回だけでも、話を聞くだけでもOK。各回 12:10〜12:50 ＠総合研学修室1</p>
+      <p>予約なし、1回だけでも、話を聞くだけでもOK。各回 12:10〜12:50 ＠総合研学修室1</p>
       <ol class="sess" id="sess"></ol>
     </aside>
   </div>
@@ -310,6 +322,7 @@ const courseLabel = c => c === "上記以外（創生3年生以上）" ? "創生
 const txt = (s, cls) => s && String(s).trim() ? `<div class="${cls}">${esc(s)}</div>` : `<div class="${cls} empty">（未記入）</div>`;
 const pad = n => String(n).padStart(2, "0");
 const fmtNo = n => pad(n);
+const keyOf = it => it.key || String(it.no);   // コメントの紐付けキー (フォーム: 行番号, 紙: P1…)
 // "2026-11-20 12:34" / ISO → "11/20 12:34"
 function fmtC(s){
   if (!s) return "";
@@ -338,6 +351,17 @@ let ITEMS = [], current = -1;
 })();
 document.getElementById("writeBtn").href = FORM_URL;
 
+// 紙のマッチングシート (マッチングの場で記入されたものをスキャン。氏名は運営がイニシャルに加工済み)
+const PAPER_SHEETS = [
+  { key: "P1", img: "assets/img/sheets/p01.jpg", thumb: "assets/img/sheets/p01_t.jpg", date: "2026-11-26", grade: "1年", course: "創生学修コース", name: "H.N." },
+  { key: "P2", img: "assets/img/sheets/p02.jpg", thumb: "assets/img/sheets/p02_t.jpg", date: "2026-11-26", grade: "1年", course: "DX共創コース",   name: "トラトラ" },
+  { key: "P3", img: "assets/img/sheets/p03.jpg", thumb: "assets/img/sheets/p03_t.jpg", date: "2026-11-26", grade: "1年", course: "DX共創コース",   name: "Y.M." },
+  { key: "P4", img: "assets/img/sheets/p04.jpg", thumb: "assets/img/sheets/p04_t.jpg", date: "2026-11-26", grade: "1年", course: "DX共創コース",   name: "N.U." },
+  { key: "P5", img: "assets/img/sheets/p05.jpg", thumb: "assets/img/sheets/p05_t.jpg", date: "2026-11-26", grade: "1年", course: "DX共創コース",   name: "R.W." }
+];
+const paperNo = it => String(it.key).replace(/^P/, "").padStart(2, "0");
+const paperItems = (comments = {}) => PAPER_SHEETS.map(it => ({ ...it, paper: true, comments: [...(comments[it.key] || [])] }));
+
 /* ===== カード ===== */
 function latestBox(it){
   const cs = it.comments || [];
@@ -356,13 +380,17 @@ function writeCard(){
       </div>
       <div class="over">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#06080c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17v3z"/><path d="M13.5 6.5l3 3"/></svg></span>
-        <b>シートを作成する<small>＝ マッチング登録</small></b>
+        <b>シートを作成する</b>
       </div>
     </div>
-    <div class="latest"><span class="latest__txt">Google フォームが開きます。記入内容は氏名をイニシャル2文字にしてここに掲示されます。締切 11月30日(月)。</span></div>
+    <div class="latest"><span class="latest__txt">氏名を自動的にイニシャル2文字にした上で、ここに掲示します。</span></div>
   </a>`;
 }
 function card(it, i){
+  if (it.paper) return `<button class="card card--paper" type="button" data-i="${i}" aria-haspopup="dialog" aria-label="紙のマッチングシート ${paperNo(it)} を開く">
+    <div class="thumb thumb--img"><img src="${it.thumb}" alt="マッチングシート（手書き） ${esc(it.name)}" loading="lazy" decoding="async"><span class="thumb__chip">紙シート ${paperNo(it)}</span></div>
+    <div class="latest-slot" data-key="${esc(keyOf(it))}">${latestBox(it)}</div>
+  </button>`;
   const chips = (it.status || []).map(s => {
     const k = OPTIONS.indexOf(s);
     return `<span class="ms__chip">${esc(k >= 0 ? OPTION_SHORT[k] : (s.length > 18 ? "その他" : s))}</span>`;
@@ -377,12 +405,19 @@ function card(it, i){
         <span class="ms__sec">こんな人と一緒に取り組みたい</span>${txt(it.q4, "ms__txt l2")}
       </div>
     </div>
-    <div class="latest-slot" data-no="${esc(it.no)}">${latestBox(it)}</div>
+    <div class="latest-slot" data-key="${esc(keyOf(it))}">${latestBox(it)}</div>
   </button>`;
 }
 
 /* ===== 拡大シート + コメント ===== */
 function sheet(it){
+  if (it.paper) return `<div class="sheet">
+    <div class="sheet__head"><h2>マッチングシート</h2>
+      <div class="sheet__idbox">${it.grade ? `<span>${esc(it.grade)}</span>` : ""}<span class="course">${esc(courseLabel(it.course))}</span>${it.name ? `<span>${esc(it.name)}</span>` : ""}<span class="no">紙シート ${paperNo(it)}</span></div>
+    </div>
+    <a class="sheet__img" href="${it.img}" target="_blank" rel="noopener" title="別タブで原寸表示"><img src="${it.img}" alt="マッチングシート（手書き）全文" decoding="async"></a>
+    <div class="sheet__foot"><span>${it.date ? "記入日 " + esc(it.date) : ""}</span><span>氏名はイニシャルに加工しています ／ 画像クリックで原寸表示</span></div>
+  </div>` + thread(it);
   const sel = new Set(it.status || []);
   const others = [...sel].filter(s => !OPTIONS.includes(s));
   const opts = OPTIONS.map(o => `<div class="sheet__opt${sel.has(o) ? " on" : ""}"><span class="box" aria-hidden="true"></span><span>${esc(o)}</span></div>`).join("")
@@ -402,13 +437,15 @@ function sheet(it){
       <section class="sheet__sec"><h3>こんな人と一緒に取り組みたい<small>一緒に取り組みたいメンバー像</small></h3>${txt(it.q4, "sheet__ans")}</section>
       <section class="sheet__sec"><h3>疑問を解消したい<small>本コンテストについての疑問点・不明点</small></h3>${txt(it.q5, "sheet__ans")}</section>
     </div>
-    <div class="sheet__foot"><span>${it.sample ? "表示例(架空のデータ)" : (it.date ? "登録日 " + esc(it.date) : "")}</span><span>氏名はイニシャル2文字のみ掲示しています</span></div>
-  </div>
-  <section class="thread" aria-label="コメント">
+    <div class="sheet__foot"><span>${it.sample ? "表示例(架空のデータ)" : (it.date ? "作成日 " + esc(it.date) : "")}</span><span>氏名はイニシャル2文字のみ掲示しています</span></div>
+  </div>` + thread(it);
+}
+function thread(it){
+  return `<section class="thread" aria-label="コメント">
     <div class="thread__head"><h3>${ICON_C}コメント <span class="cnt" id="cmtCnt"></span></h3></div>
     <p class="thread__intro">このシートの人へのひと言、自己紹介、「◯日の回に行きます」など、自由に書き込めます。件名や名前の欄はありません。名乗るとき（イニシャルなど）や連絡先を伝えたいときは本文に。</p>
     <ol class="cmts" id="cmts"></ol>
-    ${it.sample ? `<div class="cform cform--off">これは表示例のシートです。実際のシートにはここからコメントできます。</div>` : `<form class="cform" id="cform" autocomplete="off">
+    ${it.sample ? `<div class="cform cform--off">これは表示例のシートです。実際のシートにはここからコメントできます。</div>` : (!BOARD_API && !DEMO) ? `<div class="cform cform--off">コメント機能は準備中です。</div>` : `<form class="cform" id="cform" autocomplete="off">
       <label for="cbody">コメントを書く</label>
       <textarea id="cbody" name="body" maxlength="${COMMENT_MAX + 50}" placeholder="ひと言、自己紹介、行く予定の回など。上の「コメント例」も参考に。" required></textarea>
       <input class="hp" type="text" name="website" tabindex="-1" aria-hidden="true">
@@ -428,7 +465,7 @@ function renderThread(it){
     ? cs.map(c => `<li class="cmt${c._new ? " is-new" : ""}"><time>${fmtC(c.date)}</time>${esc(c.body)}</li>`).join("")
     : `<li class="cmt cmt--ex"><span class="cmt__ex">コメント例</span>${esc(SAMPLE_COMMENT)}</li><li class="cmts__none">まだコメントはありません。最初のひと言をどうぞ。</li>`;
   cs.forEach(c => delete c._new);
-  const slot = document.querySelector(`.latest-slot[data-no="${CSS.escape(String(it.no))}"]`);
+  const slot = document.querySelector(`.latest-slot[data-key="${CSS.escape(keyOf(it))}"]`);
   if (slot) slot.innerHTML = latestBox(it);
 }
 
@@ -442,7 +479,7 @@ function openSheet(i){
   document.getElementById("next").disabled = i === ITEMS.length - 1;
   modal.classList.add("open"); document.body.style.overflow = "hidden"; modal.scrollTop = 0;
   document.getElementById("close").focus();
-  if (!it.sample) bindForm(it);
+  if (!it.sample && (BOARD_API || DEMO)) bindForm(it);
 }
 function closeSheet(){
   modal.classList.remove("open"); document.body.style.overflow = "";
@@ -488,7 +525,7 @@ function bindForm(it){
     if (Date.now() - lastSent < 5000) { msg.classList.add("err"); msg.textContent = "少し時間をおいてから送信してください。"; return; }
     btn.disabled = true; btn.textContent = "送信中…";
     try {
-      const c = await postComment(it.no, body, form.website.value);
+      const c = await postComment(keyOf(it), body, form.website.value);
       c._new = true; (it.comments = it.comments || []).push(c);
       ta.value = ""; upd(); lastSent = Date.now();
       renderThread(it);
@@ -500,8 +537,8 @@ function bindForm(it){
   });
 }
 
-// 掲示が無いとき(API 未接続、または登録 0 件)に表示例として並べるシート
-const PROD_SAMPLES = () => [SAMPLE[0], SAMPLE[1]].map(it => ({ ...it, sample: true, comments: [...(it.comments || [])] }));
+// フォーム由来のシートが無いとき(API 未接続、または 0 件)に表示例として並べるシート (1 枚)
+const PROD_SAMPLES = () => [SAMPLE[0]].map(it => ({ ...it, sample: true, comments: [...(it.comments || [])] }));
 
 /* ===== 読み込み ===== */
 const grid = document.getElementById("grid"), meta = document.getElementById("meta"), notice = document.getElementById("notice");
@@ -522,12 +559,12 @@ function fmtUpdated(iso){
     notice.innerHTML = `<div class="notice"><b>サンプル表示</b>：架空のデータで表示しています。コメントはこの端末内にだけ保存されます。</div>`;
     const saved = demoStore.load();
     const items = SAMPLE.map(it => ({ ...it, comments: [...(it.comments || []), ...(saved[it.no] || [])] })).reverse();
-    render(items, fmtUpdated(new Date().toISOString()));
+    render(items.concat(paperItems(saved)), fmtUpdated(new Date().toISOString()));
     return;
   }
   if (!BOARD_API) {
-    notice.innerHTML = `<div class="notice"><b>準備中</b>：登録されたシートは、準備が整い次第ここに掲示します。いま並んでいるのは表示例（架空のデータ）です。</div>`;
-    render(PROD_SAMPLES(), "");
+    notice.innerHTML = `<div class="notice"><b>準備中</b>：フォームから作成されたシートとコメント機能は、準備が整い次第ここに掲示します。SAMPLE 表示のシートは表示例（架空のデータ）です。</div>`;
+    render(PROD_SAMPLES().concat(paperItems()), "");
     return;
   }
   grid.innerHTML = writeCard() + `<div class="state">読み込み中…</div>`;
@@ -536,8 +573,9 @@ function fmtUpdated(iso){
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const items = (data.items || []).map(it => ({ ...it, comments: it.comments || [] })).sort((a, b) => (b.no || 0) - (a.no || 0));
-    if (!items.length) { notice.innerHTML = `<div class="notice"><b>まだ掲示はありません。</b>いま並んでいるのは表示例（架空のデータ）です。</div>`; render(PROD_SAMPLES(), fmtUpdated(data.updated)); return; }
-    render(items, fmtUpdated(data.updated));
+    const paper = paperItems(data.paper || {});
+    if (!items.length) { notice.innerHTML = `<div class="notice"><b>フォームから作成されたシートはまだありません。</b>SAMPLE 表示のシートは表示例（架空のデータ）です。</div>`; render(PROD_SAMPLES().concat(paper), fmtUpdated(data.updated)); return; }
+    render(items.concat(paper), fmtUpdated(data.updated));
   } catch (err) {
     grid.innerHTML = writeCard() + `<div class="state err"><b>掲示板を読み込めませんでした。</b><br>時間をおいて再読み込みしてください。</div>`;
   }
