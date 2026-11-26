@@ -260,7 +260,7 @@ footer a{color:var(--uv);text-decoration:none}
   <div class="bhead">
     <h2><small>Matching Sheets</small>マッチングシート</h2>
     <p class="bhead__meta" id="meta"></p>
-    <p>クリックで全文とコメントを表示。コメントに件名・名前欄はありません。名乗りたいときや連絡先は本文に。</p>
+    <p id="bheadNote">クリックで全文とコメントを表示。コメントに件名・名前欄はありません。名乗りたいときや連絡先は本文に。</p>
   </div>
   <div id="notice"></div>
   <div class="grid" id="grid" aria-live="polite"></div>
@@ -282,7 +282,7 @@ footer a{color:var(--uv);text-decoration:none}
 <script>
 /* ===== 設定 ===== */
 // 掲示データ・コメントの送受信先: Google Apps Script のウェブアプリ URL (tools/board_api.gs をデプロイしたもの)。
-// 空のままだと「準備中」表示になります。?demo=1 を付けるとサンプルデータで表示します(コメントはこの端末内にだけ保存)。
+// 空のままだとコメント欄を出さずにシートだけ掲示します。?demo=1 を付けるとサンプルデータで表示します(コメントはこの端末内にだけ保存)。
 const BOARD_API = "";
 const FORM_URL  = "https://docs.google.com/forms/d/e/1FAIpQLSdJqQyE1jmQe8gOItuXzsvrBc_Py4SbDvG2_s4TdGmUKNFefw/viewform";
 const COMMENT_MAX = 600;
@@ -334,7 +334,10 @@ function nowStr(){ const d = new Date(); return `${d.getFullYear()}-${pad(d.getM
 const ICON_C = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H8l-5 3 1.2-4.6A8 8 0 1 1 21 12z"/></svg>`;
 
 const DEMO = new URLSearchParams(location.search).has("demo");
+const COMMENTS_ON = !!BOARD_API || DEMO;   // コメント欄を出すか (API 未接続の本番では出さない)
 let ITEMS = [], current = -1;
+
+if (!COMMENTS_ON) document.getElementById("bheadNote").textContent = "クリックで全文を表示します。";
 
 /* ===== マッチングの場 ===== */
 (function(){
@@ -389,7 +392,7 @@ function writeCard(){
 function card(it, i){
   if (it.paper) return `<button class="card card--paper" type="button" data-i="${i}" aria-haspopup="dialog" aria-label="紙のマッチングシート ${paperNo(it)} を開く">
     <div class="thumb thumb--img"><img src="${it.thumb}" alt="マッチングシート（手書き） ${esc(it.name)}" loading="lazy" decoding="async"><span class="thumb__chip">紙シート ${paperNo(it)}</span></div>
-    <div class="latest-slot" data-key="${esc(keyOf(it))}">${latestBox(it)}</div>
+    ${COMMENTS_ON ? `<div class="latest-slot" data-key="${esc(keyOf(it))}">${latestBox(it)}</div>` : ""}
   </button>`;
   const chips = (it.status || []).map(s => {
     const k = OPTIONS.indexOf(s);
@@ -405,7 +408,7 @@ function card(it, i){
         <span class="ms__sec">こんな人と一緒に取り組みたい</span>${txt(it.q4, "ms__txt l2")}
       </div>
     </div>
-    <div class="latest-slot" data-key="${esc(keyOf(it))}">${latestBox(it)}</div>
+    ${COMMENTS_ON ? `<div class="latest-slot" data-key="${esc(keyOf(it))}">${latestBox(it)}</div>` : ""}
   </button>`;
 }
 
@@ -441,11 +444,12 @@ function sheet(it){
   </div>` + thread(it);
 }
 function thread(it){
+  if (!COMMENTS_ON) return "";
   return `<section class="thread" aria-label="コメント">
     <div class="thread__head"><h3>${ICON_C}コメント <span class="cnt" id="cmtCnt"></span></h3></div>
     <p class="thread__intro">このシートの人へのひと言、自己紹介、「◯日の回に行きます」など、自由に書き込めます。件名や名前の欄はありません。名乗るとき（イニシャルなど）や連絡先を伝えたいときは本文に。</p>
     <ol class="cmts" id="cmts"></ol>
-    ${it.sample ? `<div class="cform cform--off">これは表示例のシートです。実際のシートにはここからコメントできます。</div>` : (!BOARD_API && !DEMO) ? `<div class="cform cform--off">コメント機能は準備中です。</div>` : `<form class="cform" id="cform" autocomplete="off">
+    ${it.sample ? `<div class="cform cform--off">これは表示例のシートです。実際のシートにはここからコメントできます。</div>` : `<form class="cform" id="cform" autocomplete="off">
       <label for="cbody">コメントを書く</label>
       <textarea id="cbody" name="body" maxlength="${COMMENT_MAX + 50}" placeholder="ひと言、自己紹介、行く予定の回など。上の「コメント例」も参考に。" required></textarea>
       <input class="hp" type="text" name="website" tabindex="-1" aria-hidden="true">
@@ -459,6 +463,7 @@ function thread(it){
   </section>`;
 }
 function renderThread(it){
+  if (!COMMENTS_ON) return;
   const cs = it.comments || [];
   document.getElementById("cmtCnt").textContent = `${cs.length}件`;
   document.getElementById("cmts").innerHTML = cs.length
@@ -479,7 +484,7 @@ function openSheet(i){
   document.getElementById("next").disabled = i === ITEMS.length - 1;
   modal.classList.add("open"); document.body.style.overflow = "hidden"; modal.scrollTop = 0;
   document.getElementById("close").focus();
-  if (!it.sample && (BOARD_API || DEMO)) bindForm(it);
+  if (!it.sample && COMMENTS_ON) bindForm(it);
 }
 function closeSheet(){
   modal.classList.remove("open"); document.body.style.overflow = "";
@@ -547,7 +552,7 @@ function render(items, updated){
   const real = items.filter(it => !it.sample);
   const cTotal = real.reduce((a, it) => a + (it.comments || []).length, 0);
   grid.innerHTML = writeCard() + (items.length ? items.map(card).join("") : `<div class="state">まだ掲示はありません。<br><b>最初のシートを作成してみてください。</b></div>`);
-  meta.innerHTML = real.length ? `シート <b>${real.length}</b> 件 ／ コメント <b>${cTotal}</b> 件${updated ? ` ／ 更新 <b>${esc(updated)}</b>` : ""}` : "";
+  meta.innerHTML = real.length ? `シート <b>${real.length}</b> 件${COMMENTS_ON ? ` ／ コメント <b>${cTotal}</b> 件` : ""}${updated ? ` ／ 更新 <b>${esc(updated)}</b>` : ""}` : "";
   grid.querySelectorAll(".card[data-i]").forEach(b => b.addEventListener("click", () => openSheet(+b.dataset.i)));
 }
 function fmtUpdated(iso){
@@ -563,7 +568,6 @@ function fmtUpdated(iso){
     return;
   }
   if (!BOARD_API) {
-    notice.innerHTML = `<div class="notice"><b>準備中</b>：フォームから作成されたシートとコメント機能は、準備が整い次第ここに掲示します。SAMPLE 表示のシートは表示例（架空のデータ）です。</div>`;
     render(PROD_SAMPLES().concat(paperItems()), "");
     return;
   }
@@ -574,7 +578,7 @@ function fmtUpdated(iso){
     const data = await res.json();
     const items = (data.items || []).map(it => ({ ...it, comments: it.comments || [] })).sort((a, b) => (b.no || 0) - (a.no || 0));
     const paper = paperItems(data.paper || {});
-    if (!items.length) { notice.innerHTML = `<div class="notice"><b>フォームから作成されたシートはまだありません。</b>SAMPLE 表示のシートは表示例（架空のデータ）です。</div>`; render(PROD_SAMPLES().concat(paper), fmtUpdated(data.updated)); return; }
+    if (!items.length) { render(PROD_SAMPLES().concat(paper), fmtUpdated(data.updated)); return; }
     render(items.concat(paper), fmtUpdated(data.updated));
   } catch (err) {
     grid.innerHTML = writeCard() + `<div class="state err"><b>掲示板を読み込めませんでした。</b><br>時間をおいて再読み込みしてください。</div>`;
